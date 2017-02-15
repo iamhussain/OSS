@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - OSS</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/webfonts.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="plugins/boot-select/css/bootstrap-select.css">
+    <link href="plugins/datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="plugins/material-design/material.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+    <link rel="stylesheet" href="plugins/multilevelMenu/css/component.css">
+
+    <!-- Custom Stylesheet (always need to be the last css file) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="plugins/morris/morris.css" rel="stylesheet">
+    <link href="plugins/easypiechart/easypiechart.css" rel="stylesheet">
+    <link href="plugins/vmap/jqvmap.css" rel="stylesheet">
+    <link href="plugins/flags/css/flag-icon.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/chartist/chartist.css">
+    <link rel="stylesheet" href="plugins/horizontal-timeline/style.css">
+
+
+    <!-- responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body class="fadeIn go slow nav-closed">
+    <div class="container">
+        <!-- header starts -->
+        <div id="header">
+            <header>
+                <div class="min-max header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">fullscreen</i></div>
+                <div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+                <div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">notifications</i></div>
+
+                <div class="date-time">
+                    <div id="clock_uae"></div>
+                </div>
+
+                <div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+
+                <div class="switcher">
+                    <div class="switch-button"><i class="material-icons">folder_shared</i></div>
+                </div>
+            </header>
+            <!-- header ends -->
+            <!-- Sub header with breadcrumbs -->
+            <div class="sub-header">
+                <div class="user-login-info open">
+                    <div class="welcome">اهلاً وسهلاً بك٫</div>
+                    <div class="last-login">
+                        <div class="last-date">2016/05/10 الثلاثاء</div>
+                        <div class="last-time">04:46:13 AM</div>
+                        <label>:آخر دخول </label>
+                    </div>
+                </div>
+                <div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+                    <div id="nav-icon1" class="">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="day-select">
+                    <ul>
+                        <li class="active"><a href="#">اليوم</a></li>
+                        <li><a href="#">اخر ٧ ايام</a></li>
+                        <li><a href="#">اخر شهر</a></li>
+                        <!--<li class="datepicker-select"><a href="#" class="calender">
+            <div id="datepickbox1" class="datepickbox"><i class="material-icons">today</i><input type="text" name="h" title="Select Date"  value="" class="searchinput datepicker indnap" placeholder="حدد تاريخ"/></div>
+                      <div id="zebracontainer1" class="zbc"></div> 
+            </a></li>-->
+                    </ul>
+                    <div class="datepick-wrpr"> <span class="material-icons">today</span>
+                        <input type="text" class="form-control" id="datePickFrom" placeholder="اضغط لاخيار تاريخ محدد">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Sub header ends -->
+
+
+
+        <!-- sidebar navigation -->
+        <aside class="open">
+            <div class="user">
+                <div class="user-details">
+                    <div class="avatar"><img src="images/user.jpg" width="136" height="146" alt="user Avatar" /></div>
+                    <div class="user-info">
+                        <div class="initial"><span class="emp-no">8729</span>الدكتور المهندس خبير</div>
+                        <div class="user-name">سامي سامر سامي أحمد محمد هاشم محمد صالح فاخوري</div>
+                    </div>
+
+                </div>
+                <div class="dept">
+                    <i class="material-icons">business</i><span class="ar">الادارة العامة للخدمات الذكية</span>
+                </div>
+                <div class="figures">
+                    <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+                    <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+                    <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                </div>
+            </div>
+            <!-- mp-menu -->
+
+            <div class="sidenav">
+                <nav id="ml-menu" class="menu">
+                    <div class="menu__wrap">
+                        <ul data-menu="main" class="menu__level">
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" href="#">
+                                    <i class="material-icons lg">home</i>
+                                    <div class="link"> لوحة التحكم </div>
+                                </a>
+                            </li>
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1" href="#">
+                                    <i class="material-icons lg">fingerprint</i>
+                                    <div class="link"> البلاغات </div>
+                                    <div class="counter" data-submenu="submenu-1">
+                                        <span class="green">203</span>
+                                        <span class="orange">44</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-2" href="#">
+                                    <i class="material-icons lg">traffic</i>
+                                    <div class="link"> المرورية</div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-3" href="#">
+                                    <i class="demo-icon icon-doc"></i>
+                                    <div class="link">التصاريح والشهادات </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="material-icons md">language</i>
+                                    <div class="link"> المجتمعية </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- Submenu 1 -->
+                        <ul data-menu="submenu-1" class="menu__level">
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="sprite-icon service-icon1"></i>
+                                    <div class="link"> فتح بلاغ شيك او امتناع عن الدفع </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="sprite-icon service-icon2"></i>
+                                    <div class="link"> الاستفسارات الجنائية </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="sprite-icon service-icon27"></i>
+                                    <div class="link"> متابعة فتح بلاغ شيك او امتناع عن الدفع </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="sprite-icon service-icon29"></i>
+                                    <div class="link"> السندات المتعلقة بالشخص </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="sprite-icon service-icon3"></i> فك حجز جواز سفر - جنائي
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="sprite-icon service-icon4"></i> فتح بلاغ جنائي جديد
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="sprite-icon service-icon5"></i> متابعة اجراءات بلاغ جنائي (تابع محضر الإفادة)
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon6"></i> طلب استبدال كفالة - جنائي
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon7"></i> شهادة لمن يهمه الامر - جنائي
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon8"></i> شهادة إثبات حاله
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon9"></i> اجراءات دفن وترحيل الجثث
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- Submenu 1-1 -->
+                        <ul data-menu="submenu-1-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+                        </ul>
+                        <!-- Submenu 2 -->
+                        <ul data-menu="submenu-2" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+                            <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+                        </ul>
+                        <!-- Submenu 2-1 -->
+                        <ul data-menu="submenu-2-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+                        </ul>
+                        <!-- Submenu 3 -->
+                        <ul data-menu="submenu-3" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
+                            <li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
+                        </ul>
+                        <!-- Submenu 3-1 -->
+                        <ul data-menu="submenu-3-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
+                        </ul>
+                        <!-- Submenu 4 -->
+                        <ul data-menu="submenu-4" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
+                            <li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
+                        </ul>
+                        <!-- Submenu 4-1 -->
+                        <ul data-menu="submenu-4-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /mp-menu -->
+            </div>
+            <div class="more-options">
+                <ul>
+                    <li data-toggle="modal" data-target="#logout"><i class="material-icons">power_settings_new</i></li>
+                    <li><i class="material-icons">forum</i></li>
+                    <li><i class="material-icons group">group</i></li>
+                    <li><i class="material-icons">settings_applications</i></li>
+                </ul>
+            </div>
+        </aside>
+        <!-- sidebar navigation ends -->
+
+        <!-- Main Content - Center page -->
+        <div class="main-wrpr">
+            <div class="wrpr dashboard">
+                <div class="col-sm-6">
+
+                    <div class="counter-values">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="chart-counter" data-percent="50"><span>50%</span></div>
+                                <!--<div class="easypie-count">450</div>-->
+                                <div class="value">
+                                    <span class="count">5</span>
+                                    <label>نقاط خدمة فعالة</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-sm-6">
+                    <div class="card">
+                    	<span class="material-icons">person</span>
+                        <div class="value">
+                        	<span class="count">10</span>
+                            <label>مجموع نقاط الخدمة</label>
+                        </div>
+                        </div>
+                    </div>-->
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <i class="demo-icon icon-pending"></i>
+                                <div class="value">
+                                    <span class="count">10</span>
+                                    <label>متعامل قيد الانتظار <span class="material-icons">person</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <span class="material-icons">thumb_up</span>
+                                <div class="value">
+                                    <span class="count">100</span>
+                                    <label>متعامل تمت خدمته <span class="material-icons">person</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <span class="material-icons">receipt</span>
+                                <div class="value">
+                                    <span class="count">110</span>
+                                    <label>مجموع التذاكر</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card nopad">
+                        <div class="box-heading light">
+                            <div class="tab-icons">
+                                <i class="material-icons">sync</i>
+                                <i class="expand-table"></i>
+                            </div>
+                            <div class="box-title">عدد المعاملات <span class="material-icons">account_box</span></div>
+                        </div>
+                        <div class="box-content">
+                            <div class="trans-graph height50">
+                                <div class="col-sm-6">
+                                    <div class="total-value">
+                                        <label class="section-title">كاونتر <i class="demo-icon icon-counter"></i></label>
+
+                                        <span class="trans-value count">550</span>
+                                        <label>إجمالي</label>
+                                    </div>
+
+                                    <div id="pie-chart" style="height:140px;"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="total-value">
+                                        <label class="section-title">إلكترونية <i class="demo-icon icon-web-channel"></i></label>
+                                        <span class="trans-value count">1000</span>
+                                        <label>إجمالي</label>
+                                    </div>
+                                    <div id="pie-chart1" style="height:140px;"></div>
+                                </div>
+
+                                <div class="col-sm-12 nopad">
+                                    <ul>
+                                        <li class="pending-trans">
+                                            <label>غير منجزة</label>
+                                        </li>
+                                        <li class="completed-trans">
+                                            <label>منجزة</label>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--<div class="col-sm-5">
+                    	<ul>
+                        	<li class="pending"><label>غير منجزة</label><span class="trans-value">150</span></li>
+                            <li class="completed"><label>منجزة</label><span class="trans-value">800</span></li>
+                            <li class="online"><label>إلكترونية / ذكية</label><span class="trans-value">50</span></li>	
+                        </ul>
+                    </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card nopad">
+                        <div class="box-heading light">
+                            <div class="tab-icons">
+                                <i class="material-icons">sync</i>
+                                <i class="expand-table"></i>
+                            </div>
+                            <div class="box-title"> الخدمات الأكثر استخداما <span class="material-icons">account_box</span></div>
+                        </div>
+                        <div class="box-content">
+
+                            <div class="height50 easypie">
+                                <div class="col-sm-5th">
+
+                                    <div class="chart" data-percent="73"><i class="sprite-icon service-icon1"></i><span>73%</span></div>
+                                    <label>دفع غرامة
+                                    </label>
+                                    <div class="easypie-count">450</div>
+                                </div>
+
+
+                                <div class="col-sm-5th">
+                                    <div class="chart" data-percent="45">
+                                        <i class="sprite-icon service-icon12"></i><span>45%</span></div>
+                                    <label>تقديم المعلومات
+                                    </label>
+                                    <div class="easypie-count">320</div>
+                                </div>
+
+                                <div class="col-sm-5th">
+                                    <div class="chart" data-percent="25"><i class="sprite-icon service-icon18"></i><span>25%</span></div>
+                                    <label>تغيير لون السيارة
+                                    </label>
+                                    <div class="easypie-count">70</div>
+                                </div>
+
+                                <div class="col-sm-5th">
+                                    <div class="chart" data-percent="10"><i class="sprite-icon service-icon19"></i><span>10%</span></div>
+                                    <label>تغيير لو السيارة
+                                    </label>
+                                    <div class="easypie-count">37</div>
+                                </div>
+
+                                <div class="col-sm-5th">
+                                    <div class="chart" data-percent="8"><i class="sprite-icon service-icon20"></i><span>8%</span></div>
+                                    <label>شهادة براءة الذمة
+                                    </label>
+                                    <div class="easypie-count">25</div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card nopad">
+                        <div class="box-heading light">
+                            <div class="tab-icons">
+                                <i class="material-icons">sync</i>
+                                <i class="expand-table"></i>
+                            </div>
+                            <div class="box-title">المتعامل المتصدر <span class="material-icons">flag</span></div>
+                        </div>
+                        <div class="box-content top-customer">
+                            <div class="col-sm-4" data-toggle="modal" data-target="#myModal">
+                                <div class="avatar56"><img src="images/P34324.JPG" alt="" /></div>
+                                <div class="username">Mohammed El Hafiz</div>
+                                <div class="nationality">Palestine <i class="flag-icon flag-icon-ps"></i></div>
+                                <div class="services-used">
+                                    <div class="col-sm-6">
+                                        <div class="amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <i class="demo-icon icon-car-paint">&#xe807;</i>
+                                        <label class="sm">تغيير لون السيارة</label>
+                                        <div class="service-date">11<sup>th</sup>Jul 2016</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4" data-toggle="modal" data-target="#myModal">
+                                <div class="avatar56"><img src="images/mona.jpg" alt="" /></div>
+                                <div class="username">Monalisa Joseph</div>
+                                <div class="nationality">United Kingdom <i class="flag-icon flag-icon-gb"></i></div>
+                                <div class="services-used">
+                                    <div class="col-sm-6">
+                                        <div class="amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <i class="demo-icon icon-car-paint">&#xe807;</i>
+                                        <label class="sm">تغيير لون السيارة</label>
+                                        <div class="service-date">11<sup>th</sup>Jul 2016</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4" data-toggle="modal" data-target="#myModal">
+                                <div class="avatar56"><img src="images/ankush.jpg" alt="" /></div>
+                                <div class="username">Ankush Sharma</div>
+                                <div class="nationality">India <i class="flag-icon flag-icon-in"></i></div>
+                                <div class="services-used">
+                                    <div class="col-sm-6">
+                                        <div class="amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <i class="demo-icon icon-car-paint">&#xe807;</i>
+                                        <label class="sm">تغيير لون السيارة</label>
+                                        <div class="service-date">11<sup>th</sup>Jul 2016</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="col-sm-6">
+                    <div class="card nopad">
+                        <div class="box-heading light">
+                            <div class="tab-icons">
+                                <i class="material-icons">sync</i>
+                                <i class="expand-table"></i>
+                            </div>
+                            <div class="box-title">التحصيل اليومي <span class="material-icons">account_box</span></div>
+                        </div>
+                        <div class="box-content height100">
+                            <div class="legend">
+
+                                <div class="col-sm-4">
+                                    <div class="total-amt">
+                                        <span class="total-amount"><span class="count">1,077</span> <small>AED</small></span>
+                                        <label><i class="demo-icon icon-money"></i>المبلغ الإجمالي</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="cash">
+
+                                        <span class="total-amount"><span class="count">850</span> <small>AED</small></span>
+                                        <label><i class="demo-icon icon-money"></i> السيولة النقدية</label>
+                                    </div>
+                                    <div class="credit">
+
+                                        <span class="total-amount"> <span class="count">227</span> <small>AED</small></span>
+                                        <label><i class="material-icons">credit_card</i> رصيد</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ct-chart ct-golden-section" id="chartist-chart" style="height:80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6 pr-10">
+                            <div class="card nopad">
+                                <div class="box-heading light">
+
+                                    <div class="box-title"> مركز الشرطة المتصدر <span class="material-icons">business</span></div>
+                                </div>
+                                <div class=" box-content height600">
+                                    <div class="category-filters">
+                                        <div class="counter-link" type="top-police">مركز</div>
+                                        <div class="online-link" type="top-police">خدمات ذكية</div>
+                                        <div class="all-link active" type="top-police">شامل </div>
+                                    </div>
+                                    <div class="top-position-banner">
+                                        <div class="total-completed-trans">
+                                            <i class="demo-icon icon-doc-tick"></i> 218
+
+
+                                        </div>
+
+                                        <div class="position-holder">
+                                            <div class="avatar62">
+                                                <img src="images/male-user.png" />
+                                                <div class="rank-badge first"></div>
+                                            </div>
+
+                                            <span>الإدارة العامة للخدمات الذكية</span> السيد/سامي سامر فاخوري
+
+                                        </div>
+
+                                        <div class="total-avg-time">
+                                            <i class="material-icons">av_timer</i> 05:25
+                                        </div>
+                                    </div>
+                                    <div class="allRankings" id="top-police">
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count rank-badge second"></div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail online-rank">
+                                            <div class="position-count rank-badge third"></div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">4</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail online-rank">
+                                            <div class="position-count">5</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail online-rank">
+                                            <div class="position-count">6</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">7</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">8</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 pl-10 ">
+                            <div class="card nopad">
+                                <div class="box-heading light">
+
+                                    <div class="box-title"> الموظف المتصدر <span class="material-icons">business</span></div>
+                                </div>
+                                <div class=" box-content top-employ height600">
+                                    <div class="category-filters ">
+                                        <div class="counter-link" type="top-employ">مركز</div>
+                                        <div class="online-link" type="top-employ">خدمات ذكية</div>
+                                        <div class="all-link active" type="top-employ">شامل </div>
+                                    </div>
+                                    <div class="top-position-banner">
+                                        <div class="total-completed-trans">
+                                            <i class="demo-icon icon-doc-tick"></i> 218
+
+                                            <div class="my-rank">1377</div>
+                                        </div>
+
+                                        <div class="position-holder">
+                                            <div class="avatar62">
+                                                <img src="images/male-user.png" />
+                                            </div>
+                                            الإدارة العامة للخدمات الذكية
+                                            <span>السيد/سامي سامر فاخوري</span>
+
+                                        </div>
+
+                                        <div class="total-avg-time">
+                                            <i class="material-icons">av_timer</i> 05:25
+                                        </div>
+                                    </div>
+                                    <div class="allRankings" id="top-employ">
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count rank-badge first"></div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 201</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 15:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail online-rank">
+                                            <div class="position-count rank-badge second"></div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 151</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 18:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count rank-badge third"></div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 101</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 21:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">4</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">5</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">6</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">7</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="ranker-detail counter-rank">
+                                            <div class="position-count">8</div>
+                                            <div class="avatar38"><img src="images/male-user.png" /> </div>
+                                            <div class="user-details">
+                                                <div class="name">السيد/سامي سامر فاخوري</div>
+                                                <div class="dept">الإدارة العامة للخدمات الذكية</div>
+
+                                            </div>
+                                            <div class="counter">
+                                                <span class="green"><i class="demo-icon icon-doc-tick"></i> 128</span>
+                                                <span class="blue"><i class="material-icons">av_timer</i> 22:20</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card nopad top-nations">
+                        <div class="box-heading light">
+                            <div class="tab-icons">
+                                <i class="material-icons">sync</i>
+                                <i class="expand-table"></i>
+                            </div>
+                            <div class="box-title">الجنسيات المتصدرة <span class="material-icons">flag</span></div>
+                        </div>
+                        <div class="box-content height100">
+                            <div class="col-md-7 col-sm-7">
+                                <div id="vmap" style="width: 100%; height: 100%; min-height:400px"></div>
+                            </div>
+                            <div class="col-md-5 col-sm-5">
+                                <ul class="top-nationals">
+                                    <li><i class="flag-icon flag-icon-us"></i>
+                                        <h3>USA</h3><span>210</span></li>
+                                    <li><i class="flag-icon flag-icon-in"></i>
+                                        <h3>India </h3> <span>200</span></li>
+                                    <li><i class="flag-icon flag-icon-ph"></i>
+                                        <h3>Phillipines</h3> <span>180</span></li>
+                                    <li><i class="flag-icon flag-icon-br"></i>
+                                        <h3>Brazil </h3><span>100</span></li>
+                                    <li><i class="flag-icon flag-icon-sa"></i>
+                                        <h3>Saudi Arabia </h3><span>90</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="card nopad">
+                        <div class="box-heading light">
+                            <div class="tab-icons">
+                                <i class="material-icons">sync</i>
+                                <i class="expand-table"></i>
+                            </div>
+                            <div class="box-title">المتعامل المتصدر <span class="material-icons">flag</span></div>
+                        </div>
+                        <!--<div class="legend">
+            <div class="col-sm-4">
+                    <label>السيولة النقدية</label>
+                    <span class="total-amount">7500</span>
+            </div>
+            <div class="col-sm-4">
+            	<label>المبلغ الإجمالي</label>
+                <span class="total-amount">1077 AED</span>
+            </div>
+            <div class="col-sm-4">
+            	<label>المبلغ الإجمالي</label>
+                <span class="total-amount">1077 AED</span>
+            </div>
+            </div>-->
+                        <div class="box-content peak-time height100" id="peak-time">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog customer-details" role="document" style="width:740px;">
+                    <div class="box-heading">
+                        <div class="box-title">تحميل الشهادة</div>
+                        <div class="tab-icons close-tab" data-dismiss="modal"><i class="material-icons">close</i></div>
+                    </div>
+
+                    <div class="applicant-details">
+                        <div class="list applic-info">
+                            <div class="applic-img"><img src="images/P34324.JPG" alt=""></div>
+                            <div class="applic-name">
+                                <span>Mohammed El Hafiz</span>
+                                <span><i class="flag-icon flag-icon-ps"></i></span>
+                            </div>
+                            <div class="flag"><img src="images/happy-pagetitle-icon.png" alt="" /></div>
+                        </div>
+                        <div class="list">
+                            <label>الرقم الموحد</label>
+                            <div class="form-data disabled">110805921</div>
+                        </div>
+                        <div class="list">
+                            <label>الهاتف المتحرك</label>
+                            <div class="form-data">+971 56 7882020</div>
+                        </div>
+                        <div class="list">
+                            <label>البريد الإلكتروني</label>
+                            <div class="form-data">des.samidp@gmail.com</div>
+                        </div>
+                        <div class="list">
+                            <label>رقم الهوية</label>
+                            <div class="form-data">784198376843755</div>
+
+                        </div>
+                        <div class="list extra">
+                            <label>الرقم الموحد</label>
+                            <div class="form-data disabled">110805921</div>
+                        </div>
+                        <div class="list extra">
+                            <label>الهاتف المتحرك</label>
+                            <div class="form-data">+971 56 7882020</div>
+                        </div>
+                        <div class="list extra">
+                            <label>البريد الإلكتروني</label>
+                            <div class="form-data">des.samidp@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="list show-more mdl-js-button mdl-js-ripple-effect">
+                        <label>المزيد</label>
+                        <i class="material-icons flex-left">keyboard_arrow_left</i>
+                    </div>
+                    <div class="customer-total">
+                        <div class="col-sm-6">
+                            <label>عدد المعاملات</label>
+                            <div class="value">540 <i class="demo-icon icon-doc-tick"></i></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>عدد المعاملات</label>
+                            <div class="value">2,820. <sub>50</sub> <i class="demo-icon icon-money"></i></div>
+                        </div>
+                    </div>
+                    <section class="cd-horizontal-timeline">
+                        <div class="timeline">
+                            <div class="events-wrapper">
+                                <div class="events">
+                                    <ol>
+                                        <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+                                        <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+                                        <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+                                        <li><a href="#0" data-date="20/05/2014">20 May</a></li>
+                                        <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+                                        <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+                                        <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+                                        <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+                                        <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+                                        <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+                                        <li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+                                    </ol>
+
+                                    <span class="filling-line" aria-hidden="true"></span>
+                                </div>
+                                <!-- .events -->
+                            </div>
+                            <!-- .events-wrapper -->
+
+                            <ul class="cd-timeline-navigation">
+                                <li><a href="#0" class="prev inactive">Prev</a></li>
+                                <li><a href="#0" class="next">Next</a></li>
+                            </ul>
+                            <!-- .cd-timeline-navigation -->
+                        </div>
+                        <!-- .timeline -->
+
+                        <div class="events-content">
+                            <ol>
+                                <li class="selected" data-date="16/01/2014">
+                                    <h2>Horizontal Timeline</h2>
+                                    <em>January 16th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="28/02/2014">
+                                    <h2>Event title here</h2>
+                                    <em>February 28th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="20/04/2014">
+                                    <h2>Event title here</h2>
+                                    <em>March 20th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="20/05/2014">
+                                    <h2>Event title here</h2>
+                                    <em>May 20th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="09/07/2014">
+                                    <h2>Event title here</h2>
+                                    <em>July 9th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="30/08/2014">
+                                    <h2>Event title here</h2>
+                                    <em>August 30th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="15/09/2014">
+                                    <h2>Event title here</h2>
+                                    <em>September 15th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="01/11/2014">
+                                    <h2>Event title here</h2>
+                                    <em>November 1st, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="10/12/2014">
+                                    <h2>Event title here</h2>
+                                    <em>December 10th, 2014</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="19/01/2015">
+                                    <h2>Event title here</h2>
+                                    <em>January 19th, 2015</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+
+                                <li data-date="03/03/2015">
+                                    <h2>Event title here</h2>
+                                    <em>March 3rd, 2015</em>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- .events-content -->
+                    </section>
+                </div>
+                <!-- Main Content - Ends -->
+            </div>
+            <!-- jQuery -->
+            <script src="js/jquery-1.11.3.min.js"></script>
+            <!-- bootstrap -->
+            <script src="js/bootstrap.js"></script>
+
+
+            <!-- Plugins JS -->
+            <script src="plugins/datepicker/js/moment.js"></script>
+            <script src="plugins/datepicker/bootstrap-datetimepicker.min.js"></script>
+            <script src="plugins/material-design/material.js"></script>
+            <script src="plugins/clock/js/jClocksGMT.js"></script>
+            <script src="plugins/clock/js/jquery.rotate.js"></script>
+            <script src="plugins/boot-select/js/bootstrap-select.js"></script>
+
+            <!-- Dashboard JS -->
+            <script src="plugins/counterUp/waypoints.min.js"></script>
+            <script src="plugins/counterUp/counterup.js"></script>
+            <script type="text/javascript" src="plugins/morris/raphael-min.js"></script>
+            <script type="text/javascript" src="plugins/morris/morris.js"></script>
+            <script src="plugins/easypiechart/jquery.easypiechart.js"></script>
+            <script src="plugins/vmap/jquery.vmap.js"></script>
+            <script src="plugins/vmap/jquery.vmap.world.js"></script>
+            <script src="plugins/vmap/jquery.vmap.sampledata.js"></script>
+
+            <script src="plugins/chartist/chartist.min.js"></script>
+            <script src="plugins/chartist/chartist-plugin-pointlabels.min.js"></script>
+
+            <script src="plugins/horizontal-timeline/jquery.mobile.custom.min.js"></script>
+            <script src="plugins/horizontal-timeline/main.js"></script>
+            <script src="plugins/multilevelMenu/js/modernizr-custom.js"></script>
+            <script src="plugins/multilevelMenu/js/classie.js"></script>
+
+            <script src="plugins/multilevelMenu/js/main.js"></script>
+
+            <!-- Custom JS - Always needs to be at the bottom -->
+            <script>
+                /* Filter for transactions */
+                $(document).ready(function () {
+                    $(".counter-link").click(function () {
+                        $("#" + $(this).attr("type") + " > div:not(.counter-rank)").slideUp(200);
+                        $("#" + $(this).attr("type") + " .counter-rank").slideDown(200);
+                    });
+                    $(".online-link").click(function () {
+                        $("#" + $(this).attr("type") + " > div:not(.online-rank)").slideUp(200);
+                        $("#" + $(this).attr("type") + " .online-rank").slideDown(200);
+                    });
+                    $(".all-link").click(function () {
+                        $("#" + $(this).attr("type") + " > div").slideDown(200);
+                    });
+                    $(".category-filters > div").click(function () {
+                        $(".category-filters > div").removeClass("active");
+                        $(this).addClass("active");
+                    });
+                });
+            </script>
+            <script>
+                var menuEl = '';
+                var mlmenu = '';
+                (function () {
+                    menuEl = document.getElementById('ml-menu');
+                    mlmenu = new MLMenu(menuEl, {
+                        // breadcrumbsCtrl : true, // show breadcrumbs
+                        // initialBreadcrumb : 'all', // initial breadcrumb text
+                        backCtrl: false, // show back button
+                        // itemsDelayInterval : 60, // delay between each menu item sliding animation
+                        onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+                    });
+
+                    // mobile menu toggle
+                    var openMenuCtrl = document.querySelector('.action--open'),
+                        closeMenuCtrl = document.querySelector('.action--close');
+
+                    openMenuCtrl.addEventListener('click', openMenu);
+                    closeMenuCtrl.addEventListener('click', closeMenu);
+
+                    function openMenu() {
+                        classie.add(menuEl, 'menu--open');
+                    }
+
+                    function closeMenu() {
+                        classie.remove(menuEl, 'menu--open');
+                    }
+
+                    // simulate grid content loading
+                    var gridWrapper = document.querySelector('.content');
+
+                    function loadDummyData(ev, itemName) {
+                        ev.preventDefault();
+
+                        closeMenu();
+                        if (gridWrapper != undefined) {
+                            gridWrapper.innerHTML = '';
+                            classie.add(gridWrapper, 'content--loading');
+                            setTimeout(function () {
+                                classie.remove(gridWrapper, 'content--loading');
+                                gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+                            }, 700);
+                        }
+                    }
+                })();
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $(".menu__breadcrumbs a:first-child").click(function () {
+                        $('.menu__breadcrumbs').slideUp(300);
+                    });
+
+
+
+                });
+            </script>
+
+            <script>
+                $(function () {
+                            $('#datePickFrom').datetimepicker({
+                                format: 'DD/MM/YYYY',
+                                showTodayButton: true,
+                                showClear: true,
+                                showClose: false,
+                                //debug: true,
+
+                            });
+            </script>
+
+            <script>
+                $(function () {
+                    $('.chart').easyPieChart({
+                        animate: 2000,
+                        barColor: "#67809F",
+                        delay: 300,
+                        size: 105,
+                        lineWidth: 6,
+                        trackColor: "#dddddd"
+
+                    });
+
+                    $('.chart-counter').easyPieChart({
+                        animate: 2000,
+                        barColor: "#3498db",
+                        delay: 300,
+                        size: 90,
+                        lineWidth: 8,
+                        trackColor: "#dddddd"
+
+                    });
+                });
+            </script>
+
+            <script>
+                $('.count').counterUp({
+                    delay: 10,
+                    time: 3000
+                });
+                $('.easypie-count').counterUp({
+                    time: 1500
+                });
+            </script>
+
+
+            <script>
+                jQuery(document).ready(function () {
+                    var areasWithLabel = ['DE', 'US', 'CA', 'RU'];
+                    jQuery('#vmap').vectorMap({
+                        map: 'world_en',
+                        backgroundColor: 'transparent',
+                        color: '#3498db',
+                        hoverOpacity: 0.7,
+
+                        selectedColor: '#707070',
+                        borderColor: '#fff',
+                        borderWidth: 2,
+                        enableZoom: true,
+                        showTooltip: true,
+                        scaleColors: ['#3498db', '#0078b2'],
+                        values: sample_data,
+                        normalizeFunction: 'polynomial',
+                        onRegionClick: false,
+                        //selectedRegions: ['in','ru','ph','ke','br','lb'],
+                        //showLabels: true,
+                        onLabelShow: function (event, label, code) {
+                            if (sample_data[code] > 0)
+                                label.append(': ' + sample_data[code] + ' transactions');
+                        }
+
+                    });
+                    var fc = '#3ec491';
+                    jQuery('#vmap').vectorMap('set', 'colors', {
+                        us: fc,
+                        in : fc,
+                        ph: fc,
+                        br: fc,
+                        sa: fc
+                    });
+                });
+            </script>
+            <script>
+                var chart = new Chartist.Line('.ct-chart', {
+                    labels: ['Jul 29', 'Jul 30', 'Jul 31', 'Aug 1', 'Aug 2', 'Aug 3'],
+                    series: [
+    [10, 15, 12, 15, 4, 13],
+    [12, 8, 14, 8, 10, 12],
+  ]
+                }, {
+                    low: 0,
+                    showArea: true,
+                    showPoint: true,
+                    fullWidth: true,
+                    showLabel: true,
+                    /*axisX: {
+                      // On the x-axis start means top and end means bottom
+                      position: 'bottom'
+                    },
+                    axisY: {
+                      // On the y-axis start means left and end means right
+                      position: 'end'
+                    },*/
+                    plugins: [
+    Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+  ]
+                });
+
+                chart.on('draw', function (data) {
+                    if (data.type === 'line' || data.type === 'area') {
+                        data.element.animate({
+                            d: {
+                                begin: 2000 * data.index,
+                                dur: 2000,
+                                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                                to: data.path.clone().stringify(),
+                                easing: Chartist.Svg.Easing.easeOutQuint
+                            }
+                        });
+                    }
+                });
+
+                var chart = new Chartist.Pie('#pie-chart', {
+                    series: [100, 450],
+                    labels: ['100', '450']
+                }, {
+                    donut: true,
+                    showLabel: true
+
+                });
+                var chart = new Chartist.Pie('#pie-chart1', {
+                    series: [320, 680],
+                    labels: ['320', '680']
+                }, {
+                    donut: true,
+                    showLabel: true
+                });
+
+
+                chart.on('draw', function (data) {
+                    if (data.type === 'slice') {
+                        // Get the total path length in order to use for dash array animation
+                        var pathLength = data.element._node.getTotalLength();
+
+                        // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+                        data.element.attr({
+                            'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                        });
+
+                        // Create animation definition while also assigning an ID to the animation for later sync usage
+                        var animationDefinition = {
+                            'stroke-dashoffset': {
+                                id: 'anim' + data.index,
+                                dur: 1000,
+                                from: -pathLength + 'px',
+                                to: '0px',
+                                easing: Chartist.Svg.Easing.easeOutQuint,
+                                // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+                                fill: 'freeze'
+                            }
+                        };
+
+                        // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+                        if (data.index !== 0) {
+                            animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                        }
+
+                        // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+                        data.element.attr({
+                            'stroke-dashoffset': -pathLength + 'px'
+                        });
+
+                        // We can't use guided mode as the animations need to rely on setting begin manually
+                        // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+                        data.element.animate(animationDefinition, false);
+                    }
+                });
+
+                // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
+                chart.on('created', function () {
+                    if (window.__anim21278907124) {
+                        clearTimeout(window.__anim21278907124);
+                        window.__anim21278907124 = null;
+                    }
+                    window.__anim21278907124 = setTimeout(chart.update.bind(chart), 100000000000000);
+                });
+            </script>
+            <script>
+                new Chartist.Bar('#peak-time', {
+                    labels: ['6:00 AM - 2:00 PM', '2:00 PM - 10:00 PM', '10:00 PM - 6:00 AM'],
+                    series: [
+    [60000, 40000, 80000],
+    [40000, 30000, 70000],
+    [8000, 3000, 10000]
+  ]
+                }, {
+                    seriesBarDistance: 10,
+                    axisX: {
+                        offset: 60
+                    },
+                    axisY: {
+                        offset: 80,
+                        labelInterpolationFnc: function (value) {
+                            return value
+                        },
+                        scaleMinSpace: 15
+                    },
+                });
+
+                var customLabels = [];
+                customLabels[0] = 'An other one';
+                customLabels[1] = 'A custom label';
+                customLabels[2] = 'An other one';
+
+                chart.on('draw', function (data) {
+                    if (['bar', 'line'].indexOf(data.type) !== -1 && customLabels[data.index]) {
+
+                        var x = data.type === 'bar' ? data.x2 : data.x;
+                        var y = data.type === 'bar' ? data.y2 : data.y;
+
+                        data.group.elem('text', {
+                            x: x + 10,
+                            y: y + 5,
+                            transform: 'rotate(-90, ' + x + ', ' + y + ')'
+                        }, 'ct-label').text(customLabels[data.index]);
+                    }
+                });
+            </script>
+
+            <script>
+                $('.day-select li').click(function () {
+                    $('.day-select li').removeClass('active');
+                    $(this).addClass('active');
+                });
+                $('.datepicker').click(function () {
+                    $('.day-select li').removeClass('active');
+                    $('.datepicker-select').addClass('active');
+                });
+            </script>
+            <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>

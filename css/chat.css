@@ -1,0 +1,178 @@
+@charset "UTF-8";
+html, body{
+	min-height:100%;
+	height:100%;
+}
+body{
+	padding-right:0;
+	overflow-y: auto;
+	max-height:100%;
+}
+.chat .col-sm-4{
+	float:right;
+}
+.chat .activity-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    height: 100%;
+}
+.chat aside {
+    position: relative;
+    background: none;
+    top: 0;
+    width: 100%;
+}
+.chat .mdl-checkbox {
+    align-self: flex-start;
+    float: right;
+    height: 35px;
+    margin-top: 3px;
+    padding: 0;
+    width: 20px;
+}
+.chatter {
+    margin-right: 15px;
+}
+.chatter-name {
+    float: right;
+    font-family:"Myriad apple","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 16px;
+    line-height: normal;
+}
+.chatter-no {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 5px;
+    clear: both;
+    float: right;
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 5px;
+    padding: 3px 10px;
+}
+.chatter-comment {
+    clear: both;
+    direction: ltr;
+    float: right;
+    font-family:"Myriad apple","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+    margin-top: 3px;
+}
+.chat .nav-arrow{
+	margin-right:auto;
+}
+.chat .nav {
+    flex-shrink: 0;
+}
+
+.chat .content-bubble{
+	max-width:80%;
+}
+.chat .transactions.alt{
+	direction:ltr;
+	margin-left: 10px;
+}
+.chat .alt .content-bubble:before{
+	    left: -12px;
+		transform:scale(-1);
+		right:auto;
+		color:#E1EBF2;
+}
+.chat .alt .content-bubble {
+    margin-right: 0;
+    margin-left: 11px;
+    background: rgba(52, 152, 219,.1);
+}
+.user-pics {
+    background: #fff none repeat scroll 0 0;
+    border: 3px solid #e2e3e6;
+    border-radius: 50%;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+    position: relative;
+    flex-shrink: 0;
+	overflow:hidden;
+}
+.chat .conversation-compose textarea{
+	max-width:100%;
+}
+.chat .conversation-compose .input-msg{
+	max-width:87%;
+}
+.chat .conversation-compose{
+	height:auto;
+	background:#3498DB;
+	position:relative;
+	margin-top:20px;
+	border-radius: 0 0 5px 5px;
+}
+.chat .conversation-compose div{
+	background:none;
+}
+.chat .conversation-compose .send{
+	color: #fff;
+}
+.chat .trans-timeline {
+    padding: 23px 0 0;
+}
+.chat .conversation .conversation-container{
+	padding:0 8px;
+}
+.chat .sidenav{
+	overflow:auto;
+}
+.chat .trans-timeline::before{
+	content:none;
+}
+/* Used for 3rd chat form */
+.form-horizontal {
+    overflow: hidden;
+}
+.service-selection > ul li {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 100%;
+    padding: 3px 10px;
+	cursor:pointer;
+}
+.service-selection > ul li:hover{
+	background:#f8f8f8;
+	color:#3498DB;
+}
+.service-selection li > i {
+    float: right;
+    font-size: 13px;
+    margin-left: 4px;
+}
+.service-selection {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    float: left;
+    margin-top: 13px;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+}
+.chat-time {
+   align-self: center;
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 5px;
+    direction: ltr;
+    font-family: myriad apple;
+    line-height: 100%;
+    margin-right: auto;
+    margin-top: 6px;
+    padding: 5px;
+
+}
+.chat-time > i {
+    display: inline-block;
+    font-size: 13px;
+    position: relative;
+    top: 2px;
+}

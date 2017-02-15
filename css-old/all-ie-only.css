@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .dataTables_wrapper table.dataTable td, .dataTables_wrapper table.dataTable th{
+	display: inline-block;
+	max-width:188px;
+}
+.lock {
+    background: url(../images/lock-row-bg.png) no-repeat right top #f2f9ff !important;
+}
+.user-login-info{
+	padding-left:11px;
+}
+.Zebra_DatePicker .dp_header .dp_previous::before, .Zebra_DatePicker .dp_header .dp_next::before{
+	margin-top: 51px;
+}
+.Zebra_DatePicker .dp_header .dp_next::after, .Zebra_DatePicker .dp_header .dp_previous::after{
+	margin-top: 65px;
+}
+}

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OSS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="plugins/boot-select/css/select2.css" rel="stylesheet">
+<link href="plugins/datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+<link rel="stylesheet" href="plugins/multilevelMenu/css/component.css">
+
+
+<!-- Custom Stylesheet (always need to be the last css file) -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+<!-- responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+</head>
+<body class="search fadeIn go slow">
+<div class="container"> 
+<!-- header starts -->
+<div id="header">
+<header>
+<div class="min-max header-icons mdl-js-button mdl-js-ripple-effect" onclick="toggleFullScreen()"><i class="material-icons">fullscreen</i></div>
+<div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+<div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"> <i class="material-icons notify-icon">notifications</i> <span class="notify-count">143</span>
+<div class="notifications-drop"> 
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active all-notifs"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">
+<label>جميع</label>
+<i class="material-icons">assessment</i><span class="count-total">143</span></a> </li>
+<li role="presentation" class="reply-notifs"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+<label>ردود</label>
+<i class="material-icons">reply</i><span class="count-total">21</span></a> </li>
+<li role="presentation" class="trans-notifs"><a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab">
+<label>المعاملات</label>
+<i class="material-icons">assignment</i> <span class="count-total">45</span></a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="all">
+<ul class="notify-ul">
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-goodconduct"></i></div>
+<div class="col-sm-7 title">
+<p>203306740980</p>
+<span class="ar-droid">شهادة براءة الذمة</span> </div>
+<div class="col-sm-3 notify-times">
+<div class="date">17/05/2016 </div>
+<div class="time">3:02 PM</div>
+</div>
+</li>
+<li class="reply-notifs">
+<div class="col-sm-2 icon"><i class="material-icons">reply</i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+<div class="col-sm-3 notify-times">
+<div class="date">17/05/2016 </div>
+<div class="time">3:02 PM</div>
+</div>
+</li>
+<li class="late-notifs">
+<div class="col-sm-2 icon"><i class="demo-icon icon-roadclose"></i></div>
+<div class="col-sm-7 title">
+<p>203306712345</p>
+<span class="ar-droid">تغيير لو السيارة</span> </div>
+<div class="col-sm-3 notify-times">
+<div class="item-notify animated go pulse"></div>
+</div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-counter"></i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+</li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane" id="messages">
+<ul class="notify-ul">
+<li class="reply">
+<div class="col-sm-2 icon"><i class="material-icons">reply</i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+<div class="col-sm-3 notify-times">
+<div class="date">17/05/2016 </div>
+<div class="time">3:02 PM</div>
+</div>
+</li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane" id="transactions">
+<ul class="notify-ul">
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-goodconduct"></i></div>
+<div class="col-sm-7 title">
+<p>203306740980</p>
+<span class="ar-droid">شهادة براءة الذمة</span> </div>
+<div class="col-sm-3 notify-times">
+<div class="date">17/05/2016 </div>
+<div class="time">3:02 PM</div>
+</div>
+</li>
+<li class="reply">
+<div class="col-sm-2 icon"><i class="material-icons">reply</i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+<div class="col-sm-3 notify-times">
+<div class="date">17/05/2016 </div>
+<div class="time">3:02 PM</div>
+</div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-roadclose"></i></div>
+<div class="col-sm-7 title">
+<p>203306712345</p>
+<span class="ar-droid">تغيير لو السيارة</span> </div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-counter"></i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+</li>
+<li>
+<div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+<div class="col-sm-7 title">
+<p>203123450980</p>
+<span class="ar-droid">تغيير لون السيارة</span> </div>
+</li>
+</ul>
+</div>
+</div>
+<div class="all-notifications">All Notifications</div>
+</div>
+</div>
+<div class="date-time">
+<div id="clock_uae"></div>
+</div>
+<div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+<div class="switcher">
+<div class="switch-button"><i class="material-icons">folder_shared</i></div>
+</div>
+</header>
+<!-- header ends --> 
+<!-- Sub header with breadcrumbs -->
+<div class="sub-header">
+<div class="user-login-info">
+<div class="welcome">اهلاً وسهلاً بك٫</div>
+<div class="last-login">
+<div class="last-date">2016/05/10 الثلاثاء</div>
+<div class="last-time">04:46:13 AM</div>
+<label>:آخر دخول </label>
+</div>
+</div>
+<div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+<div id="nav-icon1" class="open"> <span></span> <span></span> <span></span> </div>
+</div>
+<ol class="breadcrumb">
+<li><a href="#"><i class="material-icons">home</i></a></li>
+<li><a href="#">خدمات مجتمعية</a></li>
+<li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="demo-icon icon-car-paint"></i>معاينة مركبة<b class="caret"></b> </a>
+<ul class="dropdown-menu">
+<li><a href="#">خدمات مجتمعية</a></li>
+<li><a href="#">معاينة مركبة</a></li>
+</ul>
+</li>
+</ol>
+<div class="search-opener"> </div>
+</div>
+</div>
+<!-- Sub header ends --> 
+
+<!-- sidebar navigation -->
+<aside>
+<div class="user">
+<div class="user-details">
+<div class="avatar"><img src="images/user.jpg" width="136" height="146" alt="user Avatar"/></div>
+<div class="user-info">
+    <div class="initial"><span class="emp-no">8729</span>الدكتور المهندس خبير</div>
+    <div class="user-name">سامي سامر سامي أحمد محمد
+    هاشم محمد صالح فاخوري</div>
+</div>
+
+</div>
+<div class="dept">
+    	<i class="material-icons">business</i><span class="ar">الادارة العامة للخدمات الذكية</span>
+    </div>
+<div class="figures">
+<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+<div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+<div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+</div>
+</div>
+<!--<div class="sidenav">
+	<div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">home</i><div class="link"> لوحة التحكم </div></div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">fingerprint</i> <div class="link"> البلاغات </div>
+    
+    	<div class="counter">
+        	<span class="green">203</span>
+        	<span class="orange">44</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+        
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">traffic</i><div class="link"> المرورية </div>
+    
+    	<div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="demo-icon icon-doc"></i> <div class="link">التصاريح والشهادات </div>
+     
+    	<div class="counter">
+        	<span class="green">3</span>
+        	<span class="orange">1</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons md">language</i><div class="link"> المجتمعية </div>
+     
+    	<div class="counter">
+        	<span class="green zero">0</span>
+        	<span class="orange zero">44</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+        
+    </div>
+</div>--> 
+
+<!-- mp-menu -->
+
+<div class="sidenav">
+<nav id="ml-menu" class="menu">
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level">
+                
+                <li class="menu__item nav">
+                	<a class="menu__link" href="#">
+                		<i class="material-icons lg">home</i><div class="link"> لوحة التحكم </div>
+                    </a>
+                </li>
+                
+					<li class="menu__item nav" ><a class="menu__link" data-submenu="submenu-1" href="#">
+                    <i class="material-icons lg">fingerprint</i> 
+                  <div class="link"> البلاغات </div>   
+                    <div class="counter" data-submenu="submenu-1">
+                        <span class="green">203</span>
+                        <span class="orange">44</span>            
+                    </div>
+    				</a>
+                    </li>
+                    
+                     <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-2" href="#">
+                	<i class="material-icons lg">traffic</i><div class="link">  المرورية</div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-3" href="#">
+                	<i class="demo-icon icon-doc"></i><div class="link">التصاريح والشهادات </div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-4" href="#">
+                	<i class="material-icons md">language</i><div class="link"> المجتمعية </div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                	
+				</ul>
+				<!-- Submenu 1 -->
+				<ul data-menu="submenu-1" class="menu__level">
+					<li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-4" href="#">
+                	<i class="demo-icon service-icon1"></i><div class="link"> فتح بلاغ شيك او امتناع عن الدفع </div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+					<li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-4" href="#">
+                	<i class="demo-icon service-icon2"></i><div class="link"> الاستفسارات الجنائية </div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+					<li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-4" href="#">
+                	<i class="demo-icon service-icon27"></i><div class="link"> متابعة فتح بلاغ شيك او امتناع عن الدفع </div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+					<li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-4" href="#">
+                	<i class="demo-icon service-icon29"></i><div class="link"> السندات المتعلقة بالشخص </div>
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+					<li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon3"></i>  فك حجز جواز سفر - جنائي 
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon4"></i>  فتح بلاغ جنائي جديد 
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon5"></i>  متابعة اجراءات بلاغ جنائي (تابع محضر الإفادة) 
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon6"></i>   طلب استبدال كفالة - جنائي  
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon7"></i>  شهادة لمن يهمه الامر - جنائي 
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon8"></i>  شهادة إثبات حاله 
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+                <li class="menu__item nav">
+                	<a class="menu__link" data-submenu="submenu-1-1" href="#">
+                	<i class="demo-icon service-icon9"></i>  اجراءات دفن وترحيل الجثث 
+                    <div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        </a>
+                </li>
+					
+				</ul>
+				<!-- Submenu 1-1 -->
+				<ul data-menu="submenu-1-1" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+				</ul>
+				<!-- Submenu 2 -->
+				<ul data-menu="submenu-2" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+				</ul>
+				<!-- Submenu 2-1 -->
+				<ul data-menu="submenu-2-1" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+				</ul>
+				<!-- Submenu 3 -->
+				<ul data-menu="submenu-3" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
+				</ul>
+				<!-- Submenu 3-1 -->
+				<ul data-menu="submenu-3-1" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
+				</ul>
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
+				</ul>
+				<!-- Submenu 4-1 -->
+				<ul data-menu="submenu-4-1" class="menu__level">
+					<li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
+				</ul>
+			</div>
+		</nav>
+<!-- /mp-menu --> 
+</div>
+<div class="more-options">
+<ul>
+<li data-toggle="modal" data-target="#logout"><i class="material-icons">power_settings_new</i></li>
+<li><i class="material-icons">forum</i></li>
+<li><i class="material-icons group">group</i></li>
+<li><i class="material-icons">settings_applications</i></li>
+</ul>
+</div>
+</aside>
+<!-- sidebar navigation ends --> 
+
+<!-- Main Content - Center page -->
+<div class="main-wrpr">
+<div class="search-bar">
+<div class="in-container">
+<div class="search-date">
+<div class="form-group ftDate">
+<label class="control-label">التاريخ :</label>
+<div class="row select-date">
+<div class="form-group col-sm-6">
+<div class="input-group date" > <span class="material-icons">today</span>
+<input type="text" class="form-control" id="datePickFrom" placeholder="From Date">
+</div>
+</div>
+<div class="form-group col-sm-6">
+<div class="input-group date" > <span class="label">إلى</span>
+<input type="text" class="form-control" id="datePickTo" placeholder="To Date">
+</div>
+</div>
+</div>
+</div>
+<!--</div>
+        <div class="search-date2 col-lg-6 col-md-6 col-sm-5">-->
+<div class="form-group sel-status">
+<label class="control-label">الحالة :</label>
+<div class="select-date">
+<div class='input-group' > <span class="material-icons">info </span>
+<select id="basic" class="selectpicker form-control">
+<option>جديد</option>
+<option>جديد 1</option>
+<option>جديد 2</option>
+<option>جديد 1</option>
+<option>جديد 2</option>
+<option>جديد 1</option>
+<option>جديد 2</option>
+<option>جديد 1</option>
+<option>جديد 2</option>
+</select>
+</div>
+</div>
+</div>
+<div class="form-group sel-status">
+<label class="control-label">القناة :</label>
+<div class="select-date">
+<div class='input-group' > <span class="demo-icon icon-channel">&#xe806;</span>
+<select id="basic" class="selectpicker form-control">
+<option>الجميع</option>
+<option>الجميع 1</option>
+<option>الجميع 2</option>
+</select>
+</div>
+</div>
+</div>
+<div class="form-group adv-options" style="display:none;">
+<label class="control-label"> الرقم المعاملة:</label>
+<div class="select-date">
+<div class='input-group date' > <span class="material-icons">folder </span>
+<input type="text" placeholder="No. of treatment" />
+</div>
+</div>
+</div>
+<div class="form-group adv-options" style="display:none;">
+<label class="control-label">الرقم الهوية:</label>
+<div class="select-date">
+<div class='input-group date' > <span class="demo-icon icon-license"></span>
+<input type="text" placeholder="Id Number" />
+</div>
+</div>
+</div>
+<div class="form-group adv-options" style="display:none;">
+<label class="control-label"> الرقم الموحد:</label>
+<div class="select-date">
+<div class='input-group date' > <span class="material-icons">format_list_numbered</span>
+<input type="text" placeholder="unified number" />
+</div>
+</div>
+</div>
+<div class="form-group adv-options" style="display:none;">
+<label class="control-label"> الاسم:</label>
+<div class="select-date">
+<div class='input-group date' > <span class="material-icons">person </span>
+<input type="text" placeholder="Name" />
+</div>
+</div>
+</div>
+<div class="form-group nationality adv-options" style="display:none;">
+<label class="control-label"> الجنسية:</label>
+<div class="select-date">
+<div class='input-group date' > <span class="material-icons">flag </span>
+<select class="selectpicker" data-live-search="true" title="Nationality">
+<option>UAE</option>
+<option>Saudi</option>
+<option>India</option>
+<option>Philippines</option>
+<option>UAE</option>
+<option>Saudi</option>
+<option>India</option>
+<option>Philippines</option>
+<option>UAE</option>
+<option>Saudi</option>
+<option>India</option>
+<option>Philippines</option>
+</select>
+</div>
+</div>
+</div>
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect btn-lg"> بحث <i class="material-icons">search</i> </button>
+</div>
+
+<!--<div class="search-date3 col-lg-2 col-md-2 col-sm-3">
+      		
+        </div>--> 
+</div>
+<div class="adv-search mdl-js-button mdl-js-ripple-effect">بحث متقدم <i class="material-icons">more_horiz</i></div>
+</div>
+<div class="wrpr">
+<div class="main-content card">
+<ul class="nav nav-tabs" role="tablist">
+<div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> </div>
+<li role="presentation" class="mdl-js-button mdl-js-ripple-effect active"><a href="#vcolor" aria-controls="vcolor" role="tab" data-toggle="tab">طلبات معاينة مركبة</a></li>
+</ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="vcolor">
+<table id="example" class="dataTable_master table table-striped nowrap" cellspacing="15" cellpadding="15" width="100%">
+<thead>
+<tr>
+<th><i class="material-icons">folder</i>
+<label>رقم المعاملة </label></th>
+<th><i class="material-icons">account_box</i>
+<label> الإسم</label></th>
+<th><i class="demo-icon icon-license"></i>
+<label> رقم الهوية </label></th>
+<th><i class="material-icons">today</i>
+<label>تاريخ التقديم</label></th>
+<th><i class="material-icons">directions_car</i>
+<label> بيانات اللوحة</label></th>
+<th><i class="material-icons">info</i>
+<label> حالة الطلب</label></th>
+</tr>
+</thead>
+<!--<tfoot>
+            <tr>
+                <th>رقم المعاملة</th>
+                <th>الإسم</th>
+                <th>رقم الهوية</th>
+                <th>تاريخ التقديم</th>
+                <th>بيانات اللوحة</th>
+                <th>حالة الطلب</th>
+            </tr>
+        </tfoot>-->
+<tbody>
+<tr class="reject">
+<td><a href="vehicle-color-details.html">203306740908</a>
+<div class="transaction-timer">
+<div class="item"></div>
+<div class="OutofTime"></div>
+</div></td>
+<td class="ar">معتز بديع قاسم كوكش </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="jadid"><span>جديد</span></td>
+</tr>
+<tr class="lock">
+<td><a href="vehicle-color-details.html">203306740908</a>
+<div class="transaction-timer">
+<div class="item"></div>
+<div class="OutofTime"></div>
+</div></td>
+<td class="ar">فريتز نيل ديلا سيرنا زوزوبرادو </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="mahfuz"><span>محفوظ</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">فريتز نيل ديلا سيرنا زوزوبرادو</td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="jadid"><span>جديد</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">عبدالله على قاسم على عبدالله 
+الشعيبى جميل ابولبن </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="done"><span>منجزة</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">عبدالله على قاسم على عبدالله 
+الشعيبى جميل ابولبن </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="done"><span>منجزة</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">عبدالله على قاسم على عبدالله 
+الشعيبى جميل ابولبن </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="done"><span>منجزة</span></td>
+</tr>
+<tr class="lock">
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">فريتز نيل ديلا سيرنا زوزوبرادو</td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="mahfuz"><span>محفوظ</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">فريتز نيل ديلا سيرنا زوزوبرادو</td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="jadid"><span>جديد</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">عبدالله على قاسم على عبدالله 
+الشعيبى جميل ابولبن </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="done"><span>منجزة</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">عبدالله على قاسم على عبدالله 
+الشعيبى جميل ابولبن </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="done"><span>منجزة</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">عبدالله على قاسم على عبدالله 
+الشعيبى جميل ابولبن </td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="done"><span>منجزة</span></td>
+</tr>
+<tr class="reject">
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">معتز بديع قاسم كوكش</td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="jadid"><span>جديد</span></td>
+</tr>
+<tr class="lock">
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">فريتز نيل ديلا سيرنا زوزوبرادو</td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="mahfuz"><span>محفوظ</span></td>
+</tr>
+<tr>
+<td><a href="vehicle-color-details.html">203306740908</a></td>
+<td class="ar">فريتز نيل ديلا سيرنا زوزوبرادو</td>
+<td>784197687979266</td>
+<td>07:23:37 <br/>
+12/05/2016</td>
+<td><div class="car-plate">
+<div class="series">A</div>
+<div class="dubai-logo"><img src="images/dubai.png" alt=""/></div>
+<div class="car-num">54273</div>
+</div></td>
+<td class="jadid"><span>جديد</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pad20">
+<div class="alert alert-success"> اتشسيا تشام شمسامشنسي مني مشستينمشي   شستيكشنسيتنيتشسني شنميت   شستيمنشستيمشن ي</div>
+<div class="alert alert-danger"> اتشسيا تشام شمسامشنسي مني مشستينمشي   شستيكشنسيتنيتشسني شنميت   شستيمنشستيمشن ي</div>
+<div class="alert alert-warning"> اتشسيا تشام شمسامشنسي مني مشستينمشي   شستيكشنسيتنيتشسني شنميت   شستيمنشستيمشن ي</div>
+<div class="alert alert-info"> اتشسيا تشام شمسامشنسي مني مشستينمشي   شستيكشنسيتنيتشسني شنميت   شستيمنشستيمشن ي</div>
+<div class="alert alert-custom"> اتشسيا تشام شمسامشنسي مني مشستينمشي   شستيكشنسيتنيتشسني شنميت   شستيمنشستيمشن ي
+  تشسيا تشام شمسامشنسي مني مشستينمشي   شستيكشنسيتنيتشسني شنميت   شستيمنشستيمشن ي
+<div class="alert-actions">
+<button class="btn btn-primary"><i class="material-icons">done</i></button>
+<button class="btn btn-default"><i class="material-icons">close</i></button>
+</div>
+</div>
+<div class="alert alert-logout"> هل أنت متأكد أنك تريد تسجيل الخروج
+<div class="alert-actions">
+<button class="btn btn-success"><i class="material-icons">done</i></button>
+<button class="btn btn-default"><i class="material-icons">close</i></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Main Content - Ends --> 
+</div>
+<!-- jQuery --> <script src="js/jquery-1.11.3.min.js"></script> 
+<!-- bootstrap --> <script src="js/bootstrap.js"></script>
+<div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="alert alert-logout"> هل أنت متأكد أنك تريد تسجيل الخروج
+<div class="alert-actions">
+<button class="btn btn-primary"><i class="material-icons">done</i></button>
+<button class="btn btn-default"><i class="material-icons">close</i></button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Plugins JS --> 
+<script src="plugins/datepicker/moment.js"></script> 
+<script src="plugins/datepicker/bootstrap-datetimepicker.min.js"></script> 
+<script src="plugins/datatables/js/jquery.dataTables.js"></script> 
+<script src="plugins/datatables/js/dataTables.bootstrap.min.js"></script> 
+<script src="plugins/material-design/material.js"></script> 
+<script src="plugins/clock/js/jClocksGMT.js"></script> 
+<script src="plugins/clock/js/jquery.rotate.js"></script> 
+<!--<script src="plugins/material-design/jquery.dropdown.js"></script>--> 
+<script src="plugins/boot-select/js/select2.full.js"></script> 
+<script src="plugins/multilevelMenu/js/modernizr-custom.js"></script>
+<script src="plugins/multilevelMenu/js/classie.js"></script> 
+
+<script src="plugins/multilevelMenu/js/main.js"></script> 
+ 
+<!-- Custom JS - Always needs to be at the bottom --> 
+
+<script>
+    var menuEl = '';
+	var mlmenu = '';
+	(function() {
+		 menuEl = document.getElementById('ml-menu');
+			mlmenu = new MLMenu(menuEl, {
+				// breadcrumbsCtrl : true, // show breadcrumbs
+				// initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : false, // show back button
+				// itemsDelayInterval : 60, // delay between each menu item sliding animation
+				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
+
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
+
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			if(gridWrapper != undefined){
+				gridWrapper.innerHTML = '';
+				classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+			}			
+		}
+	})();
+	</script> 
+    <script>
+    $(document).ready(function(){
+		$(".menu__breadcrumbs a:first-child").click(function(){
+				$('.menu__breadcrumbs').slideUp(300);
+			});
+			
+
+
+});
+    </script>
+<script src="js/custom.js"></script> 
+<script>
+$( document ).ready(function() {
+    $('.OutofTime').html("3:00 ساعة");
+});
+moveProgressBar();
+
+function moveProgressBar(){
+  var getPercent = ($('.progress-wrap').data('progress-percent') / 100),
+      getProgressWrapWidth = $('.progress-wrap').width(),
+      progressTotal = getPercent * getProgressWrapWidth,
+      animationLength = converte("00:03");
+
+  $('.progress-bar').stop().animate({
+    left: progressTotal
+  }, animationLength);
+}
+
+function converte(time){
+  var time = time.split(":");
+
+  var s = (time[2] * 1000),
+      m = ((time[1] * 1000) * 60),
+      h = ((time[0] * 60000) * 60);
+  
+  return (h+m+s);
+}
+
+
+var evento  = new Date('2016-06-03 11:03:00'),
+    atual   = new Date('2016-06-03 11:00:00'),
+    duracao = moment.duration(evento - atual, 'milliseconds');
+	var tTime = "true"; 
+	var tTimeVal = "true";
+	var halfTimeDuration; 
+	var lastTime = "60000";
+	var timer = "true";
+updateChronometer(duracao);
+
+function updateChronometer(duracao){
+  setInterval(function(){
+    duracao = moment.duration(duracao - 1000, 'milliseconds');
+	if(tTime == "true"){
+		halfTimeDuration = duracao / 2 ;
+		tTime = "false";
+		}
+		if (duracao < halfTimeDuration && tTimeVal == "true"){
+			timeLeft();
+			tTimeVal = "false";
+			}
+			
+			if (duracao < lastTime && timer == "true" ){
+				test();
+				timer = "false";
+				}
+    if(duracao>=0){
+      if(duracao.days()==0){
+        $(".item").html(completeZeroToLeft(duracao.hours()) + 
+		"<em>..</em>" + completeZeroToLeft(duracao.minutes()) );
+      }else{
+        $(".item").html(duracao.days() + "d " + completeZeroToLeft(duracao.hours()) + "<em>..</em>" + completeZeroToLeft(duracao.minutes()) );
+      }
+    }
+	if(duracao>=0){
+      if(duracao.days()==0){
+        $(".item-notify").text(completeZeroToLeft(duracao.hours()) + "<em>..</em>" + completeZeroToLeft(duracao.minutes()) + ".." + completeZeroToLeft(duracao.seconds()));
+      }else{
+        $(".item-notify").text(duracao.days() + "d " + completeZeroToLeft(duracao.hours()) + "<em>..</em>" + completeZeroToLeft(duracao.minutes()) + "<em>..</em>" + completeZeroToLeft(duracao.seconds()));
+      }
+    }
+  }, 1000);	
+}
+function timeLeft(){
+	var x = 10;
+	$('body').addClass('timePending');
+	}
+
+function completeZeroToLeft(number){
+    return ( number < 10 ? "0" + number : number );
+}
+function test(){
+	$('body').removeClass('timePending').addClass('timeOver');
+	}
+
+
+</script> 
+<script>
+		$(function () {
+        $('#datePickFrom').datetimepicker({
+            format: 'DD/MM/YYYY',
+            showTodayButton: true,
+            showClear: true,
+            showClose: false,
+			//debug: true,
+			
+        });
+        $('#datePickTo').datetimepicker({
+            format: 'DD/MM/YYYY',
+            showTodayButton: true,
+            showClear: true,
+            showClose: false,
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datePickFrom").on("dp.change", function (e) {
+            $('#datePickTo').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datePickTo").on("dp.change", function (e) {
+            $('#datePickFrom').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+	
+	$('#datepicker').datetimepicker({
+            format: 'DD/MM/YYYY',
+            showTodayButton: true,
+            showClear: true,
+            showClose: false,
+            useCurrent: false //Important! See issue #1075
+        });
+</script> 
+<script>
+$(document).ready(function() {
+	debugger;
+var senseSpeed = 35;
+var previousScroll = 0;
+$(".main-wrpr").scroll(function(event){
+	debugger;
+   var scroller = $(this).scrollTop();
+   if (scroller-senseSpeed > previousScroll){
+	  $('.search-bar').css('top', -300);
+	  $('body').addClass('search-up');
+	  
+   } else if (scroller+senseSpeed < previousScroll) {
+	  $('.search-bar').css('top', 108);
+	  $('body').removeClass('search-up');
+   }
+   
+   previousScroll = scroller;
+});
+});
+</script> 
+<script>
+		$(document).ready(function() {
+  $(".selectpicker").select2({width:'100%'});
+});
+</script>
+<style>
+.alert{
+	margin-bottom:25px;
+}
+</style>
+</body>
+</html>

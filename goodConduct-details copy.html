@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoodConduct details - OSS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/material-design/jquery.dropdown.css">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+<link rel="stylesheet" href="plugins/x-editable/bootstrap-editable.css">
+<link rel="stylesheet" href="plugins/datepicker/bootstrap-datetimepicker.css">
+<link rel="stylesheet" href="plugins/step-form/css/form-elements.css">
+<link rel="stylesheet" href="plugins/step-form/css/style.css">
+<link rel="stylesheet" href="plugins/image-viewer/css/main.css">
+<link rel="stylesheet" href="plugins/image-viewer/css/viewer.css">
+<link rel="stylesheet" href="plugins/file-input/fileinput.css">
+<link rel="stylesheet" href="css/popups.css">
+
+<!-- Custom Stylesheet (always need to be the last css file) -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+<!-- responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+</head>
+<body class="activity footer loading">
+<div class="bubblingG"> <span id="bubblingG_1"> </span> <span id="bubblingG_2"> </span> <span id="bubblingG_3"> </span> </div>
+<div class="container"> 
+  <!-- header starts -->
+  <div id="header">
+    <header>
+      <div class="min-max header-icons mdl-js-button mdl-js-ripple-effect" onclick="toggleFullScreen()"><i class="material-icons">fullscreen</i></div>
+      <div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+      <div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">notifications</i></div>
+      <div class="date-time">
+        <div id="clock_uae"></div>
+      </div>
+      <div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+      <div class="switcher">
+        <div class="switch-button"><i class="material-icons">folder_shared</i></div>
+      </div>
+    </header>
+    <!-- header ends --> 
+    <!-- Sub header with breadcrumbs -->
+    <div class="sub-header">
+      <div class="user-login-info">
+        <div class="welcome">اهلاً وسهلاً بك٫</div>
+        <div class="last-login">
+          <div class="last-date">2016/05/10 الثلاثاء</div>
+          <div class="last-time">04:46:13 AM</div>
+          <label>:آخر دخول </label>
+        </div>
+      </div>
+      <div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+        <div id="nav-icon1" class="open"> <span></span> <span></span> <span></span> </div>
+      </div>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="material-icons">home</i></a></li>
+        <li><a href="#">خدمات مجتمعية</a></li>
+        <li><a href="#">قيادات في خدمتكم </a></li>
+        <li class="active"><a> معاملة رقم <em>203306740908</em></a></li>
+      </ol>
+      <div class="close-detail"> <a href="goodConduct.html"><i class="material-icons">clear</i></a> </div>
+    </div>
+  </div>
+  <!-- Sub header ends --> 
+  <!-- sidebar navigation -->
+  <aside>
+    <div class="user">
+      <div class="user-details">
+        <div class="avatar"><img src="images/user.jpg" width="136" height="146" alt="user Avatar"/></div>
+        <div class="user-info">
+          <div class="initial">الدكتور المهندس خبير</div>
+          <div class="user-name">سامي سامر سامي أحمد محمد
+            هاشم محمد صالح فاخوري</div>
+        </div>
+      </div>
+      <div class="figures">
+        <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+      </div>
+    </div>
+    <div class="sidenav">
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">home</i>
+        <div class="link"> لوحة التحكم </div>
+      </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">fingerprint</i>
+        <div class="link"> البلاغات </div>
+        <div class="counter"> <span class="green">203</span> <span class="orange">44</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">traffic</i>
+        <div class="link"> المرورية </div>
+        <div class="counter"> <span class="green">12</span> <span class="orange">8</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="demo-icon icon-doc"></i>
+        <div class="link">التصاريح والشهادات </div>
+        <div class="counter"> <span class="green">3</span> <span class="orange">1</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons md">language</i>
+        <div class="link"> المجتمعية </div>
+        <div class="counter"> <span class="green zero">0</span> <span class="orange zero">44</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+    </div>
+    <div class="more-options">
+      <ul>
+        <li><i class="material-icons">power_settings_new</i></li>
+        <li><i class="material-icons">forum</i></li>
+        <li><i class="material-icons group">group</i></li>
+        <li><i class="material-icons">settings_applications</i></li>
+      </ul>
+    </div>
+  </aside>
+  <!-- sidebar navigation ends --> 
+  <!-- Main Content - Center page -->
+  <div class="main-wrpr">
+    <div class="wrpr">
+      <div class="main-content">
+        <div class="card md new-transaction">
+          <div class="col-sm-4 trans-status">
+            <label>جديد</label>
+            <i class="material-icons">assignment</i> </div>
+          <div class="col-sm-4">
+            <label class="item"></label>
+            <span class="time-label"><em>Hrs</em><em>Min</em><em>Sec</em></span></div>
+          <div class="col-sm-4 completion-status"> <span class="ar">في الوقت المحدد</span> <i class="alarm"></i> </div>
+          <div class="progress-wrap progress" data-progress-percent="100">
+            <div class="progress-bar progress"></div>
+          </div>
+        </div>
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> <i class="material-icons enable">create</i> </div>
+            <div class="box-title">نتائج اللجان <span class="material-icons">account_box</span></div>
+          </div>
+          <div class="box-content gcc-status-wrpr">
+            <div class="col-sm-3">
+            	<label>لجنة التسجيم الجناني</label>
+                <div class="gcc-status-details">
+                	<span>
+                    	<i class="material-icons">assignment</i>
+                        <em class="approved"></em>
+                    </span>
+                    <ul class="gcc-moreDetails">
+                    	<li class="ar" id="text">تم قبول شهادة بحث الحالة وننمنت الشارسالها بنجاحالا لكترون</li>
+                        <li class="ref-no">8029</li>
+                        <li class="mdl-color-text--green" id="select-status" data-type="select" data-pk="1" data-value="1" >  يجد قيد  </li>
+                        <li> 
+                        <div class="trans-time metadata">
+                      <div class="date"><i class="material-icons">today</i>16/05/2016 </div>
+                      <div class="time"><i class="material-icons">access_time</i>12:29 PM</div>
+                    </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+            	<label>الجنة القوائم</label>
+                <div class="gcc-status-details">
+                	<span>
+                    	<i class="material-icons">person</i>
+                        <em class="approved"></em>
+                    </span>
+                    <ul class="gcc-moreDetails">
+                    	<li class="ar">تم قبول شهادة بحث الحالة وننمنت الشارسالها بنجاحالا لكترون</li>
+                        <li class="ref-no">8029</li>
+                        <li class="mdl-color-text--green">  يجد قيد  </li>
+                        <li> 
+                        <div class="trans-time metadata">
+                      <div class="date"><i class="material-icons">today</i>20/05/2016 </div>
+                      <div class="time"><i class="material-icons">access_time</i>01:15 PM</div>
+                    </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+             <div class="col-sm-3">
+            	<label>الجنة اليصمات</label>
+                <div class="gcc-status-details">
+                	<span>
+                    	<i class="material-icons">fingerprint</i>
+                        <em class="approved"></em>
+                    </span>
+                    <ul class="gcc-moreDetails">
+                    	<li class="ar">تم قبول شهادة بحث الحالة وننمنت الشارسالها بنجاحالا لكترون</li>
+                        <li class="ref-no">8029</li>
+                        <li class="mdl-color-text--green">يجد قيد</li>
+                        <li> 
+                        <div class="trans-time metadata">
+                      <div class="date"><i class="material-icons">today</i>20/05/2016 </div>
+                      <div class="time"><i class="material-icons">access_time</i>01:15 PM</div>
+                    </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+            	<label>الجنة اليصمات</label>
+                <div class="gcc-status-details">
+                	<span>
+                    	<i class="material-icons">security</i>
+                        <em class="material-icons rejected">close</em>
+                    </span>
+                    <ul class="gcc-moreDetails">
+                    	<li class="ar">تم قبول شهادة بحث الحالة وننمنت الشارسالها بنجاحالا لكترون</li>
+                        <li class="ref-no">8029</li>
+                        <li class="mdl-color-text--red">لا يجد قيد </li>
+                        <li> 
+                        <div class="trans-time metadata">
+                      <div class="date"><i class="material-icons">today</i>20/05/2016 </div>
+                      <div class="time"><i class="material-icons">access_time</i>01:15 PM</div>
+                    </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons">
+            	<i class="material-icons">sync</i> 
+                <i class="expand-table"></i>
+                <i class="material-icons enable" id="enable">create</i>
+                <i class="material-icons save" style="display:none;">save</i>
+                <i class="material-icons clear" style="display:none;">cancel</i>
+            </div>
+            <div class="box-title">بيانات مقدم الطلب <span class="material-icons">account_box</span></div>
+          </div>
+          <div class="box-content">
+            <div class="applicant-details" id="user">
+              <div class="list applic-info">
+                <div class="applic-img"><img src="images/user.jpg" alt=""/></div>
+                <div class="applic-name"> <span class="ar">سامي سامر فاخوري</span> <span>Sami Samer Fakhouri</span> </div>
+                <div class="flag"><img src="images/flag.png" alt=""/></div>
+              </div>
+              <div class="list">
+                <label>الرقم الموحد</label>
+                <div class="form-data disabled">110805921</div>
+              </div>
+              <div class="list">
+                <label>الهاتف المتحرك</label>
+                <div class="form-data" id="mobile" data-type="text" data-placement="top" data-title="Enter Mobile">+971 56 7882020</div>
+              </div>
+              <div class="list">
+                <label>البريد الإلكتروني</label>
+                <div class="form-data" id="email" data-type="text" data-placement="top" data-title="Enter Email">des.samidp@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> <i class="material-icons">create</i> </div>
+            <div class="box-title">تفاصيل المعاملة<span class="material-icons">folder</span></div>
+          </div>
+          <div class="box-content">
+            <div class="applicant-details" id="detail-info">
+              <div class="list">
+                <label>رقم المعاملة</label>
+                <div class="form-data" id="raqam" data-type="text" data-placement="top" data-title="Enter Number">203905945032</div>
+                <i class="material-icons enable">create</i> </div>
+              <div class="list">
+                <label>وقت / تاريخ التقديم</label>
+                <div class="form-data disabled" id="sel-date" data-type="combodate" data-template="D MMM YYYY  HH:mm" data-format="YYYY-MM-DD HH:mm" data-viewformat="D MMM, YYYY, HH:mm">2 Mar, 2013, 02:25</div>
+                <i class="material-icons" id="enable-inline">create</i> </div>
+              <div class="list">
+                <label>الحالة</label>
+                <div class="form-data status-green">مقبول <i class="material-icons">thumb_up</i></div>
+              </div>
+              <div class="list">
+                <label>الحالة</label>
+                <div class="form-data status-reject">رفض <i class="material-icons">thumb_down</i></div>
+              </div>
+              <div class="list">
+                <label>الحالة</label>
+                <div class="form-data status-progress"> في تَقَدم <i class="material-icons">slow_motion_video</i></div>
+              </div>
+              <div class="list">
+                <label>الحالة</label>
+                <div class="form-data status-new"> عملية جديدة <i class="material-icons">compare_arrows</i></div>
+              </div>
+              <div class="list">
+                <label>الموضوع</label>
+                <div class="form-data">ِEvent Security</div>
+              </div>
+              <div class="list extra">
+                <label>التفاصيل</label>
+                <div class="form-data">ّI would like to apply for event security ID</div>
+              </div>
+              <div class="list extra">
+                <label>نوع الطلب</label>
+                <div class="form-data">
+                  <select class="selectpicker form-control">
+                    <option>اسفسار</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list show-more mdl-js-button mdl-js-ripple-effect">
+            <label>المزيد</label>
+            <i class="material-icons flex-left">keyboard_arrow_left</i> </div>
+        </div>
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> <i class="material-icons">get_app</i> </div>
+            <div class="box-title">المرفقات<span class="material-icons rotate90_minus">note</span></div>
+          </div>
+          <div class="box-content">
+            <div class="applicant-attachments">
+              <div class="xs-box"><img src="images/xls.svg" alt=""/></div>
+              <div class="xs-box"><img src="images/txt.svg" alt=""/></div>
+              <div class="xs-box"><img src="images/pdf.svg" alt=""/></div>
+              <div class="xs-box">
+                <div class="docs-pictures"> <img data-original="images/tibet-1.jpg" src="images/tibet-1.jpg" alt="#203911625943 حادث رقم"> <img data-original="images/tibet-1.jpg" src="images/tibet-1.jpg" alt="#203911625943 حادث رقم"> </div>
+              </div>
+              <div class="xs-box"><img src="images/ppt.svg" alt=""/></div>
+              <div class="xs-box"><img src="images/mp3.svg" alt=""/></div>
+              <div class="xs-box"><img src="images/doc.svg" alt=""/></div>
+              <div class="xs-box"><img src="images/zip.svg" alt=""/></div>
+            </div>
+          </div>
+          <div class="list show-more mdl-js-button mdl-js-ripple-effect">
+            <label>المزيد</label>
+            <i class="material-icons flex-left">keyboard_arrow_left</i> </div>
+        </div>
+        <div class="doc-options card">
+          <div class="box-heading">
+            <div class="box-title">اجراءات المعاملة </div>
+            <div class="tab-icons"><i class="material-icons">more_horiz</i></div>
+          </div>
+          <div class="box-content">
+            <ul>
+              <li><a href="customer-msg-popup.html"  class="showpop-iframe mdl-js-button mdl-js-ripple-effect"><i class="demo-icon icon-add-notes">&#xe809;</i>إضافة ملاحظة</a></li>
+              <li><a href="customer-reply-popup.html" class="showpop-iframe mdl-js-button mdl-js-ripple-effect"><i class="material-icons group">group</i>الرد على الجمهور</a></li>
+              <li><a  data-toggle="modal" data-target="#certificate" class="mdl-js-button mdl-js-ripple-effect"><i class="material-icons">file_download</i>تحميل الشهادة</a></li>
+              <li><a  data-toggle="modal" data-target="#print" class="mdl-js-button mdl-js-ripple-effect"><i class="material-icons">print</i>طباعة</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Activity left sidebar -->
+      <div class="activity-bar">
+        <div class="act-opener"><i class="material-icons">arrow_drop_down</i></div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#transaction" aria-controls="transaction" role="tab" data-toggle="tab">سجل المعاملة</a></li>
+          <li role="presentation"><a href="#customer-tab" aria-controls="customer-tab" role="tab" data-toggle="tab">سجل المعاملة 2</a></li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="transaction">
+            <div class="trans-timeline conversation ">
+              <div class="conversation-container Cscroll ">
+                <div class="transactions message sent">
+                  <div class="status-icons cancel"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#">TAHIR_80@YAHOO.COM</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">18/05/2016 </div>
+                      <div class="time">11:51:19 AM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">784199030971917</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">2016005612</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:00:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم دفع الرسوم. رقم الايصال:</span><a href="#" class="t-no">135147</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">16/05/2016 </div>
+                      <div class="time">09:53:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent" id="random">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم انشاء معاملة رقم: </span><a href="#" class="t-no">165003043334</a></div>
+                    <div class="lawyer"> العريف اول نوف محسن على درويش البلوشى </div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="conversation-compose">
+                <div class="converse-wrap">
+                  <div class="photo"><img src="images/user.jpg" alt=""/> </div>
+                  <div class="input-msg">
+                    <textarea name="input" placeholder="ملاحظات الموظف..." autocomplete="off" autofocus></textarea>
+                  </div>
+                  <button class="send mdl-js-button mdl-js-ripple-effect"><i class="material-icons">send</i></button>
+                </div>
+                <div class="select-status">
+                  <div class="in-reject"> <span class="mdl-list__item-primary-content">إلغاء الطلب</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                      <input type="radio" id="list-option-1" class="mdl-radio__button statusBtnClass" value="1" name="one"  />
+                    </label>
+                    </span> </div>
+                  <div class="in-process"> <span class="mdl-list__item-primary-content">قيد الإجراء</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                      <input type="radio" id="list-option-2" class="mdl-radio__button statusBtnClass" value="2" name="one" checked />
+                    </label>
+                    </span> </div>
+                </div>
+              </form>
+              <div class="status-bar">
+                <div class="time"></div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="customer-tab">
+            <div class="trans-timeline conversation">
+              <div class="conversation-container">
+                <div class="transactions message sent">
+                  <div class="status-icons cancel"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#">TAHIR_80@YAHOO.COM</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">18/05/2016 </div>
+                      <div class="time">11:51:19 AM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">784199030971917</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">2016005612</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:00:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم دفع الرسوم. رقم الايصال:</span><a href="#" class="t-no">135147</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">16/05/2016 </div>
+                      <div class="time">09:53:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent" id="random">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم انشاء معاملة رقم: </span><a href="#" class="t-no">165003043334</a></div>
+                    <div class="lawyer"> العريف اول نوف محسن على درويش البلوشى </div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="conversation-compose">
+                <div class="converse-wrap">
+                  <div class="photo"><img src="images/user.jpg" alt=""/> </div>
+                  <div class="input-msg">
+                    <textarea name="input" placeholder="ملاحظات الموظف..." autocomplete="off" autofocus></textarea>
+                  </div>
+                  <button class="send mdl-js-button mdl-js-ripple-effect"><i class="material-icons">send</i></button>
+                </div>
+                <div class="select-status">
+                  <div class="in-reject"> <span class="mdl-list__item-primary-content">إلغاء الطلب</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                      <input type="radio" id="list-option-1" class="mdl-radio__button statusBtnClass" value="1" name="one"  />
+                    </label>
+                    </span> </div>
+                  <div class="in-process"> <span class="mdl-list__item-primary-content">قيد الإجراء</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                      <input type="radio" id="list-option-2" class="mdl-radio__button statusBtnClass" value="2" name="one" checked />
+                    </label>
+                    </span> </div>
+                </div>
+              </form>
+              <div class="status-bar">
+                <div class="time"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Activity left sidebar Ends--> 
+    </div>
+  </div>
+  
+  <!-- Main Content - Ends --> 
+</div>
+<!-- all popups -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="pop-container modal-dialog two-step" role="document">
+    <div class="box-heading">
+      <div class="box-title">اتخاذ القرار</div>
+      <div class="tab-icons" data-dismiss="modal"><i class="material-icons">close</i></div>
+    </div>
+    <!-- multistep form -->
+    <div class="row">
+      <div class="col-lg-12 form-box">
+        <form role="form" action="" method="post" class="f1">
+          <div class="f1-steps">
+            <div class="f1-progress">
+              <div class="f1-progress-line" data-now-value="22" data-number-of-steps="2" style="width: 22%;"></div>
+            </div>
+            <div class="step-circles">
+              <div class="f1-step active">
+                <div class="f1-step-icon">1</div>
+                <p>الرد</p>
+              </div>
+              <div class="f1-step">
+                <div class="f1-step-icon">2</div>
+                <p>تأكيد</p>
+              </div>
+            </div>
+          </div>
+          <fieldset>
+            <div class="form-group status">
+              <div class="row">
+                <div class="col-sm-6">
+                  <label>نوع الطلب</label>
+                  <select name="status" placeholder="status" class="selectpicker form-control">
+                    <option>استفسار</option>
+                    <option>Approved</option>
+                    <option>Rejected</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label>الحالة</label>
+                  <select name="status" placeholder="status" class="selectpicker form-control">
+                    <option>جديد</option>
+                    <option>Approved</option>
+                    <option>Rejected</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group status-txt">
+              <label>كتابة الرد</label>
+              <textarea placeholder="كتابة الرد أو بإمكانك اختيار  نموذج محدد  للإستخدام الفوري"></textarea>
+            </div>
+            <div class="f1-buttons">
+              <button type="button" class="btn btn-next">Next</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="alert-icon"><i class="material-icons">warning</i></div>
+            <h2>Are you Sure </h2>
+            <div class="f1-buttons">
+              <button type="button" class="btn btn-previous">Previous</button>
+              <button type="button" class="btn btn-next">Confirm</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal --> 
+
+<!-- View Certificate Popup -->
+<div class="modal fade" id="certificate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="pop-container modal-dialog card" role="document">
+    <div class="box-heading">
+      <div class="box-title">تحميل الشهادة</div>
+      <div class="tab-icons close-tab" data-dismiss="modal"><i class="material-icons">close</i></div>
+      <div class="tab-icons back-tab" style="display:none;"><i class="material-icons">keyboard_arrow_left</i> </div>
+    </div>
+    <div class="certificate-wrapper">
+      <div class="cert-options" id="cert-options">
+        <div class="sm-card print-cert btn-next"> <i class="demo-icon icon-sms">&#xe80c;</i>
+          <label>إيميل إلكتروني</label>
+        </div>
+        <div class="sm-card email btn-next"> <i class="demo-icon icon-email">&#xe80b;</i>
+          <label>رسالة نصية</label>
+        </div>
+      </div>
+      <div class="cert-pdf">
+        <iframe src="images/pdf.pdf" width="100%" height="100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal --> 
+
+<!-- View print Popup -->
+<div class="modal fade" id="print" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="pop-container modal-dialog card" role="document">
+    <div class="box-heading">
+      <div class="box-title">طباعة</div>
+      <div class="tab-icons" data-dismiss="modal"><i class="material-icons">close</i></div>
+    </div>
+    <div class="box-content">
+      <div class="print-pdf">
+        <iframe src="images/pdf.pdf" width="100%" height="100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal --> 
+<!-- Customer reply Popup -->
+<div class="modal fade step-3-process" id="customer-reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="pop-container modal-dialog" role="document">
+    <div class="box-heading">
+      <div class="box-title">الرد على الجمهور</div>
+      <div class="tab-icons close-tab1" data-dismiss="modal"><i class="material-icons">close</i></div>
+      <div style="display: none;" class="tab-icons back-tab1"><i class="material-icons">keyboard_arrow_left</i> </div>
+    </div>
+    <!-- multistep form -->
+    <div class="form-box">
+      <form role="form" action="" method="post" class="f1 f2">
+        <div class="f1-steps">
+          <div class="f1-progress">
+            <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+          </div>
+          <div class="step-circles">
+            <div class="f1-step active">
+              <div class="f1-step-icon">1</div>
+              <p>ارسال</p>
+            </div>
+            <div class="f1-step">
+              <div class="f1-step-icon">2</div>
+              <p>الرد</p>
+            </div>
+            <div class="f1-step">
+              <div class="f1-step-icon">3</div>
+              <p>تأكيد</p>
+            </div>
+          </div>
+        </div>
+        <fieldset>
+          <div class="cert-options cert-options2">
+            <div class="sm-card print-cert btn-next"> <i class="demo-icon icon-sms">&#xe80c;</i>
+              <label>إيميل إلكتروني</label>
+            </div>
+            <div class="sm-card email btn-next"> <i class="demo-icon icon-email">&#xe80b;</i>
+              <label>رسالة نصية</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="form-group status">
+            <div class="row">
+              <div class="col-sm-6">
+                <label>نوع الطلب</label>
+                <input type="text" placeholder="اختر" id="input-reply">
+              </div>
+              <div class="col-sm-6">
+                <label>الحالة</label>
+                <select name="status" placeholder="status" class="selectpicker form-control">
+                  <option>جديد</option>
+                  <option>Approved</option>
+                  <option>Rejected</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group status-txt">
+            <label>كتابة الرد</label>
+            <textarea placeholder="كتابة الرد أو بإمكانك اختيار  نموذج محدد  للإستخدام الفوري" id="textarea-reply"></textarea>
+          </div>
+          <div class="form-group">
+            <input class="fileUpload" type="file" multiple data-overwrite-initial="false">
+          </div>
+          <div class="f1-buttons">
+            <button type="button" class="btn btn-previous">Previous</button>
+            <button type="button" class="btn btn-next">Next</button>
+            <button type="button" class="btn sample-msg">نموذج محدد <i class="material-icons">format_align_center</i></button>
+          </div>
+        </fieldset>
+        <fieldset class="last-step">
+          <div class="alert-icon"><i class="material-icons">warning</i></div>
+          <h2>Are you Sure </h2>
+          <div class="f1-buttons">
+            <button type="button" class="btn btn-previous">Previous</button>
+            <button type="button" class="btn btn-next">Confirm</button>
+          </div>
+        </fieldset>
+      </form>
+      <div class="sample-message">
+        <div class="form-group status">
+          <label>اختيار النموذج</label>
+          <select name="status" placeholder="status" class="selectpicker form-control">
+            <option>الإدارة المختصة - انجليزي</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+          </select>
+        </div>
+        <div class="form-group status">
+          <label>الحالة</label>
+          <input type="text" placeholder="اختر" id="input-sample">
+        </div>
+        <div class="form-group status-txt">
+          <label>كتابة الرد</label>
+          <textarea placeholder="كتابة الرد أو بإمكانك اختيار  نموذج محدد  للإستخدام الفوري" id="textarea-sample"></textarea>
+        </div>
+        <div class="f1-buttons">
+          <button type="button" class="btn btn-primary continue" onclick="displayOut();" value="click">استخدام <i class="material-icons">keyboard_return</i></button>
+          <!-- <input type="button" onclick="displayOut();" value="click">--> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal --> 
+
+<!-- jQuery --> <script src="js/jquery-1.11.3.min.js"></script> 
+<!-- bootstrap --> <script src="js/bootstrap.js"></script> 
+
+<!-- Plugins JS --> 
+<script src="plugins/datatables/js/jquery.dataTables.js"></script> 
+<script src="plugins/datatables/js/dataTables.bootstrap.min.js"></script> 
+<script src="plugins/material-design/jquery.dropdown.js"></script> 
+<script src="plugins/datepicker/moment.js"></script> 
+<script src="plugins/material-design/material.js"></script> 
+<script src="plugins/clock/js/jClocksGMT.js"></script> 
+<script src="plugins/clock/js/jquery.rotate.js"></script> 
+<script src="plugins/x-editable/bootstrap-editable.min.js"></script> 
+<script src="plugins/datepicker/bootstrap-datetimepicker.min.js"></script> 
+<script src="plugins/x-editable/fields-edit.js"></script> 
+<script src="plugins/step-form/js/jquery.backstretch.min.js"></script> 
+<script src="plugins/step-form/js/scripts.js"></script> 
+<script src="plugins/image-viewer/js/main.js"></script> 
+<script src="plugins/image-viewer/js/viewer.js"></script> 
+<script src="plugins/file-input/canvas-to-blob.min.js"></script> 
+<script src="plugins/file-input/fileinput.js"></script> 
+<script src="js/jquery.colorbox.js"></script> 
+<script src="js/custom.js"></script> 
+
+<!-- Initialise custom JS --> 
+<script>
+moveProgressBar();
+
+function moveProgressBar(){
+  var getPercent = ($('.progress-wrap').data('progress-percent') / 100),
+      getProgressWrapWidth = $('.progress-wrap').width(),
+      progressTotal = getPercent * getProgressWrapWidth,
+      animationLength = converte("00:03:00");
+
+  $('.progress-bar').stop().animate({
+    left: progressTotal
+  }, animationLength);
+}
+
+function converte(time){
+  var time = time.split(":");
+
+  var s = (time[2] * 1000),
+      m = ((time[1] * 1000) * 60),
+      h = ((time[0] * 60000) * 60);
+  
+  return (h+m+s);
+}
+
+
+var evento  = new Date('2016-06-02 11:03:00'),
+    atual   = new Date('2016-06-02 11:00:00'),
+    duracao = moment.duration(evento - atual, 'milliseconds');
+	var tTime = "true"; 
+	var tTimeVal = "true";
+	var halfTimeDuration; 
+	var lastTime = "60000";
+	var timer = "true";
+updateChronometer(duracao);
+
+function updateChronometer(duracao){
+  setInterval(function(){
+    duracao = moment.duration(duracao - 1000, 'milliseconds');
+	if(tTime == "true"){
+		halfTimeDuration = duracao / 2 ;
+		tTime = "false";
+		}
+		if (duracao < halfTimeDuration && tTimeVal == "true"){
+			timeLeft();
+			tTimeVal = "false";
+			}
+			
+			if (duracao < lastTime && timer == "true" ){
+				test();
+				timer = "false";
+				}
+    if(duracao>=0){
+      if(duracao.days()==0){
+        $(".item").text(completeZeroToLeft(duracao.hours()) + ":" + completeZeroToLeft(duracao.minutes()) + ":" + completeZeroToLeft(duracao.seconds()));
+      }else{
+        $(".item").text(duracao.days() + "d " + completeZeroToLeft(duracao.hours()) + ":" + completeZeroToLeft(duracao.minutes()) + ":" + completeZeroToLeft(duracao.seconds()));
+      }
+    }
+  }, 1000);	
+}
+function timeLeft(){
+	var x = 10;
+	$('body').addClass('timePending');
+	}
+
+function completeZeroToLeft(number){
+    return ( number < 10 ? "0" + number : number );
+}
+function test(){
+	$('body').removeClass('timePending').addClass('timeOver');
+	}
+</script>
+<script>
+
+$(".fileUpload").fileinput({
+		browseClass: "btn btn-primary",
+		fileType: "any",
+		removeIcon: '<i class="material-icons">delete</i>',
+        uploadIcon: '<i class="material-icons">file_upload</i>',
+		allowedPreviewMimeTypes: null,
+		showPreview: true,
+		showUploadedThumbs: true
+	});
+
+$(window).load(function() {
+  $("body").removeClass("loading");
+});
+</script> 
+<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".showpop-iframe").colorbox({innerWidth:708, innerHeight:552});
+			});
+		</script> 
+<script>
+//Custom Js for transaction pages
+// Main container scrolling to hide advance search 
+$(".main-wrpr").scroll(function(){
+    if ($(this).scrollTop() > 100) {
+       $(".doc-options").addClass("circle");
+		$("body").removeClass("footer");		
+    } 
+});
+</script> 
+<script>
+
+$(".approved").click(function(){
+	$(".gcc-moreDetails").toggleClass("edit-mode");
+	$('#text').editable({
+		title: "Enter reason",
+		type: 'textarea'
+	});
+	$('#select-status').editable({
+		inputclass: 'input-large',
+		tpl: '<select class="selectpicker"></select>',
+		source: [{value: 1, text: 'يوجد قيد'}, {value: 2, text: 'لا يوجد قيد'}, {value: 3, text: 'مر فوضة'}, 
+		{value: 3, text: 'قيد اللنجاز'}]
+	});
+})
+</script>
+
+</body>
+</html>

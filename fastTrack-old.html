@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OSS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/material-design/jquery.dropdown.css">
+<link href="plugins/datepicker/css/datepicker.css" rel="stylesheet">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+<link rel="stylesheet" href="plugins/timeline/style.css">
+
+<!-- Custom Stylesheet (always need to be the last css file) -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+
+<link rel="stylesheet" type="text/css" href="css/fastTrack.css" />
+<!-- responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+
+</head>
+<body class="search fadeIn go slow">
+<div class="container">
+<!-- header starts -->
+<div id="header">
+<header>
+<div class="min-max header-icons mdl-js-button mdl-js-ripple-effect" onclick="toggleFullScreen()"><i class="material-icons">fullscreen</i></div>
+
+<div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+<div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">notifications</i></div>
+
+<div class="date-time">
+<div id="clock_uae"></div>
+</div>
+
+<div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+
+<div class="switcher">
+	<div class="switch-button"><i class="material-icons">folder_shared</i></div>
+</div>
+</header>
+<!-- header ends -->
+<!-- Sub header with breadcrumbs -->
+<div class="sub-header">
+	<div class="user-login-info">
+        <div class="welcome">اهلاً وسهلاً بك٫</div>
+        <div class="last-login">
+        <div class="last-date">2016/05/10 الثلاثاء</div>
+        <div class="last-time">04:46:13 AM</div>
+        <label>:آخر دخول </label></div>
+    </div>
+    <div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+    	<div id="nav-icon1" class="open">
+              <span></span>
+              <span></span>
+              <span></span>
+		</div>
+    </div>
+ <ol class="breadcrumb">
+      <li><a href="#"><i class="material-icons">home</i></a></li>
+      <li><a href="#">خدمات الإنترنت</a></li>
+      <li class="dropdown active">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="demo-icon icon-car-paint">&#xe807;</i> طلبات تغيير لون مركبة - هواتف ذكية <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">خدمات الإنترنت</a></li>
+                <li><a href="#">لبات تغيير لون مركبة - هواتف ذكية </a></li>
+            </ul>
+      </li>
+</ol>
+    <div class="search-opener">
+    	
+    </div>
+</div>
+</div>
+<!-- Sub header ends -->
+
+
+
+<!-- sidebar navigation -->
+<aside>
+<div class="user">
+	<div class="user-details">
+	<div class="avatar"><img src="images/user.jpg" width="136" height="146" alt="user Avatar"/></div>
+    <div class="user-info">
+    	<div class="initial">الدكتور المهندس خبير</div>
+        <div class="user-name">سامي سامر سامي أحمد محمد
+هاشم محمد صالح فاخوري</div>
+    </div>
+    </div>
+    <div class="figures">
+        <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+    </div>
+</div>
+<div class="sidenav">
+	<div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">home</i><div class="link"> لوحة التحكم </div></div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">fingerprint</i> <div class="link"> الجنائية </div>
+    
+    	<div class="counter">
+        	<span class="green">203</span>
+        	<span class="orange">44</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+        
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">traffic</i><div class="link"> المرورية </div>
+    
+    	<div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="demo-icon icon-doc"></i> <div class="link">التصاريح والشهادات </div>
+     
+    	<div class="counter">
+        	<span class="green">3</span>
+        	<span class="orange">1</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons md">language</i><div class="link"> الانترنت </div>
+     
+    	<div class="counter">
+        	<span class="green zero">0</span>
+        	<span class="orange zero">44</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+        
+    </div>
+</div>
+<div class="more-options">
+	<ul>
+    	<li><i class="material-icons">power_settings_new</i></li>
+    	<li><i class="material-icons">forum</i></li>   
+    	<li><i class="material-icons group">group</i></li>
+    	<li><i class="material-icons">settings_applications</i></li>                     
+    </ul>
+</div>
+</aside>
+<!-- sidebar navigation ends -->
+
+<!-- Main Content - Center page -->
+<div class="main-wrpr">
+    <div class="wrpr">
+
+<section class="cd-horizontal-timeline">
+
+	<div class="timeline">
+    
+		<div class="events-wrapper">
+        <div class="month-filter">
+        <select class="selectpicker">
+	<option value="Jan">Jan</option>
+    <option value="Feb">Feb</option>
+    <option value="Mar">Mar</option>
+</select>
+</div>
+			<div class="events">
+				<ol>
+					<li><a href="#0" data-date="16/01/2016"  style="display:none;">16 Jan</a></li>
+					<li><a href="#0" data-date="20/01/2016" style="display:none;">20 Jan</a></li>
+					<li><a href="#0" data-date="29/01/2016" style="display:none;">29 Jan</a></li>
+					<li><a href="#0" data-date="31/01/2016" class="selected">31 Jan</a></li>
+					<li><a href="#0" data-date="09/02/2016">09 Feb</a></li>
+					<li><a href="#0" data-date="13/02/2016">13 Feb</a></li>
+					<li><a href="#0" data-date="15/02/2016">15 Feb</a></li>
+					<li><a href="#0" data-date="25/02/2016">25 Feb</a></li>
+					<li><a href="#0" data-date="29/02/2016">29 Feb</a></li>
+					<li><a href="#0" data-date="15/03/2016">15 Mar</a></li>
+					<li><a href="#0" data-date="30/03/2016">30 Mar</a></li>
+				</ol>
+
+				<span class="filling-line" aria-hidden="true"></span>
+			</div> <!-- .events -->
+		</div> <!-- .events-wrapper -->
+			
+		<ul class="cd-timeline-navigation">
+			<li><a href="#0" class="prev inactive"><i class="material-icons">keyboard_arrow_left</i></a></li>
+			<li><a href="#0" class="next"><i class="material-icons">keyboard_arrow_right</i></a></li>
+		</ul> <!-- .cd-timeline-navigation -->
+	</div> <!-- .timeline -->
+	<div class="events-content card">
+    <div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">الموعد <span class="material-icons">today</span></div>
+    </div>
+		<ol class="all-appointments">
+			<li class="	 appoints" data-date="16/01/2016" style="display:none;">
+            <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li class="date"><i class="material-icons">access_time</i> 4th Jan 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li class="date"><i class="material-icons">access_time</i> 4th Jan 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+               <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/ankush.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Ankush Kumar <i class="material-icons status-progress">warning</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197212177255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Jan 2016  |  4:55 PM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-declined">لم يتم الحضور في الوقت المحدد</div>
+              </div>
+              </div>
+              
+			</li>
+
+			<li data-date="20/01/2016" class="appoints" style="display:none;">
+				 <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Jan 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+               <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/ankush.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Ankush Kumar <i class="material-icons status-progress">warning</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197212177255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Jan 2016  |  4:55 PM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-declined">لم يتم الحضور في الوقت المحدد</div>
+              </div>
+              </div>
+			</li>
+
+			<li data-date="29/01/2016" class="appoints" style="display:none;">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Jan 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Jan 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+			</li>
+
+			<li data-date="31/01/2016" class="appoints selected">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Jan 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+			</li>
+
+			<li data-date="09/02/2016" class="appoints">
+				 <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Feb 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Feb 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+			</li>
+
+			<li data-date="13/02/2016" class="appoints">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Feb 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+			</li>
+
+			<li data-date="15/02/2016" class="appoints">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+               <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/ankush.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Ankush Kumar <i class="material-icons status-progress">warning</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197212177255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  4:55 PM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-declined">لم يتم الحضور في الوقت المحدد</div>
+              </div>
+              </div>
+              
+			</li>
+
+			<li data-date="25/02/2016" class="appoints">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              
+               <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/ankush.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Ankush Kumar <i class="material-icons status-progress">warning</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197212177255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  4:55 PM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-declined">لم يتم الحضور في الوقت المحدد</div>
+              </div>
+              </div>
+              
+			</li>
+
+			<li data-date="29/02/2016" class="appoints">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+              
+			</li>
+
+			<li data-date="15/03/2016" class="appoints">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              
+               <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/ankush.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Ankush Kumar <i class="material-icons status-progress">warning</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197212177255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  4:55 PM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-declined">لم يتم الحضور في الوقت المحدد</div>
+              </div>
+              </div>
+              
+			</li>
+
+			<li data-date="30/03/2016" class="appoints">
+				<div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username ar">محمد فتحي الحفيظ <i class="material-icons status-new">assignment</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687979266</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  07:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<button class="btn btn-primary ar-droid">إنشاء معاملة</button>
+                <button class="btn btn-pending ar-droid">إنهاء الموعد</button>
+              </div>
+              </div>
+              <div class="appoinment">
+				<div class="app-col-1">
+                	<div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+              </div>
+              <div class="app-col-2">
+              	<div class="username">Monalisa Joseph <i class="material-icons status-green">thumb_up</i></div>
+                <div class="service ar-droid blue">فتح بلاغ شيك او امتناع عن الدفع</div>
+                <ul>
+                	<li><i class="demo-icon icon-license">&#xe804;</i> 784197687977255</li>
+                    <li class="ar"><i class="material-icons">location_on</i> مركز شرطة المرقبات</li>
+                    <li><i class="material-icons">access_time</i> 4th Aug 2016  |  09:10 AM</li>
+                </ul>
+              </div>
+              <div class="app-col-3">
+              	<div class="transaction-done">784197687912346</div>
+              </div>
+              </div>
+               
+			</li>
+		</ol>
+	</div> <!-- .events-content -->
+    
+</section>
+	
+  
+</div>	
+</div>
+</div>
+
+<!-- Main Content - Ends -->
+</div>
+<!-- jQuery --> <script src="js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap --> <script src="js/bootstrap.js"></script>
+
+
+<!-- Plugins JS -->
+<script src="plugins/datatables/js/jquery.dataTables.js"></script>
+<script src="plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<script src="plugins/datepicker/js/moment.js"></script>
+<script src="plugins/datepicker/js/datepicker2.js"></script>
+<script src="plugins/material-design/material.js"></script>
+<script src="plugins/clock/js/jClocksGMT.js"></script>
+<script src="plugins/clock/js/jquery.rotate.js"></script>
+<script src="plugins/material-design/jquery.dropdown.js"></script>
+<script src="plugins/timeline/main.js"></script>
+<!-- Custom JS - Always needs to be at the bottom -->
+<script src="js/custom.js"></script>
+
+
+<script>
+//Custom Js for transaction pages
+// Main container scrolling to hide advance search 
+
+var senseSpeed = 15;
+var previousScroll = 0;
+$(".main-wrpr").scroll(function(event){
+   var scroller = $(this).scrollTop();
+   if (scroller-senseSpeed > previousScroll){
+      $(".search-bar").filter(':not(:animated)').slideUp();
+	  $("body").removeClass("search");
+		$("body").removeClass("advSearch-open");
+		$(".search-opener").addClass("magnify");
+		$(".adv-options").hide();
+   } else if (scroller+senseSpeed < previousScroll) {
+      $(".search-bar").filter(':not(:animated)').slideDown();
+	  $("body").addClass("search");
+	   $(".search-opener").removeClass("magnify");
+   }
+   previousScroll = scroller;
+});
+
+
+</script>      
+<script>
+$(document).ready(function() {
+		$(".selectpicker").dropdown();
+		});
+</script>  
+
+<script>
+
+
+/*$('select').change(function () {
+    var month = $(this).val();
+    $(".appoints").hide();
+    $(".appoinment:contains('" + month + "')").show();
+});*/
+
+</script>
+</body>
+</html>

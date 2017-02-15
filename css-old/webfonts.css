@@ -1,0 +1,434 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('roboto-boldoss.eot');
+    src: url('roboto-boldoss.eot?#iefix') format('embedded-opentype'),
+         url('roboto-boldoss.woff2') format('woff2'),
+         url('roboto-boldoss.woff') format('woff'),
+         url('roboto-boldoss.ttf') format('truetype'),
+         url('roboto-boldoss.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('roboto-mediumoss.eot');
+    src: url('roboto-mediumoss.eot?#iefix') format('embedded-opentype'),
+         url('roboto-mediumoss.woff2') format('woff2'),
+         url('roboto-mediumoss.woff') format('woff'),
+         url('roboto-mediumoss.ttf') format('truetype'),
+         url('roboto-mediumoss.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-regulaross.eot');
+    src: url('roboto-regulaross.eot?#iefix') format('embedded-opentype'),
+         url('roboto-regulaross.woff2') format('woff2'),
+         url('roboto-regulaross.woff') format('woff'),
+         url('roboto-regulaross.ttf') format('truetype'),
+         url('roboto-regulaross.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.714rem;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.material-icons.lg{
+	font-size:28px;
+}
+.material-icons.md{
+	font-size:24px
+}
+@font-face {
+	font-family: 'Sakkal Majalla';
+	src: url('hinted-SakkalMajalla.eot');
+	src: local('Sakkal Majalla'), local('SakkalMajalla'),
+		url('hinted-SakkalMajalla.eot?#iefix') format('embedded-opentype'),
+		url('hinted-SakkalMajalla.woff2') format('woff2'),
+		url('hinted-SakkalMajalla.woff') format('woff'),
+		url('hinted-SakkalMajalla.ttf') format('truetype'),
+		url('hinted-SakkalMajalla.svg#SakkalMajalla') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*-------------------- droid kufi----------------- */
+
+@font-face {
+    font-family: 'DroidKufiRegular';
+    src: url('../fonts/DroidKufiRegular.eot');
+    src: url('../fonts/DroidKufiRegular.eot') format('embedded-opentype'),
+         url('../fonts/DroidKufiRegular.woff2') format('woff2'),
+         url('../fonts/DroidKufiRegular.woff') format('woff'),
+         url('../fonts/DroidKufiRegular.ttf') format('truetype'),
+         url('../fonts/DroidKufiRegular.svg#DroidKufiRegular') format('svg');
+}
+@font-face {
+    font-family: 'DroidKufiBold';
+    src: url('../fonts/DroidKufiBold.eot');
+    src: url('../fonts/DroidKufiBold.eot') format('embedded-opentype'),
+         url('../fonts/DroidKufiBold.woff2') format('woff2'),
+         url('../fonts/DroidKufiBold.woff') format('woff'),
+         url('../fonts/DroidKufiBold.ttf') format('truetype'),
+         url('../fonts/DroidKufiBold.svg#DroidKufiBold') format('svg');
+}
+
+
+
+/* fontello */
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?30270004');
+  src: url('../fonts/fontello.eot?30270004#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?30270004') format('woff2'),
+       url('../fonts/fontello.woff?30270004') format('woff'),
+       url('../fonts/fontello.ttf?30270004') format('truetype'),
+       url('../fonts/fontello.svg?30270004#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?30270004#fontello') format('svg');
+  }
+}
+*/
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?4493936');
+  src: url('../font/fontello.eot?4493936#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?4493936') format('woff2'),
+       url('../font/fontello.woff?4493936') format('woff'),
+       url('../font/fontello.ttf?4493936') format('truetype'),
+       url('../font/fontello.svg?4493936#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?4493936#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  /*width: 1em;
+  margin-left: .2em;*/
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+   /*text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);*/
+}
+ 
+.icon-doc-tick:before { content: '\e800'; } /* '' */
+.icon-doc-time:before { content: '\e801'; } /* '' */
+.icon-money:before { content: '\e802'; } /* '' */
+.icon-doc:before, .category-3:before { content: '\e803'; font-family:fontello;    -webkit-font-smoothing: antialiased; } /* '' */
+.icon-collapse-card:before { content: '\e805'; } /* '' */
+.icon-channel:before { content: '\e806'; } /* '' */
+.icon-pending:before { content: '\e808'; } /* '' */
+.icon-add-notes:before { content: '\e809'; } /* '' */
+.icon-edit:before { content: '\e80a'; } /* '' */
+.icon-sms:before { content: '\e80c'; } /* '' */
+.icon-web-channel:before { content: '\e80d'; } /* '' */
+.icon-dp-logo:before { content: '\e80e'; } /* '' */
+.icon-govt:before { content: '\e80f'; } /* '' */
+.icon-logo-square:before { content: '\e810'; width:auto; margin:0; } /* '' */
+.icon-logo:before { content: '\e811'; } /* '' */
+.icon-reject-reason:before { content: '\e813'; } /* '' */
+.icon-counter:before { content: '\e814'; } /* '' */
+.icon-technical-support:before { content: '\e818'; } /* '' */
+.icon-person:before { content: '\e81a'; } /* '' */
+.icon-confirm:before { content: '\e81b'; } /* '' */
+.icon-goodconduct:before { content: '\e81c'; } /* '' */
+.icon-wanted:before { content: '\e81e'; } /* '' */
+.icon-policeman:before { content: '\e832'; } /* '' */
+.icon-bank:before { content: '\e874'; } /* '' */
+.icon-black-points:before { content: '\e875'; } /* '' */
+.icon-businessman237:before { content: '\e876'; } /* '' */
+.icon-car-services-inmates:before { content: '\e879'; } /* '' */
+.icon-car:before { content: '\e87a'; } /* '' */
+.icon-caring-children-female-inmates:before { content: '\e87b'; } /* '' */
+.icon-change-sponsorship:before { content: '\e87e'; } /* '' */
+.icon-chart8:before { content: '\e87f'; } /* '' */
+.icon-collecting-bank-transfer:before { content: '\e881'; } /* '' */
+.icon-court-rulling-copy:before { content: '\e883'; } /* '' */
+
+.icon-faq:before { content: '\e88b'; } /* '' */
+.icon-fulfill-social-request:before { content: '\e88f'; } /* '' */
+.icon-health-ﬁtness-test:before { content: '\e891'; } /* '' */
+
+.icon-inquiry-sms:before { content: '\e895'; } /* '' */
+.icon-installment-traffic-fines:before { content: '\e896'; } /* '' */
+.icon-meeting-with-members:before { content: '\e899'; } /* '' */
+.icon-modifying-traffic-violations:before { content: '\e89a'; } /* '' */
+.icon-most-used-services:before { content: '\e89b'; } /* '' */
+.icon-news1:before { content: '\e89c'; } /* '' */
+.icon-operation:before { content: '\e89e'; } /* '' */
+.icon-people-with-disability:before { content: '\e8a0'; } /* '' */
+.icon-pharmacy:before { content: '\e8a1'; } /* '' */
+.icon-question36:before { content: '\e8a3'; } /* '' */
+.icon-question42:before { content: '\e8a4'; } /* '' */
+.icon-reduce-traffic-black-points:before { content: '\e8a5'; } /* '' */
+.icon-report-no-injury:before { content: '\e8a6'; } /* '' */
+.icon-request-open:before { content: '\e8ac'; } /* '' */
+.icon-sheikh-mohammad-program:before { content: '\e8af'; } /* '' */
+.icon-social-support-protection:before { content: '\e8b0'; } /* '' */
+
+.icon-speed-limit:before { content: '\e8b2'; } /* '' */
+.icon-survey:before { content: '\e8b7'; } /* '' */
+.icon-victim:before { content: '\e8bb'; } /* '' */
+.icon-informing-crime:before { content: '\e8be'; } /* '' */
+
+.icon-deceased-permit-pequest:before { content: '\e8c4'; } /* '' */
+
+
+
+
+
+
+
+
+
+.icon-court-rulling-copy-1:before { content: '\e901'; } /* '' */
+
+.icon-hospital:before { content: '\e903'; } /* '' */
+.icon-lost-document:before { content: '\e904'; } /* '' */
+.icon-lost-passport:before { content: '\e905'; } /* '' */
+
+
+.icon-report-bounced-cheques:before, .service-icon1:before { content: '\e8c0'; } /* '' */
+.icon-release-impoundpassports:before, .service-icon3:before, .service-icon16:before { content: '\e8f9'; } /* '' */
+.icon-cerificate-report-case:before, .service-icon4:before { content: '\e87c'; } /* '' */
+.icon-follow-up-transactins:before, .service-icon5:before{ content: '\e88e'; } /* '' */
+.icon-whomitmayconcert:before, .service-icon7:before { content: '\e900'; } /* '' */
+.icon-certificate:before, .service-icon8:before { content: '\e87d'; } /* '' */
+.icon-report-accident:before, .service-icon9:before  { content: '\e8fe'; } /* '' */
+.icon-unknowntrafficaccident:before, .service-icon11:before { content: '\e8ff'; } /* '' */
+.icon-payment-traffic-fines:before, .service-icon12:before { content: '\e89f'; } /* '' */
+.icon-vehiclereleaserequest:before, .service-icon13:before { content: '\e8fa'; } /* '' */
+.icon-wanted-cars:before, .service-icon14:before  { content: '\e8fc'; } /* '' */
+.icon-release-reserveitem:before, .service-icon15:before  { content: '\e8fd'; } /* '' */
+.icon-license:before, .service-icon18:before { content: '\e804'; } /* '' */
+.icon-clearance-certificate:before, .service-icon19:before, .service-icon58:before { content: '\e880'; } /* '' */
+.icon-good-conduct-certificate:before, .service-icon20:before { content: '\e890'; } /* '' */
+.icon-lost-found-items:before, .service-icon21:before  { content: '\e898'; } /* '' */
+.icon-roadclose:before, .service-icon22:before, .service-icon74:before { content: '\e81d'; } /* '' */
+.icon-v-inmates:before, .service-icon23, .service-icon70:before  { content: '\e8b9'; } /* '' */
+.icon-night-work-permit:before, .service-icon24:before { content: '\e89d'; } /* '' */
+.icon-home-security:before, .service-icon25:before { content: '\e894'; } /* '' */
+.icon-home-security:before, .service-icon26:before { content: '\e894'; } /* '' */
+.icon-doc-inquiry2:before, .service-icon27:before  { content: '\e887'; } /* '' */
+.icon-fine-payment:before, .service-icon28:before, .service-icon18:before { content: '\e88d'; } /* '' */
+.icon-documents:before, .service-icon29:before { content: '\e888'; } /* '' */
+.icon-car-paint:before, .service-icon34:before { content: '\e807'; } /* '' */
+.icon-sheikh-mohammad-program:before, .service-icon35:before { content: '\e8af'; } /* '' */
+.icon-visit-police-museum:before, .service-icon36:before { content: '\e8bc'; } /* '' */
+.icon-home-safety:before, .service-icon37:before { content: '\e893'; } /* '' */
+.icon-violence-complaint:before, .service-icon38:before { content: '\e8fb'; } /* '' */
+.icon-caring-dogs:before, .service-icon39:before { content: '\e884'; } /* '' */
+.icon-request-lecture:before, .service-icon40:before { content: '\e8ab'; } /* '' */
+.icon-special-statistics:before, .service-icon41:before { content: '\e8b1'; } /* '' */
+.icon-request-fingerprints:before, .service-icon42:before, .service-icon31:before { content: '\e8aa'; } /* '' */
+.icon-security-barrier:before, .service-icon43:before { content: '\e8ae'; } /* '' */
+.icon-request-dp-auctions:before, .service-icon44:before { content: '\e8a9'; } /* '' */
+.icon-complaint:before, .service-icon45:before, .service-icon6:before { content: '\e882'; } /* '' */
+.icon-explosive-fireworks:before, .service-icon46:before { content: '\e88a'; } /* '' */
+.icon-officers-membership:before, .service-icon47:before { content: '\e8bf'; } /* '' */
+.icon-request-security:before, .service-icon48:before { content: '\e8c1'; } /* '' */
+.icon-human-traffic:before, .service-icon49:before { content: '\e8f8'; } /* '' */
+.icon-request-detail-traffic-violations:before , .service-icon51:before{ content: '\e8a8'; } /* '' */
+.icon-policeman:before, .service-icon52:before { content: '\e832'; } /* '' */
+.icon-sports-facilities:before, .service-icon53:before { content: '\e8b3'; } /* '' */
+.icon-training-request:before, .service-icon54:before { content: '\e8b8'; } /* '' */
+.icon-buy-inmates-products:before, .service-icon55:before { content: '\e877'; } /* '' */
+.icon-job:before, .service-icon56:before { content: '\e897'; } /* '' */
+.icon-dp-leader:before, .service-icon57:before, .service-icon95:before { content: '\e889'; } /* '' */
+.icon-fasttrack:before, .service-icon60:before { content: '\e902'; } /* '' */
+.icon-we-are-police:before, .service-icon61:before { content: '\e8c3'; } /* '' */
+.icon-supplier-application:before, .service-icon63:before { content: '\e8b6'; } /* '' */
+.icon-reporting-crime:before, .service-icon64:before, .service-icon2:before { content: '\e8a7'; } /* '' */
+.icon-diplomacy-service:before , .service-icon66:before{ content: '\e885'; } /* '' */
+.icon-health-problem:before, .service-icon68:before { content: '\e892'; } /* '' */
+.icon-victim-support:before, .service-icon69:before { content: '\e8ba'; } /* '' */
+.icon-workforce-complaint:before, .service-icon72:before { content: '\e8bd'; } /* '' */
+.icon-suggestion:before, .service-icon73:before { content: '\e8b4'; } /* '' */
+.icon-police-reports-inquiry:before, .service-icon75:before { content: '\e8a2'; } /* '' */
+.icon-tourism:before, .service-icon76:before { content: '\e8c2'; } /* '' */
+.icon-feedback:before, .service-icon77:before { content: '\e88c'; } /* '' */
+.icon-summer-courses:before, .service-icon78:before { content: '\e8b5'; } /* '' */
+.icon-call-center:before, .service-icon80:before, .service-icon81:before, .service-icon50:before{ content: '\e878'; } /* '' */
+.icon-doc-inquiry:before, .service-icon81:before { content: '\e886'; } /* '' */
+.icon-email:before, .service-icon94:before { content: '\e80b'; } /* '' */
+.icon-searchdocument:before, .service-icon97:before { content: '\e8ad'; } /* '' */
+
+
+
+/*   Animation example, for spinners  */
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+/* Category icons */
+.category-1:before{
+	content:"\E90D";
+}
+.category-2:before{
+	content:"\E565";
+}
+.category-4:before{
+	content:"\E894";
+}

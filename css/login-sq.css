@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	overflow:hidden;
+}
+.login-header{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3498db+0,938fc5+100 */
+background: #3498db; /* Old browsers */
+background: -moz-linear-gradient(top, rgba(52,152,219,.98) 0%, rgba(147,143,197,.9) 100%) , url(../images/icons-pattern.png) no-repeat center top; /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(52,152,219,.98) 0%,rgba(147,143,197,.9) 100%) , url(../images/icons-pattern.png) no-repeat center top; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(52,152,219,.98) 0%,rgba(147,143,197,.9) 100%) , url(../images/icons-pattern.png) no-repeat center top; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#938fc5',GradientType=0 ); /* IE6-9 */
+	height:290px;
+	width:100%;
+	float:left;
+	text-align:center;
+	border-bottom:5px solid #fff;
+	box-shadow: 0px 17px 65px 0px rgba(0, 0, 0, 0.16); 
+}
+.demo-icon{
+	font-style:normal;
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    -ms-osx-font-smoothing: antialiased;
+    -khtml-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+.govt-logo {
+    font-size: 52px;
+    line-height: normal;
+    padding:40px;
+	text-align:left;
+	color:#fff;
+	width:250px;
+}
+.dp-logo {
+    font-size: 52px;
+    line-height: normal;
+       padding:40px;
+		text-align:right;
+	color:#fff;
+		width:250px;
+}
+.oss-logo {
+    width: 212px;
+    height: 212px;
+    background: #fff;
+    border-radius: 22.5px;
+    border: 4px solid #3498DB;
+    box-shadow: 0 0 0 4px #fff;
+    color: #3498DB;
+    display: flex;
+    margin: 100px auto 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+	opacity:0;
+}
+.oss-logo > i{
+	font-size:100px;
+}
+.login-box {
+    background: #fff;
+    width: 368px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 22.5px;
+    padding: 97px 40px 25px;
+    text-align: center;
+    position: relative;
+    flex-flow: column;
+    top: -50px;
+    box-shadow: 0px 17px 24px 0px rgba(0, 0, 0, 0.13);
+}
+.user-avatar{
+	background:#e1e1e1;
+	margin:0 auto 30px;
+	display:inline-block;
+	border-radius:22.5px;
+	width:90px;
+	height:90px;
+	text-align:center;
+	color:#bdbdbd;
+}
+.user-avatar > i {
+    font-size: 90px;
+    line-height: 100%;
+}
+.login-box input.form-control {
+    width: 289px;
+    height: 42px;
+    border: 4px solid #f7f7f7;
+	font-family:DroidKufiRegular;
+	font-size:15px;
+	border-radius: 10px;
+	box-shadow: none;
+	padding-right:35px;
+	transition:all 0.5s linear, border-width 0.2s linear;
+	
+}
+.login-box input.form-control:focus{
+	box-shadow:0 0 8px rgba(52,152,219,1);
+	color:#3498DB;
+	border-color:#3498DB;
+	border-width:1px;
+}
+.login-box .form-group.username::before{
+	content: "\E7ff";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #c0c0c0;
+    font-family: "Material Icons";
+    font-size: 22px;
+}
+
+.login-box .form-group.password::before{
+	content:"\E899";
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #c0c0c0;
+    font-family: "Material Icons";
+    font-size: 22px;
+}
+.login-box .form-group:active::before{
+	color:rgba(52,152,219,1.00)
+}
+.login-box .form-group{
+	margin-left:0;
+	margin-right:0;
+	margin-bottom:11px;
+	position:relative;
+}
+.form-control::-moz-placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+.form-control::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.ar-kufi{
+	font-family: droidkufiregular;
+}
+.login-box .ar-kufi {
+    font-size: 12px;
+    color: #c4c4c4;
+    float: left;
+    
+}
+.login-box .btn-primary {
+    float: right;
+    font-size: 18px;
+    font-family: droidkufiregular;
+    width: 100%;
+    height: 41px;
+}
+.login-box .form-buttons{
+	margin-top:20px;
+	margin-bottom:0;
+}
+.form-buttons .col-sm-6{
+	float:right;
+}
+.mini-heading{
+	margin-bottom:20px;
+}
+.login-box .mini-heading .ar-kufi{
+	font-size:15px;
+	padding:0;
+}
+.oss-copyright {
+    color: #797979;
+    float: left;
+    font-family: droidkufiregular;
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    top: -30px;
+    width: 100%;
+}
+.oss-copyright > span {
+    display: block;
+}

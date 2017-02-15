@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoodConduct Committee - OSS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="plugins/datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+<link rel="stylesheet" href="plugins/x-editable/bootstrap-editable.css">
+
+<link rel="stylesheet" href="plugins/step-form/css/form-elements.css">
+<link rel="stylesheet" href="plugins/step-form/css/style.css">
+<link rel="stylesheet" href="plugins/image-viewer/css/main.css">
+<link rel="stylesheet" href="plugins/image-viewer/css/viewer.css">
+<link rel="stylesheet" href="plugins/file-input/fileinput.css">
+<link rel="stylesheet" href="plugins/horizontal-timeline/style.css">
+<link rel="stylesheet" href="css/popups.css">
+
+<!-- Custom Stylesheet (always need to be the last css file) -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+<!-- responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+<link href="plugins/flags/css/flag-icon.css" rel="stylesheet" type="text/css">
+</head>
+<body class="activity footer">
+<div class="container"> 
+  <!-- header starts -->
+  <div id="header">
+    <header>
+      <div class="min-max header-icons mdl-js-button mdl-js-ripple-effect" onclick="toggleFullScreen()"><i class="material-icons">fullscreen</i></div>
+      <div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+      <div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">notifications</i></div>
+      <div class="date-time">
+        <div id="clock_uae"></div>
+      </div>
+      <div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+      <div class="switcher">
+        <div class="switch-button"><i class="material-icons">folder_shared</i></div>
+      </div>
+    </header>
+    <!-- header ends --> 
+    <!-- Sub header with breadcrumbs -->
+    <div class="sub-header">
+      <div class="user-login-info">
+        <div class="welcome">اهلاً وسهلاً بك٫</div>
+        <div class="last-login">
+          <div class="last-date">2016/05/10 الثلاثاء</div>
+          <div class="last-time">04:46:13 AM</div>
+          <label>:آخر دخول </label>
+        </div>
+      </div>
+      <div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+        <div id="nav-icon1" class="open"> <span></span> <span></span> <span></span> </div>
+      </div>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="material-icons">home</i></a></li>
+        <li><a href="#">خدمات مجتمعية</a></li>
+        <li><a href="#">قيادات في خدمتكم </a></li>
+        <li class="active"><a> معاملة رقم <em>203306740908</em></a></li>
+      </ol>
+      <div class="close-detail"> <a href="goodConduct.html"><i class="material-icons">clear</i></a> </div>
+    </div>
+  </div>
+  <!-- Sub header ends --> 
+  <!-- sidebar navigation -->
+  <aside>
+    <div class="user">
+      <div class="user-details">
+        <div class="avatar"><img src="images/user.jpg" width="136" height="146" alt="user Avatar"/></div>
+        <div class="user-info">
+          <div class="initial">الدكتور المهندس خبير</div>
+          <div class="user-name">سامي سامر سامي أحمد محمد
+            هاشم محمد صالح فاخوري</div>
+        </div>
+      </div>
+      <div class="figures">
+        <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+      </div>
+    </div>
+    <div class="sidenav">
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">home</i>
+        <div class="link"> لوحة التحكم </div>
+      </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">fingerprint</i>
+        <div class="link"> البلاغات </div>
+        <div class="counter"> <span class="green">203</span> <span class="orange">44</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">traffic</i>
+        <div class="link"> المرورية </div>
+        <div class="counter"> <span class="green">12</span> <span class="orange">8</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="demo-icon icon-doc"></i>
+        <div class="link">التصاريح والشهادات </div>
+        <div class="counter"> <span class="green">3</span> <span class="orange">1</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+      <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons md">language</i>
+        <div class="link"> المجتمعية </div>
+        <div class="counter"> <span class="green zero">0</span> <span class="orange zero">44</span> </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span> </div>
+    </div>
+    <div class="more-options">
+      <ul>
+        <li><i class="material-icons">power_settings_new</i></li>
+        <li><i class="material-icons">forum</i></li>
+        <li><i class="material-icons group">group</i></li>
+        <li><i class="material-icons">settings_applications</i></li>
+      </ul>
+    </div>
+  </aside>
+  <!-- sidebar navigation ends --> 
+  <!-- Main Content - Center page -->
+  <div class="main-wrpr gc-wrpr">
+    <div class="wrpr">
+      <div class="main-content">
+        
+        
+        <div class="card md" style="opacity: 1; position: relative; top: 0px;">
+	<div class="box-heading">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+        <i class="material-icons">create</i>
+    </div>
+    	<div class="box-title">تفاصيل المعاملة<span class="material-icons">folder</span></div>
+    </div>
+	<div class="box-content">
+   		<div class="applicant-details" id="detail-info">
+            <div class="list">
+            	<label>رقم المعاملة</label>
+                <div class="form-data disabled editable editable-click editable-disabled" id="raqam" data-type="text" data-placement="top" data-title="Enter Number" tabindex="-1">203905945032</div>
+                <i class="material-icons" id="enable-inline">create</i>
+            </div>
+             <div class="list">
+            	<label>وقت / تاريخ التقديم</label>
+                <div class="form-data disabled editable editable-click editable-disabled" id="sel-date" data-type="combodate" data-template="D MMM YYYY  HH:mm" data-format="YYYY-MM-DD HH:mm" data-viewformat="D MMM, YYYY, HH:mm" tabindex="-1">2 Mar, 2013, 02:25</div>
+                <i class="material-icons" id="enable-inline">create</i>
+            </div>
+             <div class="list">
+            	<label>الحالة</label>
+                <div class="form-data completed"><span>مقبول </span></div>			
+            </div>
+			 <div class="list">
+            	<label>الحالة</label>		
+				<div class="form-data statusReject"><span>رفض </span></div>
+            </div>
+			 <div class="list">
+            	<label>الحالة</label>		
+				<div class="form-data inprogress"><span> في تَقَدم </span></div>
+            </div>
+			 <div class="list">
+            	<label>الحالة</label>		
+				<div class="form-data newtransaction"><span> عملية جديدة </span></div>
+            </div>
+			
+            <div class="list">
+            	<label>الموضوع</label>
+                <div class="form-data">ِEvent Security</div>
+            </div>
+             <div class="list extra" style="display: none;">
+            	<label>التفاصيل</label>
+                <div class="form-data">ّI would like to apply for event security ID</div>
+            </div>
+            <div class="list extra" style="display: none;">
+            	<label>نوع الطلب</label>
+                <div class="form-data"><select class="selectpicker form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true"><option>اسفسار</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-nwgq-container"><span class="select2-selection__rendered" id="select2-nwgq-container" title="اسفسار">اسفسار</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+            </div>
+        </div>
+        </div>
+        <div class="list show-more mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+        	<label>المزيد</label>
+        	<i class="material-icons flex-left">keyboard_arrow_left</i>
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+  	</div>
+        
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> 
+            <i class="material-icons enable" id="enable">create</i>
+        <i class="material-icons save" style="display:none;">save</i>
+        <i class="material-icons clear" style="display:none;">clear</i>
+            </div>
+            <div class="box-title">ملف تعريفي للمستخدم <span class="material-icons">account_box</span></div>
+          </div>
+          <div class="box-content nopad">
+           <div class="profile-top">
+            <div class="col-sm-8 profile">
+              <div class="col-sm-4 userProfile-avatar"><img src="images/hafiz.JPG" alt=""/> </div>
+              <div class="col-sm-8 profile-details">
+                <div class="row">
+                  <div class="col-sm-12"><span class="ar-droid username">السيد محمد فتحي الحفيظ</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12"> Mohammed Fatih El Hafiz </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12"><i class="flag-icon flag-icon-ps"></i> Palestine  </div>
+                </div>
+                
+                 
+                 
+              </div>
+
+            </div>
+            <div class="col-sm-4 contact-info">
+              
+                <div class="col-sm-12"> <i class="material-icons">mail</i><span class="editable">des.samidp@gmail.com</span>  </div>
+              
+                <div class="col-sm-12"> <i class="material-icons">phone</i><span class="editable"> +971 52 123 2780 </span></div>
+             
+                <div class="col-sm-12"> <i class="demo-icon icon-license"></i><span class="editable"> 784198376843755 </span></div>
+             
+            </div>
+            </div>
+            
+            <div class="profile-transactions">
+                <div class="history-switcher toggle-buttons left-active">
+                   <div class="btn-toggle left-toggle"> معاملات المنجزاة <i class="material-icons">assignment</i> </div>
+                    <div class="btn-toggle right-toggle">  معاملات <i class="fa fa-history"></i> </div>
+                    
+                </div>
+                <div class="overview">
+                   
+                        <div class="col-sm-3 col-xs-6">
+                           <div class="card">
+                            <i class="demo-icon icon-doc-tick green"></i>
+                            <div class="text-right">
+                                <label>منجزة المعاملات</label>
+                                <div class="robotomed total-value">70</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                           <div class="card">
+                            <i class="demo-icon icon-doc-time orange"></i>
+                            <div class="text-right">
+                                <label>غير منجزة المعاملات</label>
+                                <div class="robotomed total-value">52</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                           <div class="card">
+                            <i class="demo-icon icon-money blue"></i>
+                            <div class="text-right">
+                                <label>المبلغ المنفق</label>
+                                <div class="robotomed total-value">2500</div>
+                            </div>
+                            </div>
+                        </div>
+                         <div class="col-sm-3 col-xs-6">
+                           <div class="card">
+                            <i class="sprite-icon service-icon2"></i>
+                            <div class="text-right">
+                                <label>شهادة لمن يهمه الامر</label>
+                                <div class="roboto flex font-sm">
+                                    <div class="date ml-8"><i class="material-icons">today</i> 05-11-2016  </div>
+                                    <div class="time"><i class="material-icons">access_time</i> 10:15  </div>
+                                    
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    
+                    
+                </div>
+                
+        
+                
+    <section class="cd-horizontal-timeline" style="display: none;">
+	<div class="timeline">
+		<div class="events-wrapper">
+			<div class="events">
+				<ol>
+					<li><a href="#0" data-date="16/01/2014" class="selected">
+					<div class="tm-date">16th Jan' 16 </div>
+			
+			<i class="sprite-icon service-icon1"></i>
+				<label>فتح بلاغ شيك</label>
+					</a></li>
+					<li><a href="#0" data-date="28/02/2014">
+					    <div class="tm-date">28th Feb' 16</div>
+			
+			<i class="sprite-icon service-icon2"></i>
+				<label>الاستفسارات الجنائية</label>
+					</a></li>
+					<li><a href="#0" data-date="20/04/2014">
+					    <div class="tm-date">20th Apr' 16</div>
+			
+			
+			<i class="sprite-icon service-icon3"></i>
+				<label>فك حجز جواز سفر / جنائي</label>
+					</a></li>
+					<li><a href="#0" data-date="20/05/2014">
+					    <div class="tm-date">20th May' 16</div>
+			
+			<i class="sprite-icon service-icon4"></i>
+				<label>فك حجز جواز سفر / جنائي</label>
+					</a></li>
+					<li><a href="#0" data-date="09/01/2015">
+					    <div class="tm-date">09th Jan' 17</div>
+		
+			<i class="sprite-icon service-icon5"></i>
+				<label>فك حجز جواز سفر / جنائي</label>
+					    
+					</a></li>
+					
+				</ol>
+
+				<span class="filling-line" aria-hidden="true"></span>
+			</div> <!-- .events -->
+		</div> <!-- .events-wrapper -->
+			
+		<ul class="cd-timeline-navigation">
+			<li><a href="#0" class="prev inactive"><i class="material-icons">keyboard_arrow_left</i></a></li>
+			<li><a href="#0" class="next"><i class="material-icons">keyboard_arrow_right</i></a></li>
+		</ul> <!-- .cd-timeline-navigation -->
+	</div> <!-- .timeline -->
+
+	<div class="events-content">
+		<ol>
+			<li class="selected" data-date="16/01/2014">
+				<div class="card">
+			       <div class="applicant-details">
+			           <div class="list">
+			               <label>رقم البصمة</label>
+			               <div class="form-data">203905945032</div>
+			           </div>
+			            <div class="list">
+			               <label>مركز الشرطة</label>
+			               <div class="form-data">  مركز الشرطة القصيص </div>
+			           </div>
+			           <div class="list">
+			               <label>الحالة</label>
+			               <div class="form-data inprogress">  <span> في تَقَدم </span></div>
+			           </div>
+			            <div class="list">
+			               <label>قناة التقديم</label>
+			               <div class="form-data">  <span class="material-icons">smartphone</span></div>
+			           </div>
+			           
+			       </div>
+			       
+			   </div>
+			</li>
+			
+
+			<li data-date="28/02/2014">
+				<div class="card">
+			       <div class="applicant-details">
+			           <div class="list">
+			               <label>رقم البصمة</label>
+			               <div class="form-data">20313255032</div>
+			           </div>
+			            <div class="list">
+			               <label>مركز الشرطة</label>
+			               <div class="form-data">  مركز الشرطة القصيص </div>
+			           </div>
+			           <div class="list">
+			               <label>الحالة</label>
+			               <div class="form-data inprogress">  <span> في تَقَدم </span></div>
+			           </div>
+			            <div class="list">
+			               <label>قناة التقديم</label>
+			               <div class="form-data">  <span class="demo-icon icon-web-channel"></span></div>
+			           </div>
+			           
+			       </div>
+			       
+			   </div>
+			</li>
+
+			<li data-date="20/04/2014">
+				<div class="card">
+			       <div class="applicant-details">
+			           <div class="list">
+			               <label>رقم البصمة</label>
+			               <div class="form-data">456498796545</div>
+			           </div>
+			            <div class="list">
+			               <label>مركز الشرطة</label>
+			               <div class="form-data">  مركز الشرطة القصيص </div>
+			           </div>
+			           <div class="list">
+			               <label>الحالة</label>
+			               <div class="form-data inprogress">  <span> في تَقَدم </span></div>
+			           </div>
+			            <div class="list">
+			               <label>قناة التقديم</label>
+			               <div class="form-data">  <span class="demo-icon icon-email"></span></div>
+			           </div>
+			           
+			       </div>
+			       
+			   </div>
+			</li>
+
+			<li data-date="20/05/2014">
+				<div class="card">
+			       <div class="applicant-details">
+			           <div class="list">
+			               <label>رقم البصمة</label>
+			               <div class="form-data">45687931265</div>
+			           </div>
+			            <div class="list">
+			               <label>مركز الشرطة</label>
+			               <div class="form-data">  مركز الشرطة القصيص </div>
+			           </div>
+			           <div class="list">
+			               <label>الحالة</label>
+			               <div class="form-data inprogress">  <span> في تَقَدم </span></div>
+			           </div>
+			            <div class="list">
+			               <label>قناة التقديم</label>
+			               <div class="form-data">  <span class="demo-icon icon-web-channel"></span></div>
+			           </div>
+			           
+			       </div>
+			       
+			   </div>
+			</li>
+
+			<li data-date="09/01/2015">
+				<div class="card">
+			       <div class="applicant-details">
+			           <div class="list">
+			               <label>رقم البصمة</label>
+			               <div class="form-data">20313255032</div>
+			           </div>
+			            <div class="list">
+			               <label>مركز الشرطة</label>
+			               <div class="form-data">  مركز الشرطة القصيص </div>
+			           </div>
+			           <div class="list">
+			               <label>الحالة</label>
+			               <div class="form-data inprogress">  <span> في تَقَدم </span></div>
+			           </div>
+			            <div class="list">
+			               <label>قناة التقديم</label>
+			               <div class="form-data">  <span class="demo-icon icon-sms"></span></div>
+			           </div>
+			           
+			       </div>
+			       
+			   </div>
+			</li>
+		</ol>
+	</div> <!-- .events-content -->
+</section>            
+                
+            </div>
+            
+            <div class="userProfile-tabs">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">
+    <i class="material-icons">person</i> معلومات عامة</a></li>
+    <li role="presentation"><a href="#moreInfo" aria-controls="moreInfo" role="tab" data-toggle="tab">
+    <i class="material-icons">info</i> بيانات اضافية</a></li>
+    <li role="presentation"><a href="#alladdress" aria-controls="alladdress" role="tab" data-toggle="tab">
+    <i class="material-icons">location_on</i>العناوبن</a></li>
+    <li role="presentation"><a href="#documents" aria-controls="settings" role="tab" data-toggle="tab">
+    <i class="material-icons">description</i> مرفقات</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="general">
+        <div class="applicant-details sidepad18">
+                  <div class="list">
+                    <label>رقم البصمة</label>
+                    <div class="form-data">203905945032</div>
+                  </div>
+                  <div class="list">
+                    <label>رقم الموحد</label>
+                    <div class="form-data">423</div>
+                  </div>
+                  <div class="list">
+                    <label>تاريخ الميلاد</label>
+                    <div class="form-data">26/04/1977</div>
+                  </div>
+                  <div class="list">
+                    <label>مكان الميلاد</label>
+                    <div class="form-data ar">الإمارات</div>
+                  </div>
+                  <div class="list">
+                    <label>دور الفرد</label>
+                    <div class="form-data">مقدم الطلب</div>
+                  </div>
+                  <div class="list">
+                    <label>رقم النزيل</label>
+                    <div class="form-data">166846545</div>
+                  </div>
+                </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="moreInfo">
+        <div class="applicant-details sidepad18">
+                  <div class="list">
+                    <label>رقم البصمة</label>
+                    <div class="form-data">203905945032</div>
+                  </div>
+                  <div class="list">
+                    <label>رقم الموحد</label>
+                    <div class="form-data">423</div>
+                  </div>
+                  <div class="list">
+                    <label>تاريخ الميلاد</label>
+                    <div class="form-data">26/04/1977</div>
+                  </div>
+                  <div class="list">
+                    <label>مكان الميلاد</label>
+                    <div class="form-data ar">الإمارات</div>
+                  </div>
+                  <div class="list">
+                    <label>دور الفرد</label>
+                    <div class="form-data">مقدم الطلب</div>
+                  </div>
+                  <div class="list">
+                    <label>رقم النزيل</label>
+                    <div class="form-data">166846545</div>
+                  </div>
+                </div>
+        
+    </div>
+    <div role="tabpanel" class="tab-pane" id="alladdress">
+        <div class="panel-group user-accordian" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <i class="more-less fa fa-minus-circle"></i> الرشيديا </a> </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <div class="applicant-details sidepad18 col-4">
+                  <div class="list">
+                    <label>Flat No.</label>
+                    <div class="form-data">408 A</div>
+                  </div>
+                  <div class="list">
+                    <label>Building Name</label>
+                    <div class="form-data">JScom Towers</div>
+                  </div>
+                  <div class="list">
+                    <label>Area</label>
+                    <div class="form-data">Rashidiya</div>
+                  </div>
+                  <div class="list">
+                    <label>Street</label>
+                    <div class="form-data ar">19A Street</div>
+                  </div>
+                  <div class="list">
+                    <label>Locality</label>
+                    <div class="form-data ar">Al Nahda 2</div>
+                  </div>
+                  <div class="list">
+                    <label>Landmark</label>
+                    <div class="form-data ar">Rashidiya Metro Station</div>
+                  </div>
+                 
+                </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> <i class="more-less fa fa-plus-circle"></i>
+                   القصيص </a> </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                   Fl-408, JScom Tower, Near Pond Park, Al Nahda 2, opp. Pristine School, Al Qusais
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        
+    </div>
+    <div role="tabpanel" class="tab-pane" id="documents">
+       <div class="applicant-details sidepad18 col-4">
+                  <div class="list">
+                    <label>Document Name</label>
+                    <div class="form-data">Passport</div>
+                  </div>
+                  <div class="list">
+                    <label>Document number</label>
+                    <div class="form-data">H123456K</div>
+                  </div>
+                  <div class="list">
+                    <label>Expiry</label>
+                    <div class="form-data">14-02-2021</div>
+                  </div>
+                  <div class="list">
+                    <label>Country of issuance</label>
+                    <div class="form-data ar">Palestine</div>
+                  </div>
+                  <div class="list">
+                    <label>Scanned Copy</label>
+                    <div class="form-data"> <div class="docs-pictures pull-right" style="width:60px; height: 40px;"> <img data-original="images/sample-passport.JPG" src="images/sample-passport.JPG" /></div> </div>
+                  </div>
+                </div>
+       
+       
+<!--
+        <ul class="user-documents">
+            <li><i class="demo-icon icon-change-sponsorship"></i> جواز سفر - فلسطيني <br/><span>رقم H123585</span> <div class="docs-pictures"> <img data-original="images/sample-passport.JPG" src="images/sample-passport.JPG" /></div> </li>
+            <li><i class="demo-icon icon-license"></i> رخصة قيادة  <br/><span>رقم 1482095</span> <div class="docs-pictures"> <img data-original="images/sample-license.JPG" src="images/sample-license.jpg"  /> </div></li>
+            
+        </ul>
+-->
+        
+    </div>
+  </div>
+
+</div>
+            
+            
+          </div>
+        </div>
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> </div>
+            <div class="box-title">أرقام احصائية للشخص <span class="material-icons">account_box</span></div>
+          </div>
+          <div class="box-content case-history">
+            <ul class="cases" role="tablist">
+              <li role="presentation" class=""> <a href="#case1" aria-controls="case1" role="tab" data-toggle="tab" > <i class="material-icons">description</i>
+                <label>ملف قضية / بلاغ</label>
+                <div class="case-result"> <span class="case-pending" data-toggle="tooltip" data-placement="top" title="Pending Case">2</span> <span class="case-completed" data-toggle="tooltip" data-placement="top" title="Completed Case">0</span> </div>
+                </a> </li>
+              <li role="presentation" > <a href="#case2" aria-controls="case2" role="tab" data-toggle="tab" > <i class="material-icons">restore_page</i>
+                <label>ملف سابقة</label>
+                <div class="case-result"> <span class="case-pending" data-toggle="tooltip" data-placement="top" title="Pending Case">2</span> <span class="case-completed" data-toggle="tooltip" data-placement="top" title="Completed Case">6</span> </div>
+                </a> </li>
+              <li role="presentation" > <a href="#case3" aria-controls="case3" role="tab" data-toggle="tab" > <i class="material-icons">local_activity</i>
+                <label>ملف تعميم</label>
+                <div class="case-result"> <span class="case-pending" data-toggle="tooltip" data-placement="top" title="Pending Case">2</span> <span class="case-completed" data-toggle="tooltip" data-placement="top" title="Completed Case">0</span> </div>
+                </a> </li>
+              <li role="presentation" > <a href="#case4" aria-controls="case4" role="tab" data-toggle="tab" > <i class="material-icons">description</i>
+                <label>ملف سجين</label>
+                <div class="case-result"> <span class="case-pending" data-toggle="tooltip" data-placement="top" title="Pending Case">1</span> <span class="case-completed" data-toggle="tooltip" data-placement="top" title="Completed Case">0</span> </div>
+                </a> </li>
+              <li role="presentation" > <a href="#case5" aria-controls="case5" role="tab" data-toggle="tab" > <i class="material-icons">assignment_late</i>
+                <label>ملف إيقاف / حجز</label>
+                <div class="case-result"> <span class="case-pending" data-toggle="tooltip" data-placement="top" title="Pending Case">9</span> <span class="case-completed" data-toggle="tooltip" data-placement="top" title="Completed Case">3</span> </div>
+                </a> </li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane" id="case1">
+                <table class="case-table table table-striped" cellspacing="15" cellpadding="15" width="100%">
+                  <thead>
+                    <tr>
+                      <th><i class="material-icons">folder</i>
+                        <label>رقم الموحد </label></th>
+                      <th><i class="material-icons">assignment</i>
+                        <label> رقم البلاغ</label></th>
+                      <th><i class="material-icons">today</i>
+                        <label> تاريخ البلاغ </label></th>
+                      <th><i class="material-icons">person</i>
+                        <label>التهمة</label></th>
+                      <th><i class="material-icons">library_books</i>
+                        <label> الوصف</label></th>
+                      <th><i class="material-icons">info</i>
+                        <label> حالة البلاغ</label></th>
+                      <th><i class="material-icons">business</i>
+                        <label> مركز الشرطة</label></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>8/2009</td>
+                      <td>07:23:37 <br/>
+                        12/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة</td>
+                      <td class="newtransaction"><span>جديد</span></td>
+                      <td class="ar">مركز شرطة القصيص</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>7/2009</td>
+                      <td>02:23:37 <br/>
+                        11/05/2016</td>
+                      <td class="ar"></td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه</td>
+                      <td class="completed"><span>منجز</span></td>
+                      <td class="ar">مركز شرطة المرقبات</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>6/2009</td>
+                      <td>05:23:37 <br/>
+                        10/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة هذه الحالة </td>
+                      <td class="statusReject"><span>رفض</span></td>
+                      <td class="ar">مركز شرطة بردبي</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="case2">
+                <table class="case-table table table-striped" cellspacing="15" cellpadding="15" width="100%">
+                  <thead>
+                    <tr>
+                      <th><i class="material-icons">folder</i>
+                        <label>رقم الموحد </label></th>
+                      <th><i class="material-icons">assignment</i>
+                        <label> رقم البلاغ</label></th>
+                      <th><i class="material-icons">today</i>
+                        <label> تاريخ البلاغ </label></th>
+                      <th><i class="material-icons">person</i>
+                        <label>التهمة</label></th>
+                      <th><i class="material-icons">library_books</i>
+                        <label> الوصف</label></th>
+                      <th><i class="material-icons">info</i>
+                        <label> حالة البلاغ</label></th>
+                      <th><i class="material-icons">business</i>
+                        <label> مركز الشرطة</label></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>7/2009</td>
+                      <td>02:23:37 <br/>
+                        11/05/2016</td>
+                      <td class="ar"></td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه</td>
+                      <td class="completed"><span>منجز</span></td>
+                      <td class="ar">مركز شرطة المرقبات</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>8/2009</td>
+                      <td>07:23:37 <br/>
+                        12/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة</td>
+                      <td class="newtransaction"><span>جديد</span></td>
+                      <td class="ar">مركز شرطة القصيص</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="case3">
+                <table class="case-table table table-striped" cellspacing="15" cellpadding="15" width="100%">
+                  <thead>
+                    <tr>
+                      <th><i class="material-icons">folder</i>
+                        <label>رقم الموحد </label></th>
+                      <th><i class="material-icons">assignment</i>
+                        <label> رقم البلاغ</label></th>
+                      <th><i class="material-icons">today</i>
+                        <label> تاريخ البلاغ </label></th>
+                      <th><i class="material-icons">person</i>
+                        <label>التهمة</label></th>
+                      <th><i class="material-icons">library_books</i>
+                        <label> الوصف</label></th>
+                      <th><i class="material-icons">info</i>
+                        <label> حالة البلاغ</label></th>
+                      <th><i class="material-icons">business</i>
+                        <label> مركز الشرطة</label></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>8/2009</td>
+                      <td>07:23:37 <br/>
+                        12/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة</td>
+                      <td class="newtransaction"><span>جديد</span></td>
+                      <td class="ar">مركز شرطة القصيص</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="case4">
+                <table class="case-table table table-striped" cellspacing="15" cellpadding="15" width="100%">
+                  <thead>
+                    <tr>
+                      <th><i class="material-icons">folder</i>
+                        <label>رقم الموحد </label></th>
+                      <th><i class="material-icons">assignment</i>
+                        <label> رقم البلاغ</label></th>
+                      <th><i class="material-icons">today</i>
+                        <label> تاريخ البلاغ </label></th>
+                      <th><i class="material-icons">person</i>
+                        <label>التهمة</label></th>
+                      <th><i class="material-icons">library_books</i>
+                        <label> الوصف</label></th>
+                      <th><i class="material-icons">info</i>
+                        <label> حالة البلاغ</label></th>
+                      <th><i class="material-icons">business</i>
+                        <label> مركز الشرطة</label></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>7/2009</td>
+                      <td>02:23:37 <br/>
+                        11/05/2016</td>
+                      <td class="ar"></td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه</td>
+                      <td class="completed"><span>منجز</span></td>
+                      <td class="ar">مركز شرطة المرقبات</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>6/2009</td>
+                      <td>05:23:37 <br/>
+                        10/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة هذه الحالة </td>
+                      <td class="statusReject"><span>رفض</span></td>
+                      <td class="ar">مركز شرطة بردبي</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="case5">
+                <table class="case-table table table-striped" cellspacing="15" cellpadding="15" width="100%">
+                  <thead>
+                    <tr>
+                      <th><i class="material-icons">folder</i>
+                        <label>رقم الموحد </label></th>
+                      <th><i class="material-icons">assignment</i>
+                        <label> رقم البلاغ</label></th>
+                      <th><i class="material-icons">today</i>
+                        <label> تاريخ البلاغ </label></th>
+                      <th><i class="material-icons">person</i>
+                        <label>التهمة</label></th>
+                      <th><i class="material-icons">library_books</i>
+                        <label> الوصف</label></th>
+                      <th><i class="material-icons">info</i>
+                        <label> حالة البلاغ</label></th>
+                      <th><i class="material-icons">business</i>
+                        <label> مركز الشرطة</label></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>8/2009</td>
+                      <td>07:23:37 <br/>
+                        12/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة</td>
+                      <td class="newtransaction"><span>جديد</span></td>
+                      <td class="ar">مركز شرطة القصيص</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>6/2009</td>
+                      <td>05:23:37 <br/>
+                        10/05/2016</td>
+                      <td class="ar">جنائي</td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه الحالة أدخل سبب هذه الحالة هذه الحالة </td>
+                      <td class="statusReject"><span>رفض</span></td>
+                      <td class="ar">مركز شرطة بردبي</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">203306740908</a></td>
+                      <td>7/2009</td>
+                      <td>02:23:37 <br/>
+                        11/05/2016</td>
+                      <td class="ar"></td>
+                      <td class="ar">أدخل سبب هذه الحالة أدخل سبب هذه</td>
+                      <td class="completed"><span>منجز</span></td>
+                      <td class="ar">مركز شرطة المرقبات</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card md">
+          <div class="box-heading">
+            <div class="tab-icons"> <i class="material-icons">sync</i> <i class="expand-table"></i> </div>
+            <div class="box-title">أحدث المعاملات<span class="material-icons">account_box</span></div>
+          </div>
+          <div class="box-content latest-transaction">
+            <div class="row">
+              <div class="col-sm-2"><i class="material-icons ongoing">play_arrow</i></div>
+              <div class="col-sm-3">110805921</div>
+              <div class="col-sm-4 text-center">Jumeirah Group LLC</div>
+              <div class="col-sm-3 text-left"><i class="material-icons date-icon">today</i> 27th Aug 2016</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2"><i class="material-icons closed">warning</i></div>
+              <div class="col-sm-3">110805921</div>
+              <div class="col-sm-4 text-center">AL Nahda PRO Services</div>
+              <div class="col-sm-3 text-left"><i class="material-icons date-icon">today</i> 14th Aug 2016</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2"><i class="material-icons complete">done</i></div>
+              <div class="col-sm-3">110805921</div>
+              <div class="col-sm-4 text-center">Personal</div>
+              <div class="col-sm-3 text-left"><i class="material-icons date-icon">today</i> 20th Sep 2016</div>
+            </div>
+          </div>
+        </div>
+        <div class="doc-options ">
+    <div class="doc-option-inner card">
+    	 <div class="box-heading">
+         <div class="box-title">اجراءات المعاملة </div>
+         <div class="tab-icons"><i class="material-icons">more_horiz</i></div>
+         </div>
+         <div class="box-content">
+         	<ul>
+            	<li><a data-toggle="modal" data-target="#person" href="#" class="mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">person</i>لجنة المطلوبين</a></li>
+                
+                <li><a href="#" class=" mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons ">assignment</i>لجنة التسجيم الجناني</a></li>
+                
+                <li><a href="#"  class="mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">fingerprint</i>الجنة اليصمات</a></li>
+               
+                <li><a  class="mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">security</i>لجنة الأمن</a></li>
+            </ul>
+         </div>
+         </div>
+    </div>
+      </div>
+      <!-- Activity left sidebar -->
+      <div class="activity-bar">
+        <div class="act-opener"><i class="material-icons">arrow_drop_down</i></div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#transaction" aria-controls="transaction" role="tab" data-toggle="tab">سجل المعاملة</a></li>
+          <li role="presentation"><a href="#customer-tab" aria-controls="customer-tab" role="tab" data-toggle="tab">سجل المعاملة 2</a></li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="transaction">
+            <div class="trans-timeline conversation ">
+              <div class="conversation-container Cscroll ">
+                <div class="transactions message sent">
+                  <div class="status-icons cancel"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#">TAHIR_80@YAHOO.COM</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">18/05/2016 </div>
+                      <div class="time">11:51:19 AM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">784199030971917</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">2016005612</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:00:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم دفع الرسوم. رقم الايصال:</span><a href="#" class="t-no">135147</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">16/05/2016 </div>
+                      <div class="time">09:53:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent" id="random">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم انشاء معاملة رقم: </span><a href="#" class="t-no">165003043334</a></div>
+                    <div class="lawyer"> العريف اول نوف محسن على درويش البلوشى </div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="conversation-compose">
+                <div class="converse-wrap">
+                  <div class="photo"><img src="images/user.jpg" alt=""/> </div>
+                  <div class="input-msg">
+                    <textarea name="input" placeholder="ملاحظات الموظف..." autocomplete="off" autofocus></textarea>
+                  </div>
+                  <button class="send mdl-js-button mdl-js-ripple-effect"><i class="material-icons">send</i></button>
+                </div>
+                <div class="select-status">
+                  <div class="in-reject"> <span class="mdl-list__item-primary-content">إلغاء الطلب</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                      <input type="radio" id="list-option-1" class="mdl-radio__button statusBtnClass" value="1" name="one"  />
+                    </label>
+                    </span> </div>
+                  <div class="in-process"> <span class="mdl-list__item-primary-content">قيد الإجراء</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                      <input type="radio" id="list-option-2" class="mdl-radio__button statusBtnClass" value="2" name="one" checked />
+                    </label>
+                    </span> </div>
+                </div>
+              </form>
+              <div class="status-bar">
+                <div class="time"></div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="customer-tab">
+            <div class="trans-timeline conversation">
+              <div class="conversation-container">
+                <div class="transactions message sent">
+                  <div class="status-icons cancel"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#">TAHIR_80@YAHOO.COM</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">18/05/2016 </div>
+                      <div class="time">11:51:19 AM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">784199030971917</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">2016005612</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:00:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم دفع الرسوم. رقم الايصال:</span><a href="#" class="t-no">135147</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">16/05/2016 </div>
+                      <div class="time">09:53:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent" id="random">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم انشاء معاملة رقم: </span><a href="#" class="t-no">165003043334</a></div>
+                    <div class="lawyer"> العريف اول نوف محسن على درويش البلوشى </div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="conversation-compose">
+                <div class="converse-wrap">
+                  <div class="photo"><img src="images/user.jpg" alt=""/> </div>
+                  <div class="input-msg">
+                    <textarea name="input" placeholder="ملاحظات الموظف..." autocomplete="off" autofocus></textarea>
+                  </div>
+                  <button class="send mdl-js-button mdl-js-ripple-effect"><i class="material-icons">send</i></button>
+                </div>
+                <div class="select-status">
+                  <div class="in-reject"> <span class="mdl-list__item-primary-content">إلغاء الطلب</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                      <input type="radio" id="list-option-1" class="mdl-radio__button statusBtnClass" value="1" name="one"  />
+                    </label>
+                    </span> </div>
+                  <div class="in-process"> <span class="mdl-list__item-primary-content">قيد الإجراء</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                      <input type="radio" id="list-option-2" class="mdl-radio__button statusBtnClass" value="2" name="one" checked />
+                    </label>
+                    </span> </div>
+                </div>
+              </form>
+              <div class="status-bar">
+                <div class="time"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Activity left sidebar Ends--> 
+    </div>
+  </div>
+  
+  <!-- Main Content - Ends --> 
+</div>
+    <!-- all popups -->
+<div class="modal" id="person" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="pop-container modal-dialog no-step" role="document">
+<div class="box-heading">
+	<div class="box-title">اتخاذ القرار</div>
+    <div class="tab-icons" data-dismiss="modal"><i class="material-icons">close</i></div>
+</div>
+ <!-- multistep form -->
+ <div class="row">
+                    <div class="col-lg-12 form-box">
+                    	<form role="form" action="" method="post" class="f1">
+<!--
+                    		<div class="f1-steps">
+                    			<div class="f1-progress">
+                    			    <div class="f1-progress-line" data-now-value="22" data-number-of-steps="2" style="width: 22%;"></div>
+                    			</div>
+                                <div class="step-circles">
+                    			<div class="f1-step active">
+                    				<div class="f1-step-icon">1</div>
+                    				<p>الرد</p>
+                    			</div>
+                    		    <div class="f1-step">
+                    				<div class="f1-step-icon">2</div>
+                    				<p>تأكيد</p>
+                    			</div>
+                    		</div>
+                    		</div>
+-->
+                    		
+                            <fieldset>
+                                
+		
+                <div class="form-group">
+                  <label>حالة الطلب</label>
+                  <div class="status-tags">
+                    <div class="tags selected"> يجد قيد <i class="material-icons">speaker_notes</i></div>
+                    <div class="tags"> لا يجد قيد <i class="material-icons">speaker_notes_off</i></div>
+                    <div class="tags"> مرفوضة <i class="material-icons">warning</i></div>
+                    <div class="tags"> قيد الانجاز <i class="material-icons">playlist_add_check</i></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>الملاحظات</label>
+                  <textarea rows="5" placeholder="أدخل سبب هذه الحالة"></textarea>
+                </div>
+
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-next">حفظ</button>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <div class="alert-icon"><i class="material-icons">warning</i></div>
+        						<h2>Are you Sure </h2>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">واضح</buttson>
+                                    <button type="button" class="btn btn-next">حفظ</button>
+                                </div>
+                            </fieldset>                            
+                    	</form>
+                    </div>
+                </div>
+</div>
+</div><!-- /.modal -->
+<div class="popup-backdrop"></div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap --> <script src="js/bootstrap.js"></script> 
+
+<!-- Plugins JS --> 
+<script src="plugins/datatables/js/jquery.dataTables.js"></script> 
+<script src="plugins/datatables/js/dataTables.bootstrap.min.js"></script> 
+
+<script src="plugins/datepicker/moment.js"></script> 
+<script src="plugins/datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="plugins/material-design/material.js"></script> 
+<script src="plugins/clock/js/jClocksGMT.js"></script> 
+<script src="plugins/clock/js/jquery.rotate.js"></script> 
+<script src="plugins/x-editable/bootstrap-editable.min.js"></script> 
+<script src="plugins/x-editable/fields-edit.js"></script> 
+    <script src="plugins/step-form/js/jquery.backstretch.min.js"></script>
+    <script src="plugins/image-viewer/js/main.js"></script>
+<script src="plugins/image-viewer/js/viewer.js"></script>
+<script src="plugins/step-form/js/scripts.js"></script>
+<script src="plugins/horizontal-timeline/main.js"></script>
+<script src="plugins/horizontal-timeline/jquery.mobile.custom.min.js"></script>
+	<script>
+	
+  $(document).ready(function($){
+      $(".left-toggle").on("click", function(){
+          $(".toggle-buttons").removeClass("right-active").addClass("left-active");
+          $(".cd-horizontal-timeline").slideUp(300);
+          $(".overview").slideDown(300);
+      });
+      $(".right-toggle").on("click", function(){
+          $(".toggle-buttons").removeClass("left-active").addClass("right-active");
+          $(".cd-horizontal-timeline").slideDown(300);
+          $(".overview").slideUp(300);
+      });
+      
+      // X editable
+      
+      $('#enable').click(function(e){    
+       e.stopPropagation();
+       $('.editable').editable('toggle');
+});
+      $.fn.editable.defaults.mode = 'inline';
+      
+       $('.editable').editable();
+      
+      
+  });
+
+
+          
+
+	</script>
+<!-- Initialise custom JS --> 
+ 
+
+<script src="js/custom.js"></script>
+    
+</body>
+</html>

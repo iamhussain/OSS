@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login - OSS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+
+<link href="css/login.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="login-header">
+	<div class="icon-overlay patternUp go animated delay-1000"><img src="images/icons-pattern-new.svg" alt=""/></div>
+	<div class="govt-logo pull-left fadeIn go animated delay-1000"><img src="images/govt.svg" > </div>
+    <div class="dp-logo pull-right fadeIn go animated delay-1000"><img src="images/dp-logo.svg" ></div>
+    
+    <div class="oss-logo animated bb">
+    	<span class="logo-border fadeIn go animated delay-1750"><img src="images/logo-border.svg" alt="logo-border" /></span>
+    	<i class="demo-icon icon-logo-square logo-animate"></i>
+        
+        <svg class="checkmark " style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        <div class="loading-wrpr" style="display: none;">
+	<span class="loader"></span>	
+</div>
+
+
+    </div>
+    <div class="loading-text" style="display: none">
+    <small>اهلاً وسهلاً بك٫</small>
+	محمد حافظ
+	<!--<span>يرجى الانتظار بينما نحن تعزيز تجربة OSS الخاص بك</span>-->
+</div>
+</div>
+<div class="login-box fadeIn go animated delay-1700">
+    
+  <div class="form-group username">
+      <input class="form-control" placeholder="اسم المستخدم">
+  </div>
+  <div class="form-group password">
+      <input type="password" class="form-control" placeholder="كلمه السر">
+  </div>
+  <div class="form-group form-buttons">
+  	<div class="row">
+    <div class="col-sm-6">
+      <button type="submit" class="btn btn-primary login-btn">دخول</button>
+      <div class='login-loader'></div>
+      <div class="error-login">Error Login</div>
+    </div>
+  	<div class="col-sm-6">
+    	<a href="#" class="ar-kufi">هل نسيت كلمة المرور ؟</a>
+        <a href="#" class="ar-kufi">مساعدة</a>
+    </div>
+    
+    </div>
+  </div>
+
+
+
+<div class="error-login-info">
+	اسم المستخدم أو كلمة المرور غير صحيحة
+</div>
+</div>
+ <div class="oss-copyright fadeIn go animated delay-1700">
+<span>جميع الحقوق محفوظة ٢٠١٦</span>
+ <span>الإدارة العامة للخدمات الذكية</span>
+
+</div>
+
+
+</body>
+<!-- jQuery --> <script src="js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap --> <script src="js/bootstrap.js"></script>
+<script src="plugins/material-design/material.js"></script>
+<script>
+	$( document ).ready(function(){
+		$(".login-btn").click(function(){
+			$(this).hide();
+			$(".error-login").hide();
+			$(".login-loader").css({"display": "block" });
+			$(".error-login-info").hide();
+			setTimeout(function(){
+				$("body").addClass("header-conversion");
+				$(".login-box").hide();
+				$(".icon-logo-square").hide();
+				$(".loading-wrpr").css({"display": "flex" });
+			}, 2000);
+			
+			setTimeout(function(){
+			$(".loading-text").css({"display": "flex" });
+			}, 2500);
+			setTimeout(function(){	
+					
+			    $(".loading-wrpr").css({"display": "none" });
+				
+				$(".checkmark").css({"display": "inline-block" });
+			 }, 3500);			
+			 setTimeout(function(){		
+				$("body").addClass("header-small");
+			 }, 5000);
+			 setTimeout(function(){		
+			 $("body").animate({"opacity": 0});
+				window.location.href = "dashboard.html";
+			 }, 6780);
+		});
+});
+
+
+// Login error 
+$( document ).ready(function(){
+		$(".error-login").click(function(){
+			$(this).hide();
+			 $(".login-box").removeClass("fadeIn");
+			$(".error-login-info").hide();
+			$(".login-btn").hide();
+			$(".login-box").addClass("shake");
+			$(".login-loader").css({"display": "block" });
+			
+			
+			 setTimeout(function(){
+				 
+			$(".login-loader").css({"display": "none" });
+			$(".login-btn").show();
+			$(".error-login").show();
+			$(".error-login-info").show();
+			$(".login-box").removeClass("shake");
+			 }, 2300);
+	});
+});			
+</script>
+
+</html>

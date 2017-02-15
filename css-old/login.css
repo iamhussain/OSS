@@ -1,0 +1,583 @@
+@charset "UTF-8";
+/* CSS Document */
+html, body{
+	height:100%
+}
+/*body{
+	overflow:hidden;
+}*/
+.login-header{
+	background:#3498db;
+	width:100%;
+	float:left;
+	text-align:center;
+	border-bottom:5px solid #fff;
+	box-shadow: 0px 17px 65px 0px rgba(0, 0, 0, 0.16); 
+	position:relative;
+	height:100%;
+	animation-name:blue-strip;
+	animation-duration:0.8s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay:1s;
+}
+.header-conversion .login-header{
+	border:none;
+	box-shadow:none;
+}
+@keyframes blue-strip {
+	0% {
+		height:100%;
+		
+	}
+	100% {
+		height:453px;
+	
+	}		
+}
+
+@-webkit-keyframes blue-strip {
+	0% {
+		height:100%;
+		
+	}
+	100% {
+		height:453px;
+	
+	}		
+}
+
+.header-conversion .login-header{
+	animation-name:blue-strip-animate;
+	animation-delay:0s !important;
+	height:453px;
+}
+@keyframes blue-strip-animate {
+	0% {
+		height:453px;
+		
+	}
+	100% {
+		height:100%;
+	
+	}		
+}
+
+@-webkit-keyframes blue-strip-animate {
+	0% {
+		height:453px;
+		
+	}
+	100% {
+		height:100%;
+	
+	}		
+}
+
+.header-small .login-header{
+	animation-name:blue-strip-small;
+	animation-delay:1s !important;
+	height:100%;
+}
+@keyframes blue-strip-small {
+	0% {
+		height:100%;
+		
+	}
+	100% {
+		height:0px;
+	
+	}		
+}
+
+@-webkit-keyframes blue-strip-small {
+	0% {
+		height:100%;
+		
+	}
+	100% {
+		height:0px;
+	
+	}		
+}
+
+.icon-overlay {
+    bottom: 19px;
+    position: absolute;
+    width: 1230px;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: .5;
+}
+.demo-icon{
+	font-style:normal;
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    -ms-osx-font-smoothing: antialiased;
+    -khtml-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+.govt-logo {
+    font-size: 52px;
+    line-height: normal;
+    padding:9px 17px 17px 17px;
+	text-align:left;
+	color:#fff;
+	width:160px;
+}
+.dp-logo {
+    font-size: 52px;
+    line-height: normal;
+       padding:9px 17px 17px 17px;
+		text-align:right;
+	color:#fff;
+		width:160px;
+}
+.oss-logo {
+  /*width: 258px;
+    height: 225px;
+    color: #fff;
+    display: flex;
+    margin: 95px auto 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+	*/
+	
+	width: 258px;
+    height: 225px;
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+	
+}
+
+.oss-logo > i{
+	font-size:91px;
+	opacity: 0;
+	animation-name:logo;
+	animation-duration:1s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	    text-shadow: 0 0 46px #fff;
+}
+span.logo-border {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+    top: 0;
+	opacity:0;
+}
+.login-box {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 22.5px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    padding: 34px 20px;
+    position: relative;
+    text-align: center;
+    top: -92px;
+    width: 335px;
+	transition: all 0.3s linear;
+	opacity:1;
+}
+.login-loading.login-box {
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+		top: -50px;
+}
+.header-conversion .login-loading.login-box{
+	dispay:none;
+}
+.user-avatar{
+	background:#e1e1e1;
+	margin:0 auto 30px;
+	display:inline-block;
+	border-radius:22.5px;
+	width:90px;
+	height:90px;
+	text-align:center;
+	color:#bdbdbd;
+}
+.user-avatar > i {
+    font-size: 90px;
+    line-height: 100%;
+}
+.login-box input.form-control {
+    width: 100%;
+    height: 42px;
+    border: 4px solid #f7f7f7;
+	font-family:DroidKufiRegular;
+	font-size:15px;
+	border-radius: 10px;
+	box-shadow: none;
+	padding-right:35px;
+	transition:all 0.5s linear, border-width 0.2s linear;
+	
+}
+.login-box input.form-control:focus{
+	box-shadow:0 0 8px rgba(52,152,219,1);
+	color:#3498DB;
+	border-color:#3498DB;
+	border-width:1px;
+}
+.login-box .form-group.username::before{
+	content: "\E7ff";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #c0c0c0;
+    font-family: "Material Icons";
+    font-size: 22px;
+}
+
+.login-box .form-group.password::before{
+	content:"\E899";
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #c0c0c0;
+    font-family: "Material Icons";
+    font-size: 22px;
+}
+.login-box .form-group:active::before{
+	color:rgba(52,152,219,1.00)
+}
+.login-box .form-group{
+	margin-left:0;
+	margin-right:0;
+	margin-bottom:11px;
+	position:relative;
+}
+.login-loading.login-box .form-group{
+	display: none;
+}
+.form-control::-moz-placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+.form-control::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.ar-kufi{
+	font-family: droidkufiregular;
+}
+.login-box .ar-kufi {
+    font-size: 11px;
+    color: #c4c4c4;
+    float: left;
+    
+}
+.login-box .btn-primary {
+    float: right;
+    font-size: 18px;
+    font-family: droidkufiregular;
+    width: 100%;
+    height: 41px;
+}
+.login-box .form-buttons{
+	margin-top:10px;
+	margin-bottom:0;
+}
+.form-buttons .col-sm-6{
+	float:right;
+}
+.mini-heading{
+	margin-bottom:20px;
+}
+.login-box .mini-heading .ar-kufi{
+	font-size:15px;
+	padding:0;
+}
+.oss-copyright {
+    color: #797979;
+    float: left;
+    font-family: droidkufiregular;
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    top: -81px;
+    width: 100%;
+}
+.header-conversion .oss-copyright{
+	color:#afdfff;
+}
+.oss-copyright span{
+	display:block;
+}
+.header-small .govt-logo, .header-small .dp-logo, .header-small .icon-overlay,.header-small .oss-logo {
+	animation-name: fadeOut !important;
+	animation-delay: 0.1s !important;
+} 
+/*************
+* background pattern *
+*************/
+
+@-webkit-keyframes patternUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translate(-50%, 400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: .5; 
+        -webkit-transform: translate(-50%, 0); 
+    } 
+} 
+@keyframes patternUp { 
+    0% { 
+        opacity: 0; 
+        transform: translate(-50%, 400px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: .5; 
+        transform: translate(-50%, 0); 
+    } 
+} 
+.patternUp{ 
+    opacity: 0; 
+    -webkit-transform: translate(-50%, 400px); 
+    transform: translate(-50%, 400px);
+}
+.patternUp.go { 
+    -webkit-animation-name: patternUp; 
+    animation-name: patternUp; 
+}
+.header-conversion .icon-overlay{
+	animation-name: patterCenter;
+	    bottom: auto;
+    top: 50%;
+	animation-delay:0s ;
+	transform: translate(-50%, -50%); 
+	 opacity: .5; 
+}
+@keyframes patterCenter { 
+    0% { 
+        opacity: .5; 
+        transform: translate(-50%, 0); 
+    } 
+    100% { 
+        opacity: .5; 
+        transform: translate(-50%, -50%); 
+    } 
+} 
+/*************
+* logo *
+*************/
+
+@keyframes logo {
+	30% {
+		opacity:1;
+	}
+	60%{
+		text-shadow: 0 0 1px #fff;
+		/*transform: scale(2);*/
+		font-size: 200px;
+	}
+	100% {
+		opacity:1;
+		/*transform: scale(1);*/
+		text-shadow: 0 0 1px #fff;
+		font-size: 91px;
+	}
+}
+
+@-webkit-keyframes logo {
+	30% {
+		opacity:1;
+	}
+	60%{
+		text-shadow: 0 0 1px #fff;
+		/*transform: scale(2);*/
+		font-size: 200px;
+	}
+	100% {
+		opacity:1;
+		/*transform: scale(1);*/
+		text-shadow: 0 0 1px #fff;
+		font-size: 91px;
+	}
+}
+ .loading-wrpr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 999;
+	flex-flow: column;
+}
+.loader{
+	border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 6px solid rgba(255, 255, 255, 1);
+    border-top-color: #3498DB;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+    background: none;
+    margin: 0;
+	display: inline-table;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.login-loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  animation: login-loader 0.5s ease alternate infinite;
+  animation-delay: 0.18s;
+  top: 50%;
+  margin: -20px auto 0;
+  display:none; }
+  .login-loader::after, .login-loader::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: login-loader 0.5s ease alternate infinite; }
+  .login-loader::before {
+    left: -30px;
+    animation-delay: 0s; }
+  .login-loader::after {
+    right: -30px;
+    animation-delay: 0.36s; }
+
+@keyframes login-loader {
+  0% {
+    box-shadow: 0 28px 0 -28px #3498DB; }
+  100% {
+    box-shadow: 0 28px 0 #3498DB; } }
+
+.loading-text {
+        width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: normal;
+    color: #fff;
+    font-family: droidkufiregular;
+    justify-content: center;
+    flex-flow: column;
+    position: absolute;
+    bottom: 100px;
+}
+.loading-text > span{
+	display: block;
+	 font-size: 24px;
+	 color: #fff;
+font-family: droidkufiregular;
+}
+
+/* tick animation */
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #2ecc71;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 0 auto;
+  box-shadow: inset 0px 0px 0px #2ecc71;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+   transform: scale3d(2.5, 2.5, 1);
+  }
+  50% {
+    transform: scale3d(2.6, 2.6, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #2ecc71;
+	
+  }
+}
+/* Error Login */
+.error-login{
+	line-height: 100%;
+    padding-top: 6px;
+    display: block;
+    clear: both;
+	cursor:pointer;
+}
+.error-login-info {
+    background: #d65656;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 0;
+    margin-top: 9px;
+    border: 2px solid #c73b3b;
+	display:none;
+	font-family:DroidKufiRegular
+}

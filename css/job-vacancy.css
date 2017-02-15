@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* CSS Document */
+.username{
+    font-size: 14px;
+    color: #707070;
+    text-align: right;
+	    direction: rtl;
+		margin-bottom: 10px;
+		float:right;
+}
+.username.ar{
+	font-size:20px;
+	font-family:"Sakkal Majalla"
+}
+.username > span {
+    display: block;
+}
+
+.job-details-wrpr .list.fullwidth {
+    width: 100%;
+}
+.service {
+    display: block;
+    padding: 4px 0;
+	text-align:right;
+	clear:both;
+	max-width:90%;
+	margin-left:auto;
+	color:#808697
+}
+.app-col-3 > span + span {
+    margin-top: 10px;
+}
+.app-col-3 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.app-col-3 > span {
+    position: relative;
+}
+.job {
+    width: 100%;
+	float:left;
+}
+
+.job-wrapper {
+    float: left;
+    width: 100%;
+}
+.username > i {
+    position: relative;
+    top: 3px;
+    margin-right: 8px;
+}
+
+.appoint-search {
+    padding: 8px;
+    max-width: 180px;
+}
+.appoint-search > .form-control{
+	border-color: #ddd;
+}
+.job-number {
+    background: #eeeeee none repeat scroll 0 0;
+    color: #808697;
+    flex-shrink: 0;
+    font-size: 25px;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+	border-radius:5px;
+}
+.job-number > i{
+	color: #3498DB;
+	display:block;
+	margin:5px 0;
+}
+.icon-position{
+	    font-size: 18px;
+    position: relative;
+    top: 4px;
+    margin-left: 8px;
+}
+.job-details-wrpr {
+    display: flex;
+    flex-flow: row wrap;
+	width:100%;
+}
+
+.job-wrapper .form-data{
+	font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.more-btn > i {
+    background: #3498db none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #ffffff;
+    float: right;
+    font-size: 16px;
+    margin-left: 10px;
+	margin-top: 3px;
+}
+.card-footer {
+    background: #eeeeee none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #dddddd;
+    float: right;
+    width: 100%;
+	padding:8px 15px;
+}
+
+.job-wrpr .box-content {
+    padding: 0;
+	width:100%;
+}
+/* New Design */
+.app-col-1{
+    background: #eeeeee none repeat scroll 0 0;
+    border-bottom: 1px solid #dddddd;
+    height: 79px;
+    padding: 15px;
+	border-radius:5px 5px 0 0;	
+}
+.app-col-2 .list {
+    min-height: 38px;
+    padding: 10px 16px;
+    width: 100%;
+	border:none;
+}
+.app-col-2 .list + .list {
+    border-top: 1px solid #eeeeee;
+}
+.job-wrapper .avatar56 {
+    background: #ffffff none repeat scroll 0 0;
+    float: right;
+    margin-left: 10px;
+    text-align: center;
+}
+.job-wrapper .avatar56 > i {
+    color: #9b9b9b;
+    font-size: 38px;
+    line-height: 65px;
+}
+.job-wrapper .avatar56 > i.icon-policeman{
+	color:#74a172;
+}
+.job .flag-icon {
+    font-size: 24px;
+}
+.job-details-wrpr > div.list:first-child {
+    border-bottom: 1px solid #eee;
+}
+.modal-dialog.job-dialog{
+	width:712px;
+}
+.job-details-wrpr .form-data{
+	font-size:17px;
+}
+
+.job-dialog .show-more{
+	margin-top:-7px;
+}
+.job-wrpr .col-sm-3 {
+    float: right;
+}
+.add-contact{
+	position:fixed;
+	bottom:20px;
+	right:320px;
+	background:#3498DB;
+	width:59px;
+	height:59px;
+	border-radius:50%;	
+	color:#fff;
+	text-align:center;
+	line-height:59px;
+	z-index:9;
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+	cursor:pointer;
+}
+.add-contact > i{
+	 font-size: 30px;
+    line-height: 59px;
+}
+.add-contact:hover{
+	background:#00A8FC;
+}
+.add-contact:active{
+	transform: scale(.95);
+}
+.job-dialog .list {
+    padding: 10px 19px;
+}
+.job-dialog .box-content {
+    padding: 0;
+}
+.job-dialog .modal-content {
+    overflow:visible !important;
+}

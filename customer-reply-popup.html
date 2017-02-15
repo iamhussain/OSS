@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Customer Reply</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/boot-select/css/bootstrap-select.css">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/step-form/css/form-elements.css">
+<link rel="stylesheet" href="plugins/step-form/css/style.css">
+<link rel="stylesheet" href="plugins/file-input/fileinput.css">
+<link rel="stylesheet" href="plugins/custom-scroll/jquery.mCustomScrollbar.css">
+<!-- Custom Stylesheet (always need to be the last css file) -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+<!-- responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+</head>
+
+<body class="iframe Cscroll">
+<div class="pop-container modal-dialog" role="document">
+<div class="box-heading">
+	<div class="box-title">الرد على الجمهور</div>
+   
+    
+    <div style="display: none;" class="tab-icons back-tab1"><i class="material-icons">keyboard_arrow_left</i>
+    </div>
+</div>
+ <!-- multistep form -->
+                    <div class="form-box">
+                    	<form role="form" action="" method="post" class="f1 f2">
+                    		<div class="f1-steps">
+                    			<div class="f1-progress">
+                    			    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                    			</div>
+                                <div class="step-circles">
+                    			<div class="f1-step active">
+                    				<div class="f1-step-icon">1</div>
+                    				<p>ارسال</p>
+                    			</div>
+                    			<div class="f1-step">
+                    				<div class="f1-step-icon">2</div>
+                    				<p>الرد</p>
+                    			</div>
+                    		    <div class="f1-step">
+                    				<div class="f1-step-icon">3</div>
+                    				<p>تأكيد</p>
+                    			</div>
+                    		</div>
+                    		</div>
+                    		<fieldset>
+                    		    <div class="cert-options cert-options2">
+	<div class="sm-card print-cert btn-next">
+        <i class="demo-icon icon-sms">&#xe80c;</i>
+        <label>إيميل إلكتروني</label>
+    </div>
+    <div class="sm-card email btn-next">
+        <i class="demo-icon icon-email">&#xe80b;</i>
+        <label>رسالة نصية</label>
+    </div>
+</div>
+                            </fieldset>
+
+                            <fieldset>
+                                <div class="form-group status">
+                                <div class="row">
+                                <div class="col-xs-6">
+        	<label>نوع الطلب</label>
+        	<input type="text" placeholder="اختر" id="input-reply">
+        </div>
+             <div class="col-xs-6">
+        	<label>الحالة</label>
+        	<select name="status" placeholder="status" class="selectpicker form-control">
+            <option>جديد</option>
+            <option>Approved</option>
+            <option>Rejected</option>
+            </select>
+        </div>
+        </div>
+        </div>
+		<div class="form-group status-txt">
+        	<label>كتابة الرد</label>
+    		<textarea placeholder="كتابة الرد أو بإمكانك اختيار  نموذج محدد  للإستخدام الفوري" id="textarea-reply"></textarea>
+        </div>
+        <div class="form-group">
+                    <input class="fileUpload" type="file" multiple data-overwrite-initial="false">
+                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn sample-msg">نموذج محدد <i class="material-icons">format_align_center</i></button>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="last-step">
+                                <div class="alert-icon"><i class="material-icons">warning</i></div>
+        						<h2>Are you Sure </h2>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-next">Confirm</button>
+                                </div>
+                            </fieldset>                            
+                    	</form>
+                        <div class="sample-message">
+                        	<div class="form-group status">
+        	<label>اختيار النموذج</label>
+        	<select name="status" placeholder="status" class="selectpicker form-control">
+            <option>الإدارة المختصة - انجليزي</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            </select>
+            </div>
+            <div class="form-group status">
+        	<label>الحالة</label>
+        	<input type="text" placeholder="اختر" id="input-sample">
+        </div>
+		<div class="form-group status-txt">
+        	<label>كتابة الرد</label>
+    		<textarea placeholder="كتابة الرد أو بإمكانك اختيار  نموذج محدد  للإستخدام الفوري" id="textarea-sample"></textarea>
+        </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-primary continue" onclick="displayOut();" value="click">استخدام <i class="material-icons">keyboard_return</i></button>
+                                   <!-- <input type="button" onclick="displayOut();" value="click">-->
+                                </div>
+                        </div>
+                    </div>
+                    
+                
+</div>
+
+<!-- jQuery --> <script src="js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap --> <script src="js/bootstrap.js"></script>
+
+
+
+<!-- Plugins JS -->
+<script src="plugins/datatables/js/jquery.dataTables.js"></script>
+<script src="plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<script src="plugins/boot-select/js/bootstrap-select.js"></script>
+<script src="plugins/datepicker/js/moment.js"></script>
+<script src="plugins/datepicker/js/datepicker2.js"></script>
+<script src="plugins/material-design/material.js"></script>
+<script src="plugins/clock/js/jClocksGMT.js"></script>
+<script src="plugins/clock/js/jquery.rotate.js"></script>
+<script src="plugins/x-editable/bootstrap-editable.min.js"></script>
+<script src="plugins/x-editable/BS-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="plugins/x-editable/fields-edit.js"></script>
+<script src="plugins/step-form/js/jquery.backstretch.min.js"></script>
+<script src="plugins/step-form/js/scripts.js"></script>
+<script src="plugins/image-viewer/js/main.js"></script>
+<script src="plugins/image-viewer/js/viewer.js"></script>
+<script src="plugins/custom-scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="plugins/file-input/canvas-to-blob.min.js"></script>
+<script src="plugins/file-input/fileinput.js"></script>
+<script src="js/jquery.colorbox.js"></script>
+<script src="js/custom.js"></script> 
+<script>
+$(".fileUpload").fileinput({
+		browseClass: "btn btn-primary",
+		fileType: "any",
+		removeIcon: '<i class="material-icons">delete</i>',
+        uploadIcon: '<i class="material-icons">file_upload</i>',
+		allowedPreviewMimeTypes: null,
+		showPreview: true,
+		showUploadedThumbs: true
+	});
+	</script>
+</body>
+</html>

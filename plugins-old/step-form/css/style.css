@@ -1,0 +1,180 @@
+.pop-container.modal-dialog{
+	max-width:708px;
+	width:100%;
+	margin:0 auto;
+	display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  padding-top:53px;
+	height:100%;
+}
+
+.pop-container .box-heading{
+	position:fixed;
+	top:0;
+	width:100%;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.form-box {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+	border-radius:0 0 5px 5px;
+}
+.f1 {
+	text-align:center; transition:all 0.2s linear;
+}
+.f1 h3 { margin-top: 0; margin-bottom: 5px; text-transform: uppercase; }
+
+.f1-steps { overflow: hidden; position: relative; margin: 25px auto 0; display:inline-block; }
+
+.f1-progress {
+    background: #eee none repeat scroll 0 0;
+    height: 4px;
+    position: absolute;
+    right: 2px;
+    top: 29px;
+    width: 98%;
+}
+.f1-progress-line { position: absolute; top: 0; right: 0; height: 4px; background: #3498DB; max-width:100%; }
+
+.f1-step { position: relative; padding:0; text-align:center; display:inline-block; }
+.f1-step + .f1-step{ margin-right:70px;}
+.f1-step-icon {
+	display: inline-block; width: 54px; height: 54px; margin-top: 4px; background: #eee;
+	font-size: 32px; color: #b8b8b8; line-height: 48px;
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; font-weight:bold;
+	border:4px solid transparent; transition:all 0.2s linear;
+	position:relative;
+}
+.f1-step .f1-step-icon:before{
+background: #2ecc71 none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 0;
+    color: #fff;
+    content: "\E5CA";
+    font-family: "Material Icons";
+    font-size: 12px;
+    height: 20px;
+    left: -7px;
+    line-height: 19px;
+    position: absolute;
+    width: 20px;
+    z-index: 1;
+	opacity:0;
+}
+.f1-step.activated .f1-step-icon:before{
+	opacity:1;
+	animation-name:bounceIn;
+	animation-duration:0.2s;
+	animation-iteration-count:1;
+}
+.f1-step.activated .f1-step-icon {
+	background: #3498DB; border: 4px solid #3498DB; color: #fff;
+}
+.f1-step.active .f1-step-icon {
+	background: #fff; border: 4px solid #3498DB; color: #3498DB;
+}
+
+.f1-step p { color: #b8b8b8; font-size:16px; font-family:DroidKufiRegular; transition:all 0.2s linear; }
+.f1-step.activated p { color: #3498DB; }
+.f1-step.active p { color: #3498DB; }
+
+.f1 fieldset { display: none; text-align: center; /*min-height:370px;*/
+padding:20px 25px 56px; animation-name:fadeInUp; animation-iteration-count:1; animation-duration:0.5s; position:relative;
+transition: all 0.3s linear;
+    max-height: 300px;
+    overflow: auto;
+    overflow-x: hidden; }
+
+.f1-buttons { /*float:left; width:100%; text-align:left;*/
+   	float: left;
+    width: 100%;
+    text-align: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #ddd;
+    padding-top: 6px;
+    padding: 10px 22px;
+    background: #eee;
+    border-radius: 0 0 5px 5px;
+    clear: both;
+    white-space: nowrap;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-duration: .9s;
+    animation-delay: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+ }
+.f1-buttons button + button{
+	margin-right:10px;
+}
+.f1 .input-error { border-color: #c0392b; }
+.btn.sample-msg {
+   direction: ltr;
+    float: right;
+    margin-right: 0;
+    height: 34px;
+    padding-top: 0;
+    line-height: 34px;
+}
+.sample-msg{
+	background:#3498DB;
+	color:#fff;
+}
+.btn.sample-msg > i{
+	margin-left: 6px;
+    position: relative;
+    top: 3px;
+    float: right;
+}
+.sample-message {
+     position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(170%, -50%);
+    transition: all 0.2s linear 0s;
+    width: 100%;
+	padding:0 25px;
+}
+.sample-message.move-left{
+	transform: translate(50%, -50%);
+}
+form.f1.move-left{
+	transform:translateX(-712px);
+}
+.btn.fileinput-upload, .btn.fileinput-remove {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    color: #202020;
+}
+.btn.fileinput-remove i{
+	font-size:21px;
+}
+.sample-message .f1-buttons {
+    bottom: -95px;
+    border-radius: 0 0 5px 5px;
+}
+/***** Media queries *****/
+@media (max-width: 415px) {
+	
+	h1, h2 { font-size: 32px; }
+	
+	.f1 { padding-bottom: 20px; }
+	.f1-buttons button { margin-bottom: 5px; }
+
+}

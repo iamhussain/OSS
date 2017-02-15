@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Counter Service - OSS</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/webfonts.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="plugins/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/boot-select/css/select2.css" rel="stylesheet">
+    <link href="plugins/datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="plugins/material-design/material.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+    <link rel="stylesheet" href="plugins/multilevelMenu/css/component.css">
+    <link rel="stylesheet" href="plugins/step-form/css/form-elements.css">
+    <link rel="stylesheet" href="plugins/step-form/css/style.css">
+    <link rel="stylesheet" href="plugins/flags/css/flag-icon.css">
+    <link rel="stylesheet" href="plugins/x-editable/bootstrap-editable.css">
+    <link rel="stylesheet" href="css/popups.css">
+    <!-- Custom Stylesheet (always need to be the last css file) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/counter-service.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+    <!-- responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    
+</head>
+
+<body class="fadeIn go slow nav-closed">
+    <div class="container">
+        <!-- header starts -->
+        <div id="header">
+            <header>
+                <div class="min-max header-icons mdl-js-button mdl-js-ripple-effect" onclick="toggleFullScreen()"><i class="material-icons">fullscreen</i></div>
+                <div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+                <div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"> <i class="material-icons notify-icon">notifications</i> <span class="notify-count">143</span>
+                    <div class="notifications-drop">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active all-notifs">
+                                <a href="#all" aria-controls="all" role="tab" data-toggle="tab">
+                                    <label>جميع</label>
+                                    <i class="material-icons">assessment</i><span class="count-total">143</span></a>
+                            </li>
+                            <li role="presentation" class="reply-notifs">
+                                <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+                                    <label>ردود</label>
+                                    <i class="material-icons">reply</i><span class="count-total">21</span></a>
+                            </li>
+                            <li role="presentation" class="trans-notifs">
+                                <a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab">
+                                    <label>المعاملات</label>
+                                    <i class="material-icons">assignment</i> <span class="count-total">45</span></a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="all">
+                                <ul class="notify-ul">
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-goodconduct"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203306740980</p>
+                                            <span class="ar-droid">شهادة براءة الذمة</span> </div>
+                                        <div class="col-sm-3 notify-times">
+                                            <div class="date">17/05/2016 </div>
+                                            <div class="time">3:02 PM</div>
+                                        </div>
+                                    </li>
+                                    <li class="reply-notifs">
+                                        <div class="col-sm-2 icon"><i class="material-icons">reply</i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                        <div class="col-sm-3 notify-times">
+                                            <div class="date">17/05/2016 </div>
+                                            <div class="time">3:02 PM</div>
+                                        </div>
+                                    </li>
+                                    <li class="late-notifs">
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-roadclose"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203306712345</p>
+                                            <span class="ar-droid">تغيير لو السيارة</span> </div>
+                                        <div class="col-sm-3 notify-times">
+                                            <div class="item-notify animated go pulse"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-counter"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                                <ul class="notify-ul">
+                                    <li class="reply">
+                                        <div class="col-sm-2 icon"><i class="material-icons">reply</i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                        <div class="col-sm-3 notify-times">
+                                            <div class="date">17/05/2016 </div>
+                                            <div class="time">3:02 PM</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="transactions">
+                                <ul class="notify-ul">
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-goodconduct"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203306740980</p>
+                                            <span class="ar-droid">شهادة براءة الذمة</span> </div>
+                                        <div class="col-sm-3 notify-times">
+                                            <div class="date">17/05/2016 </div>
+                                            <div class="time">3:02 PM</div>
+                                        </div>
+                                    </li>
+                                    <li class="reply">
+                                        <div class="col-sm-2 icon"><i class="material-icons">reply</i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                        <div class="col-sm-3 notify-times">
+                                            <div class="date">17/05/2016 </div>
+                                            <div class="time">3:02 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-roadclose"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203306712345</p>
+                                            <span class="ar-droid">تغيير لو السيارة</span> </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-counter"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-2 icon"><i class="demo-icon icon-car-paint"></i></div>
+                                        <div class="col-sm-7 title">
+                                            <p>203123450980</p>
+                                            <span class="ar-droid">تغيير لون السيارة</span> </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="all-notifications">All Notifications</div>
+                    </div>
+                </div>
+                <div class="date-time">
+                    <div id="clock_uae"></div>
+                </div>
+                <div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+                <div class="switcher">
+                    <div class="switch-button"><i class="material-icons">folder_shared</i></div>
+                </div>
+            </header>
+            <!-- header ends -->
+            <!-- Sub header with breadcrumbs -->
+            <div class="sub-header">
+                <div class="user-login-info open">
+                    <div class="welcome">اهلاً وسهلاً بك٫</div>
+                    <div class="last-login">
+                        <div class="last-date">2016/05/10 الثلاثاء</div>
+                        <div class="last-time">04:46:13 AM</div>
+                        <label>:آخر دخول </label>
+                    </div>
+                </div>
+                <div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+                    <div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
+                </div>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="material-icons">home</i></a></li>
+                    <li><a href="#">انشاء معاملة جديدة </a></li>
+
+                </ol>
+                <div class="close-detail">
+                <i class="material-icons">close </i>
+                </div>
+            </div>
+        </div>
+        <!-- Sub header ends -->
+
+        <!-- sidebar navigation -->
+        <aside class="open">
+            <div class="user">
+                <div class="user-details">
+                    <div class="avatar"><img src="images/user.jpg" width="136" height="146" alt="user Avatar" /></div>
+                    <div class="user-info">
+                        <div class="initial"><span class="emp-no">8729</span>الدكتور المهندس خبير</div>
+                        <div class="user-name">سامي سامر سامي أحمد محمد هاشم محمد صالح فاخوري</div>
+                    </div>
+
+                </div>
+                <div class="dept">
+                    <i class="material-icons">business</i><span class="ar">الادارة العامة للخدمات الذكية</span>
+                </div>
+                <div class="figures">
+                    <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+                    <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+                    <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                </div>
+            </div>
+
+
+            <!-- mp-menu -->
+
+            <div class="sidenav">
+                <nav id="ml-menu" class="menu">
+                    <div class="menu__wrap">
+                        <ul data-menu="main" class="menu__level">
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" href="#">
+                                    <i class="material-icons lg">home</i>
+                                    <div class="link"> لوحة التحكم </div>
+                                </a>
+                            </li>
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1" href="#">
+                                    <i class="material-icons lg">fingerprint</i>
+                                    <div class="link"> البلاغات </div>
+                                    <div class="counter" data-submenu="submenu-1">
+                                        <span class="green">203</span>
+                                        <span class="orange">44</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-2" href="#">
+                                    <i class="material-icons lg">traffic</i>
+                                    <div class="link"> المرورية</div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-3" href="#">
+                                    <i class="demo-icon icon-doc"></i>
+                                    <div class="link">التصاريح والشهادات </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="material-icons md">language</i>
+                                    <div class="link"> المجتمعية </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- Submenu 1 -->
+                        <ul data-menu="submenu-1" class="menu__level">
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="demo-icon service-icon1"></i>
+                                    <div class="link"> فتح بلاغ شيك او امتناع عن الدفع </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="demo-icon service-icon2"></i>
+                                    <div class="link"> الاستفسارات الجنائية </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="demo-icon service-icon27"></i>
+                                    <div class="link"> متابعة فتح بلاغ شيك او امتناع عن الدفع </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-4" href="#">
+                                    <i class="demo-icon service-icon29"></i>
+                                    <div class="link"> السندات المتعلقة بالشخص </div>
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon3"></i> فك حجز جواز سفر - جنائي
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon4"></i> فتح بلاغ جنائي جديد
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon5"></i> متابعة اجراءات بلاغ جنائي (تابع محضر الإفادة)
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon6"></i> طلب استبدال كفالة - جنائي
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon7"></i> شهادة لمن يهمه الامر - جنائي
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon8"></i> شهادة إثبات حاله
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item nav">
+                                <a class="menu__link" data-submenu="submenu-1-1" href="#">
+                                    <i class="demo-icon service-icon9"></i> اجراءات دفن وترحيل الجثث
+                                    <div class="counter">
+                                        <span class="green">12</span>
+                                        <span class="orange">8</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- Submenu 1-1 -->
+                        <ul data-menu="submenu-1-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+                        </ul>
+                        <!-- Submenu 2 -->
+                        <ul data-menu="submenu-2" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+                            <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+                        </ul>
+                        <!-- Submenu 2-1 -->
+                        <ul data-menu="submenu-2-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+                        </ul>
+                        <!-- Submenu 3 -->
+                        <ul data-menu="submenu-3" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
+                            <li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
+                        </ul>
+                        <!-- Submenu 3-1 -->
+                        <ul data-menu="submenu-3-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
+                        </ul>
+                        <!-- Submenu 4 -->
+                        <ul data-menu="submenu-4" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
+                            <li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
+                        </ul>
+                        <!-- Submenu 4-1 -->
+                        <ul data-menu="submenu-4-1" class="menu__level">
+                            <li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /mp-menu -->
+            </div>
+            <div class="more-options">
+                <ul>
+                    <li data-toggle="modal" data-target="#logout"><i class="material-icons">power_settings_new</i></li>
+                    <li><i class="material-icons">forum</i></li>
+                    <li><i class="material-icons group">group</i></li>
+                    <li><i class="material-icons">settings_applications</i></li>
+                </ul>
+            </div>
+        </aside>
+        <!-- sidebar navigation ends -->
+
+        <!-- Main Content - Center page -->
+        <div class="main-wrpr">
+            <div class="wrpr">
+                <div class="main-content counter-content">
+                    <div class="card new-transaction floating-container">
+                        <div class="col-sm-3"> <button data-toggle="modal" data-target="#reqDocs" class="btn btn-default btn-transparent pull-left mt-30 reqDocs-btn"><i class="material-icons">content_copy</i> المستندات المطلوبة </button> </div>
+                        <div class="col-sm-3 completion-status">
+                            <div class="status-text">
+
+                                <label>معاملة جديدة</label>
+                                <span class="ar">يرجى مرعاة الوقت لنتيجة مثالية</span>
+                            </div>
+
+                            <i class="demo-icon icon-meter"></i>
+                        </div>
+                        
+                        <div class="col-sm-3 transaction-info">
+                            <div class="status-text">
+
+                                <label>معلومات المعاملة</label>
+                                <div class="trans-inner-info"><i class="material-icons">receipt</i>17103000000</div>
+                                <div class="trans-inner-info"><i class="material-icons">today</i><span>04/01/2017</span>   <span>13:07:04</span></div>
+                            </div>
+
+                            <i class="material-icons">info</i>
+                        </div>
+                        
+                        
+                        <div class="col-sm-6 time-countdown">
+                            <i class="material-icons"></i>
+                            <label class="item"></label><span class="time-label"><em>  ثواني</em><em>دقائق</em><em>ساعات</em></span></div>
+                        
+
+                        <div class="progress-wrap progress" data-progress-percent="100">
+                            <div class="progress-bar progress"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- multistep form -->
+                    <div class="form-box">
+                        <form role="form" action="" method="post" class="f1 counter-steps">
+                            <div class="f1-steps">
+                                <div class="f1-progress">
+                                    <div class="f1-progress-line" data-now-value="0" data-number-of-steps="6" style="height: 0;"></div>
+                                </div>
+                                <div class="step-circles">
+                                    <div class="f1-step active replace-icon" id="step_1" onclick="testPrev(this)">
+                                        <div class="f1-step-icon " >1 <span class="result-pic"><img src="images/hafiz.JPG" alt="customer-image"></span></div>
+                                        <p>االبحث عن شخص</p>
+                                        <div class="customer-mini-detail">
+                                            <span class="c-name ar-droid">جميل الحي محمد</span>
+                                            <span class="counter-ref-no"><i class="flag-icon flag-icon-ae"></i> 784198881383172</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="f1-step replace-icon" id="step_2" onclick="testPrev(this)">
+                                        <div class="f1-step-icon " >2 <span class="result-pic"><i class="sprite-icon service-icon1"></i></span></div>
+                                        <p>اختيار الخدمة</p>
+                                        <div class="customer-mini-detail">
+                                            <span class="ar">نوع المعاملة</span><br/>
+                                            <span class="ar-droid">تصريح اغلاق شارع</span>
+                                        </div>
+                                    </div>
+                                    <div class="f1-step" id="step_3" onclick="testPrev(this)">
+                                        <div class="f1-step-icon" >3</div>
+                                        <p>تفاصيل المعاملة 
+                                        
+                                        
+                                            <a href="#" class=" btn save-step btn-next"><i class="fa fa-save"></i> حفظ </a>
+                                        
+                                        </p>
+                                        
+                                        
+                                    </div>
+                                    <div class="f1-step">
+                                        <div class="f1-step-icon" id="step_4" onclick="testPrev(this)">4</div>
+                                        <p>عملية الدفع </p>
+                                    </div>
+
+                                    <div class="f1-step">
+                                        <div class="f1-step-icon"  id="step_5" onclick="testPrev(this)">5</div>
+                                        <p> الطباعة </p>
+                                    </div>
+                                    <div class="f1-step">
+                                        <div class="f1-step-icon"  id="step_6" onclick="testPrev(this)">6</div>
+                                        <p> الخلاصة </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <fieldset class="perspective" id="fsOne">
+                               <div class="floating-container pt-10">
+                                <div class="row">
+                                   
+                                    <div class="col-sm-6">
+                                        <div class="card btn-next hover-card">
+                                            <div class="box-title-Big">
+
+                                                <i class="demo-icon icon-em-machine"></i>
+                                                <label>قارئ الهوية </label>
+                                                <span class="ar">يمكنك إضافة الشخص عن طريق كتابة رقم بطاقة الهوية.</span>
+
+                                            </div>
+                                            <div class="box-content nopad">
+                                                <div class="card-reader-container">
+                                                    <img src="images/card-reader.png" class="card-reader" />
+                                                    <img src="images/em-card.png" class="em-card" />
+
+                                                    <div class="em-card-bg"> </div>
+                                                    <div class="hover-text ar-droid">تفعيل القارئ</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="card hover-card">
+                                            <div class="box-title-Big">
+                                                <i class="material-icons">search</i>
+                                                <label>البحث يدوياً<a href="#" class="open-personSrch">بحث متقدم؟</a> </label>
+                                                <span class="ar">يمكنك إضافة الشخص عن طريق كتابة رقم بطاقة الهوية.</span>
+                                            </div>
+                                            <div class="box-content nopad">
+                                                <div class="em-card-layout">
+                                                    <img src="images/em-card-layout.jpg" />
+                                                    <div class="em-replica">
+                                                        <div id="digit3" style="width:16%"></div>
+                                                        <div id="digit4" style="width:25%"></div>
+                                                        <div id="digit7" style="width:41%"></div>
+                                                        <div id="digit1" style="width:17%"></div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="em-search">
+                                                    <div class="em-src-container">
+                                                        <!--                                         <form data-toggle="validator" role="form">-->
+                                                        <div class="em-input">
+                                                            <input type="number" name="digit3" min="3" maxlength="3" step="1" required class="form-control digit3" style="width:78px">
+                                                            <input type="number" name="digit4" min="4" maxlength="4" step="2" required class="form-control digit4" style="width:95px">
+                                                            <input type="number" name="digit7" min="7" maxlength="7" step="3" required class="form-control digit7" style="width:104px">
+                                                            <input type="number" name="digit1" min="1" maxlength="1" step="4" required class="form-control digit1" style="width:36px">
+
+                                                        </div>
+                                                        <button type="submit" class="btn-link">بحث</button>
+                                                        <!--                                       </form>-->
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+</div>
+                                </div>
+                                
+                            </fieldset>
+
+                            <fieldset id="fsTwo">
+                               <div class="floating-container">
+                                <div class="card">
+                                    <div class="box-title-Big">
+
+                                        <i class="material-icons">apps</i>
+                                        <label>الرجاء اختيار الخدمة</label>
+
+
+                                    </div>
+                                    <div class="box-content all-services nopad">
+                                        <ul class="nav nav-tabs light" role="tablist">
+                                            
+                                            <li role="presentation" class="mdl-js-button mdl-js-ripple-effect active" ><a href="#cases" aria-controls="cases" role="tab" data-toggle="tab" aria-expanded="false">خدمات جنائية<span class="material-icons">fingerprint</span></a>
+                                            </li>
+                                            <li role="presentation" class="mdl-js-button mdl-js-ripple-effect" ><a href="#traffic" aria-controls="traffic" role="tab" data-toggle="tab"> خدمات مرورية <span class="material-icons">traffic</span></a>
+                                            </li>
+                                            <li role="presentation" class="mdl-js-button mdl-js-ripple-effect " ><a href="#documents" aria-controls="documents" role="tab" data-toggle="tab" aria-expanded="true"> خدمات التصاريح والشهادات  <span class="demo-icon icon-doc"></span></a>
+                                            </li>
+                                            <li role="presentation" class="mdl-js-button mdl-js-ripple-effect" ><a href="#internet" aria-controls="internet" role="tab" data-toggle="tab">  خدمات الانترنت   <span class="material-icons">language</span></a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active in" id="cases" role="tabpanel">
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon1"></i>
+                                                        <label class="">فتح بلاغ شيك</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon2"></i>
+                                                        <label class="">الاستفسارات الجنائية</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon3"></i>
+                                                        <label class="">فك حجز جواز سفر - جنائي</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon4"></i>
+                                                        <label class="">فتح بلاغ جنائي جديد</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon5"></i>
+                                                        <label class="">متابعة اجراءات بلاغ جنائي</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon6"></i>
+                                                        <label class="">طلب استبدال كفالة - جنائي</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon7"></i>
+                                                        <label class="">شهادة لمن يهمه الامر - جنائي</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon8"></i>
+                                                        <label class="">شهادة إثبات حاله</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="traffic" role="tabpanel">
+                                            
+                                            <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon10"></i>
+                                                        <label class="">الابلاغ عن حوادث مرورية وحوادث ضد مجهول</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon11"></i>
+                                                        <label class="">متابعة اجراءات حادث او بلاغ مروري</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon12"></i>
+                                                        <label class=""> إجراءات الاعتراض على المخالفات</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon13"></i>
+                                                        <label class=""> شهادة براءة ذمة مرورية</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon14"></i>
+                                                        <label class=""> دفع المخالفات المرورية</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="internet" role="tabpanel">
+                                            
+                                            <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon56"></i>
+                                                        <label class="">الوظائف الشاغرة</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon34"></i>
+                                                        <label class="">طلب معاينة مركبة</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon35"></i>
+                                                        <label class=""> برنامج الشيخ محمد للرياضة واللياقة</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon57"></i>
+                                                        <label class=""> قيادات في خدمتكم</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon58"></i>
+                                                        <label class=""> شهادة بحث الحالة المرورية</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon36"></i>
+                                                        <label class=""> زيارة متحف شرطة دبي</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon37"></i>
+                                                        <label class=""> أمن المساكن</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon38"></i>
+                                                        <label class=""> طلب الدعم الاجتماعي لضحايا العنف الاسري</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon39"></i>
+                                                        <label class=""> رعاية الكلاب البوليسية</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon61"></i>
+                                                        <label class=""> عين الشرطة</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="documents" role="tabpanel">
+                                            
+                                            <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon20"></i>
+                                                        <label class="">طلب شهادة بحث الحالة الجنائية</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon21"></i>
+                                                        <label class="">شهادة فقدان</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon22"></i>
+                                                        <label class=""> تصريح إغلاق شارع</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon23"></i>
+                                                        <label class="">طلب زيارة موقوف</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon24"></i>
+                                                        <label class=""> تصريح عمل ليلي</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="documents" role="tabpanel">
+                                            
+                                            <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon20"></i>
+                                                        <label class="">طلب شهادة بحث الحالة الجنائية</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon21"></i>
+                                                        <label class="">شهادة فقدان</label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon22"></i>
+                                                        <label class=""> تصريح إغلاق شارع</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon23"></i>
+                                                        <label class="">طلب زيارة موقوف</label>
+
+                                                    </div>
+                                                </div>
+                                                 <div class="col-sm-3 parent-service">
+                                                    <div class="home-action ">
+                                                        <i class="sprite-icon service-icon24"></i>
+                                                        <label class=""> تصريح عمل ليلي</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+ <button type="button" class="btn btn-next service-confirm" style="display: none">التالي</button>
+                                       <i class="material-icons clear-highlight" style="display: none">clear</i>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+<!--
+                                <div class="f1-buttons">
+                                   
+                                    <button type="button" class="btn btn-previous" style="display: none;"></button>
+                                </div>
+-->
+
+
+</div>
+                            </fieldset>
+
+                            <fieldset class="edit-mode-wrpr" id="fsThree">
+                              
+                               <div class="floating-container">
+                                <div class="card grey">
+                                   <div class="box-heading">
+                                    <div class="box-title"><span class="material-icons">group</span> بيانات الأطراف</div>
+                                    </div>
+                                    <div class="box-content counter-user-details right nopad">
+                                       
+                                        <div class="col-sm-4">
+                                          <div class="card mb-5">
+                                           <div class="box-heading light">
+                                               <div class="tab-icons"><i class="material-icons close-card">close</i>
+                                               <i class="material-icons enable" id="enable">edit</i>
+                                               <i class="material-icons clear" style="display: none">clear</i>
+                                               <i class="material-icons save" style="display: none">save</i>
+                                               </div>
+                                            <div class="box-title ">الطرف الأول </div>
+                                            </div>
+                                            <div class="box-content user-info-small nopad">
+                                                <div class="fullwidth nopad">
+                                                    <div class="avatar56"><img src="images/hafiz.JPG">  </div>
+                                                </div>   
+                                                <div class="list-sm fullwidth">
+                                                    <label><i class="material-icons">account_circle</i>
+                                                    الاسم الكامل</label>
+                                                    <div class="form-data ar">سامي سامر محمد أحمد فاخوري</div>
+                                                </div>
+                                                <div class="list-sm">
+                                                    <label><i class="material-icons">folder_shared</i>
+                                                    الرقم الموحد</label>
+                                                    <div class="form-data">74194610</div>
+                                                </div>
+                                                <div class="list-sm">
+                                                    <label><i class="demo-icon icon-license"></i>
+                                                    رقم الهوية</label>
+                                                    <div class="form-data">784198174397301</div>
+                                                </div>
+                                                <div class="list-sm">
+                                                    <label><i class="material-icons">live_help</i>
+                                                    دور الفرد</label>
+                                                    <div class="form-data ar">مقدم الطلب</div>
+                                                </div>
+                                                 <div class="list-sm">
+                                                    <label><i class="material-icons">public</i>
+                                                    الجنسية</label>
+                                                    <div class="form-data ar">سوريا</div>
+                                                </div>
+                                                 <div class="list-sm">
+                                                    <label><i class="material-icons">wc</i>
+                                                    الجنس</label>
+                                                    <div class="form-data ar">ذكر</div>
+                                                </div>
+                                               </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4" id="addedPerson" style="display: none;">
+                                          <div class="card mb-5">
+                                           <div class="box-heading light">
+                                               <div class="tab-icons"><i class="material-icons close-card">close</i>
+                                               <i class="material-icons enable" id="enable">edit</i>
+                                               <i class="material-icons clear" style="display: none">clear</i>
+                                               <i class="material-icons save" style="display: none">save</i>
+                                               </div>
+                                            <div class="box-title ">الطرف الأول </div>
+                                            </div>
+                                            <div class="box-content user-info-small nopad">
+                                                <div class="fullwidth nopad">
+                                                    <div class="avatar56"><img src="images/hafiz.JPG">  </div>
+                                                </div>   
+                                                <div class="list-sm fullwidth">
+                                                    <label><i class="material-icons">account_circle</i>
+                                                    الاسم الكامل</label>
+                                                    <div class="form-data ar">سامي سامر محمد أحمد فاخوري</div>
+                                                </div>
+                                                <div class="list-sm">
+                                                    <label><i class="material-icons">folder_shared</i>
+                                                    الرقم الموحد</label>
+                                                    <div class="form-data">74194610</div>
+                                                </div>
+                                                <div class="list-sm">
+                                                    <label><i class="demo-icon icon-license"></i>
+                                                    رقم الهوية</label>
+                                                    <div class="form-data">784198174397301</div>
+                                                </div>
+                                                <div class="list-sm">
+                                                    <label><i class="material-icons">live_help</i>
+                                                    دور الفرد</label>
+                                                    <div class="form-data ar">مقدم الطلب</div>
+                                                </div>
+                                                 <div class="list-sm">
+                                                    <label><i class="material-icons">public</i>
+                                                    الجنسية</label>
+                                                    <div class="form-data ar">سوريا</div>
+                                                </div>
+                                                 <div class="list-sm">
+                                                    <label><i class="material-icons">wc</i>
+                                                    الجنس</label>
+                                                    <div class="form-data ar">ذكر</div>
+                                                </div>
+                                               </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                                <div class="add-person">
+                                                        <i class="material-icons">person_add</i>
+                                                        <label>إضافة شخص</label>
+                                                        <span class="ar">اضغط هنا لإضافة أطراف آخرى</span>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="box-heading">
+                                        <div class="box-title"><span class="material-icons">group</span> بيانات الأطراف</div>
+                                        <button class="btn btn-white btn-round mr-10"><i class="material-icons">add_circle_outline</i> إضافة أطراف</button>
+                                    </div>   
+                                    <div class="box-content nopad dataTables_wrapper">
+                                        <table class="table dataTable nowrap compressed-table" cellspacing="15" cellpadding="15" width="100%"> 
+                                             <thead>
+            <tr>
+                <th><i class="material-icons">folder_shared</i><label> الرقم الموحد </label></th>
+            <th><i class="demo-icons icon-license"></i><label> رقم الهوية </label></th>
+                <th><i class="material-icons">account_circle</i><label> الاسم الكامل </label></th>
+                <th><i class="material-icons">wc</i> <label> الجنس</label></th>
+                <th><i class="material-icons">public</i><label>  الجنسية</label></th>
+                <th><i class="material-icons">live_help</i><label>  دور الفرد</label></th>
+            </tr>
+        </thead>
+                                             <tbody>
+            <tr>
+           <td><a href="#">74194610</a></td>
+           <td>17103000000</td>
+           <td class="ar">سامي سامر محمد أحمد فاخوري</td>
+           <td class="ar">ذكر</td>
+           <td class="ar">سوريا</td>
+           <td class="ar">مقدم الطلب</td>
+        </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>   
+                                   
+                                <div class="card grey">
+                                    <div class="box-heading ">
+                                        <div class="box-title"><span class="material-icons">list</span>تفاصيل المعاملة</div>
+                                    </div>
+                                    <div class="box-content service-info-form">
+                                       <div class="validation-div" style="display: none">
+                                               <label><em> * </em>يرجى التأكد من تعبئة البيانات الآتية:</label>
+                                               <span>
+                                                   <p> - اسم الشركة المنفذة للمشروع </p>
+<p>- رقم رقم رسالة هيئة الطرق والمواصلات </p>
+                                              <p>- ملاحظات</p>
+                                               </span>
+                                           
+                                       </div>
+                                       
+<!--
+                                        <div class="form-group width60">
+                                            <label>اسم الشركة المنفذة للمشروع</label>
+                                            <input type="text" class="form-control" placeholder="اكتب هنا...">
+                                            
+                                        </div>
+                                         <div class="form-group width60">
+                                            <label>رقم رسالة هيئة الطرق والمواصلات</label>
+                                            <input type="text" class="form-control" placeholder="اكتب هنا...">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label>ملاحظات</label>
+                                            <textarea class="form-control" rows="2" placeholder="اكتب هنا (اختياري)..."></textarea>
+                                            
+                                        </div>
+-->
+                                        <div class="form-inline">
+                                            <div class="form-group required">
+                                                <label>رقم الهوية</label>
+                                                <input type="text" class="form-control" placeholder="رقم الهوية">
+
+                                            </div>
+                                            <div class="form-group required">
+                                                <label>البريد الالكتروني</label>
+                                                <input type="text" class="form-control" placeholder="abc@xyy.com">
+
+                                            </div>
+<!--
+                                            <div class="form-group required">
+                                                <label>تأكيد البريد الالكتروني</label>
+                                                <input type="text" class="form-control" placeholder="abc@xyy.com">
+
+                                            </div>
+-->
+                                            <div class="form-group">
+                                                <label>اسم الشركة</label>
+                                                <input type="text" class="form-control" placeholder="اسم الشركة">
+
+                                            </div>
+                                            <div class="form-group ">
+                                                <label>نوع العمل</label>
+                                                <input type="text" class="form-control" placeholder="نوع العمل">
+
+                                            </div>
+                                             <div class="form-group ">
+                                                <label>اسم المحل</label>
+                                                <input type="text" class="form-control" placeholder="xyz LLC">
+
+                                            </div>
+                                            <div class="form-group ">
+                                                <label>موقع العمل</label>
+                                                <input type="text" class="form-control" placeholder="Al Nahda, Al Qusais etc.">
+
+                                            </div>
+                                            <div class="form-group ">
+                                                <label>تاريخ بدأ العمل </label>
+                                                <div class="input-group" > <span class="material-icons">today</span>
+<input type="text" class="form-control roboto-ltr" id="datePickFrom" placeholder="From Date">
+</div>
+                                            </div>
+                                            <div class="form-group ">
+                                                <label>تاريخ انتهاء العمل </label>
+                                                <div class="input-group" > <span class="material-icons">today</span>
+<input type="text" class="form-control roboto-ltr" id="datePickTo" placeholder="To Date">
+</div>
+                                            </div>
+                                            <div class="form-group ">
+                                                <label>تاريخ بدأ العمل </label>
+                                                <div class="input-group" > <span class="material-icons">access_time</span>
+<input type="text" class="form-control roboto-ltr" id="timePickFrom" placeholder="From Time">
+</div>
+                                            </div>
+                                             <div class="form-group ">
+                                                <label>تاريخ بدأ العمل </label>
+                                                <div class="input-group" > <span class="material-icons">access_time</span>
+<input type="text" class="form-control roboto-ltr" id="timePickto" placeholder="to Time">
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="card grey">
+                                        <div class="box-heading ">
+                                        <div class="box-title"><span class="demo-icon icon-license" style="font-size:18px;"></span>بيانات العمال (بحد أقصى 50 عامل)</div>
+                                    </div>
+                                        <div class="box-content">
+                                            <div class="form-group relative">
+                                                <label>رقم الهوية</label>
+                                                <input type="text" class="form-control robotomed" id="emiratesID" placeholder="رقم الهوية">
+                                                <div class="repeat">أضف المزيد <i class="material-icons">add_box</i></div>
+                                            </div>
+                                         <div class="form-group added-id">
+                                                <div class="number tag2"><span class="emIDformat"> 784198510539541 </span> <i class="material-icons">clear</i></div>
+                                             <div class="number tag2"><span class="emIDformat"> 784198510539541 </span><i class="material-icons">clear</i></div>
+                                            </div>
+                                            
+                                        </div>    
+                                        
+                                   </div>
+                                   <div class="card grey">
+                                        <div class="box-heading">
+                                           
+                                            <button class="btn btn-white pull-left" data-toggle="modal" data-target="#addSubCompany" >
+                                                أضف المزيد 
+                                                <i class="material-icons">add_box</i></button>
+                                      <div class="box-title"><span class="material-icons">business</span>Sub Companies Details</div>
+                                    </div>
+                                        <div class="box-content">
+                                        <div class="form-group" dir="ltr">No Sub Companies added. Please add sub companies by clicking on button above.. </div>    
+                                           <div class="form-group">
+                                           
+                                                <div class="tag2 sub-company">
+                                                    Jscom Constructions LLC <i class="material-icons">clear</i>
+                                                    <ul class="sc-emID">
+                                                        <li><span class="emIDformat"> 784198510539541 </span><i class="material-icons">clear</i> </li>
+                                                        <li><span class="emIDformat"> 784198510539541 </span><i class="material-icons">clear</i> </li>
+                                                    </ul>
+                                                </div>
+                                              
+                                            
+                                            </div> 
+                                            
+                                            
+                                        
+                                              
+                                            </div>
+                                            
+                                        </div>    
+                                        
+                                
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-next"> حفظ التالي   </button>
+                                </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="perspective" id="fsFour">
+                                 <div class="floating-container">
+                                <div class="card">
+                                    <div class="box-heading">
+                                        <div class="box-title"><span class="material-icons">payment</span> تفاصيل الدفع</div>
+                                    </div>
+                                    <div class="box-content">
+                                        <div class="payment-details">
+                                          
+                                            <div class="row">
+                                                <div class="col-sm-4 final-amount"><small> درحم</small> 220 </div>
+                                                <div class="col-sm-8"><label> رسوم الخدمة </label><i class="sprite-icon"></i> </div>
+                                                
+                                            </div>
+                                             
+                                        </div>
+                                        
+                                    </div>
+                                         
+                                </div>
+                                     <div class="payment-options">
+                                          <div class="cash payby">
+                                                <label>الدفع نقدا</label>
+                                              <div class="cr-card-details" style="display: none;">
+                                                  <div class="box-title">
+                                                <span class="demo-icons icon-money"></span>
+                                                <label>الدفع نقدا</label>
+                                            </div>
+                                                
+                                                  <div class="buttons-group">
+                                                    <button class="btn btn-primary btn-next">حفظ و طباعة الايصال</button>
+                                                      <button class="btn btn-default cancel-payment">إلغاء</button>
+                                                  </div>
+                                              </div>  
+                                              <div class="cr-card-animation">
+                                                <img src="images/cash.png" alt="Pay by Card" />
+                                              
+                                               </div>
+                                              
+                                         </div>
+                                          <div class="credit-card payby">
+                                              <label>الدفع عن طريق بطاقة</label>
+                                              <div class="cr-card-details" style="display: none;">
+                                                  <div class="box-title">
+                                                <span class="material-icons">credit_card</span>
+                                                <label>الدفع عن طريق بطاقة</label>
+                                            </div>
+                                                <span class="ar">ملاحظة: يرجي التأكد من هوية صاحب البطاقة</span>
+                                                  <div class="form-group">
+                                                    <input type="number" maxlength="12" class="form-control">
+                                                  </div>
+                                                  <div class="buttons-group">
+                                                    <button class="btn btn-primary btn-next">حفظ و طباعة الايصال</button>
+                                                      <button class="btn btn-default cancel-payment">إلغاء</button>
+                                                  </div>
+                                              </div>  
+                                              
+                                              <div class="cr-card-animation">
+                                              <img src="images/card-machine-strip.png" style="display: none" class="cr-machine-strip" />
+                                                  
+                                              <img src="images/card.png" class="card-img " alt="Pay by Credit card" />
+                                            <img src="images/card-machine.png" class="cr-machine" style="display: none" />
+                                                  
+                                            </div>
+                                                
+                                         </div>
+                                        </div>
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">السابقة</button>
+                                    <button type="button" class="btn btn-next">التالي</button>
+                                </div>
+                            </fieldset>
+                            <fieldset id="fsFive">
+                               <div class="floating-container">
+                                <div class="card certificate-print">
+                                    <iframe src="images/pdf.pdf#zoom=80"></iframe>
+                                    <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">السابقة</button>
+                                    <button type="button" class="btn btn-next">التالي</button>
+                                </div>
+                                </div>
+</div>
+                            </fieldset>
+                            <fieldset class="last-step" id="fsSix">
+                               <div class="floating-container">
+                                <div class="box-content pad20 text-center">
+                                        <i class="material-icons counter-confirm">beenhere</i>
+                                        <div class="ar-droid big-title">تم انشاء المعاملة بنجاح</div>
+                                        <div class="final-time">
+                                            <label><strong>رائع!</strong>
+                                            <span> الوقت المستغرق لإنجاز المعاملة  </span></label>
+                                            
+                                            <label class="stopped-time"><span>0</span><span>3</span>:<span>5</span><span>1</span>:<span>4</span><span>5</span></label>
+                                            <span class="time-label"><em>  ثواني</em><em>دقائق</em><em>ساعات</em></span>
+                                        </div>
+                                
+                                
+                                <div class="buttons-group">
+                                    <button type="button" class="round-btn"><i class="material-icons">person_pin</i> معاملة جديدة للشخص ذاته  </button>
+                                    <button type="button" class="round-btn"><i class="material-icons">group</i> معاملة جديدة لشخص آخر  </button>
+                                    <button type="button" class="round-btn"><i class="material-icons">home</i> الصفحة الرئيسية  </button>
+                                    
+                                </div>
+                                </div>
+                                </div>
+                                 <button type="button" class="btn btn-previous" style="display: none;"></button>
+                            </fieldset>
+                        </form>
+
+                    </div>
+
+<div class="counter-search-wrpr tab-animation " style="display: none;">
+                                <div class="counter-search enter">
+                                    <div class="box-heading">
+                                        <div class="tab-icons">
+                                            <i class="material-icons" id="close-btn">clear</i>
+                                        </div>
+                                        <div class="box-title"><span class="material-icons">person</span> أشخاص  </div>
+                                    </div>    
+                                    <div class="box-content nopad dataTables_wrapper">
+                                        <div class="search-date-popup pad20">  
+        	 <div class="col-xs-3">
+		            <label class="control-label"> <span class="bundlemsg">الرقم الموحد</span>:</label>
+               		<input type="text" name="" id="psPersonNo" class="form-control" placeholder="الرقم الموحد">                
+            </div>
+            <div class="col-xs-3">
+		            <label class="control-label"> <span class="bundlemsg">رقم الهوية</span>:</label>            
+                        <input type="text" name="" id="psEmiratesId" class="form-control" placeholder="رقم الهوية">
+
+            </div>
+            <div class="col-xs-3">
+		            <label class="control-label"> <span class="bundlemsg">اسم في العربية</span>:</label>
+                        <input type="text" name="" id="psNameAr" class="form-control" placeholder="اسم في العربية">
+            </div>
+
+          
+            
+            <div class="col-xs-3">
+		            <label class="control-label"> <span class="bundlemsg">الهاتف المتحرك</span>:</label>		           
+                        <input type="text" name="" id="psMobile" class="form-control" placeholder="الهاتف المتحرك">
+
+            </div>
+            <div class="col-xs-3">
+            <label class="control-label"> <span class="bundlemsg">الاسم في الإنجليزية</span>:</label>
+                        <input type="text" name="" id="psNameEn" class="form-control" placeholder="الاسم في الإنجليزية">
+
+            </div>
+            <div class="col-xs-3">
+		            <label class="control-label"> <span class="bundlemsg">رقم الجواز</span>:</label>
+                        <input type="text" name="" id="psPassportNumber" class="form-control" placeholder="رقم الجواز">
+            </div>              
+            <div class="col-xs-3">  		
+            <label>&nbsp;</label>
+         <button class="mdl-button mdl-js-button mdl-js-ripple-effect btn-primary btn-block">
+             <span class="bundlemsg">بحث</span>
+		  <i class="material-icons">search</i>
+		</button>
+		 </div>
+		 </div>   
+                                        <table class="dataTable_master table compressed-table table-striped" id="example">
+                                            <thead>
+            <tr>
+                <th><i class="material-icons">folder</i><label>رقم الموحد </label></th>
+            <th><i class="material-icons">account_box</i><label> رقم الهوية</label></th>
+                <th><i class="material-icons">person</i><label> الاسم الكامل </label></th>
+                <th><i class="material-icons">today</i> <label> الجنسية</label></th>
+                <th><i class="material-icons">info</i><label>  بيانات الأش</label></th>
+            </tr>
+        </thead>
+                                           <tbody>
+            <tr>
+           <td><a href="#">625859</a></td>
+           <td class="ar">7895461235463</td>
+           <td class="ar">النقيب ابراهيم غازي احمد ابراهيم الشيباني</td>
+           <td>الامارات</td>
+           <td><button class="btn btn-primary" id="person-details">عرض</button> </td>
+        </tr>
+                                            </tbody>
+                                            
+                                        </table>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="person-details">
+<!--
+                                    <div class="box-heading">
+                                        <div class="tab-icons">
+                                            
+                                            <i class="material-icons" id="back-btn">chevron_left</i>
+                                        </div>
+                                        <div class="box-title"><span class="material-icons">account_circle</span> أشخاص  </div>
+                                    </div> 
+                                    
+                                    
+-->
+                                   <ul class="nav nav-tabs" role="tablist">
+                                   <div class="tab-icons">
+                                            
+                                            <i class="material-icons" id="back-btn">chevron_left</i>
+                                        </div>
+    <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">البيانات  <i class="material-icons">person</i></a></li>
+    <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">الوثائق <i class="material-icons">assignments</i></a></a></li>
+    <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">المعاملات السابقة <i class="material-icons">history</i></a></a></li>
+  </ul>
+                                    <div class="box-content nopad">
+<!--                                    <div class="userProfile-avatar"> <img src="images/hafiz.JPG"> </div>-->
+                                    <div class="person-details-tabs">
+                                    <!--  <ul class="nav nav-tabs" role="tablist">
+                                         <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">البيانات  <i class="material-icons">person</i></a></li>
+                                         <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">الوثائق <i class="material-icons">assignments</i></a></a></li>
+                                         <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">المعاملات السابقة <i class="material-icons">history</i></a></a></li>
+                                       </ul> -->
+                                   <div class="tab-content ">
+    <div role="tabpanel" class="tab-pane slide active" id="data">
+        <div class="form-inline col-3">
+                                        <div class="form-group">
+                                            <label>دور الفرد</label>
+                                            <select class="selectpicker"><option>مقدم الطلب</option></select>
+                                        </div>
+<!--
+                                        <div class="form-group">
+                                            <label>صاحب اعلاقة</label>
+                                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+  <span class="mdl-checkbox__label">Checkbox</span>
+</label>
+                                        </div>
+-->
+                                        <div class="clearfix"></div>
+                                        <div class="form-group">
+                                            <label>الرقم الموحد</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>رقم الهوية</label>
+                                            <input type="text" class="form-control emIDformat" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>رقم البصمة</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>السم الكامل - عربي</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                         <div class="form-group">
+                                            <label> العشيرة - عربي</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label> اسم الام - عربي</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                         <div class="form-group">
+                                            <label> السم الكامل - الإنجليزية</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                         <div class="form-group">
+                                            <label> العشيرة - الإنجليزية</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label> اسم الام - الإنجليزية</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                         <div class="form-group">
+                                            <label> تاريخ الميلاد</label>
+                                            <input type="text" class="form-control dateFormat" id="datePickFrom" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label> مكان الميلاد</label>
+                                            <select class="selectpicker"><option> الامارات العربية المتحدة </option></select>
+                                        </div>
+                                         <div class="form-group">
+                                            <label> الجنسية</label>
+                                            <select class="selectpicker"><option> الامارات العربية المتحدة </option></select>
+                                        </div>
+                                         <div class="form-group">
+                                            <label> نوع الإقامة</label>
+                                             <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label> رقم النزيل</label>
+                                             <input type="text" class="form-control" />
+                                        </div>
+                                        
+                                    </div>
+    </div>
+    <div role="tabpanel" class="tab-pane slide" id="docs">
+        <div class="applicant-details sidepad18 col-4">
+                  <div class="list">
+                    <label>Document Name</label>
+                    <div class="form-data">Passport</div>
+                  </div>
+                  <div class="list">
+                    <label>Document number</label>
+                    <div class="form-data">H123456K</div>
+                  </div>
+                  <div class="list">
+                    <label>Expiry</label>
+                    <div class="form-data">14-02-2021</div>
+                  </div>
+                  <div class="list">
+                    <label>Country of issuance</label>
+                    <div class="form-data ar">Palestine</div>
+                  </div>
+                  <div class="list">
+                    <label>Scanned Copy</label>
+                    <div class="form-data"> <div class="docs-pictures pull-right" style="width:60px; height: 40px;"> <img data-original="images/sample-passport.JPG" src="images/sample-passport.JPG"></div> </div>
+                  </div>
+                </div>
+        
+    </div>
+    <div role="tabpanel" class="tab-pane slide" id="history">...</div>
+  </div>
+                                   <center class="text-center fullwidth pad20"><button class="btn btn-primary" id="addThisPerson"> حفض وتالي </button>
+                                   
+                                    <button class="btn btn-default" id="cancel-btn">  علغا </button>
+                                      </center>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                
+                                <div class="floating-container pt-10" id="addMoreperson" style="display: none">
+                                <div class="row">
+                                   
+                                    <div class="col-sm-6">
+                                        <div class="card btn-next hover-card">
+                                            <div class="box-title-Big">
+
+                                                <i class="demo-icon icon-em-machine"></i>
+                                                <label>قارئ الهوية </label>
+                                                <span class="ar">يمكنك إضافة الشخص عن طريق كتابة رقم بطاقة الهوية.</span>
+
+                                            </div>
+                                            <div class="box-content nopad">
+                                                <div class="card-reader-container">
+                                                    <img src="images/card-reader.png" class="card-reader" />
+                                                    <img src="images/em-card.png" class="em-card" />
+
+                                                    <div class="em-card-bg"> </div>
+                                                    <div class="hover-text ar-droid">تفعيل القارئ</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="card hover-card">
+                                            <div class="box-title-Big">
+                                                <i class="material-icons">search</i>
+                                                <label>البحث يدوياً<a href="#" class="open-personSrch">بحث متقدم؟</a> </label>
+                                                <span class="ar">يمكنك إضافة الشخص عن طريق كتابة رقم بطاقة الهوية.</span>
+                                            </div>
+                                            <div class="box-content nopad">
+                                                <div class="em-card-layout">
+                                                    <img src="images/em-card-layout.jpg" />
+                                                    <div class="em-replica">
+                                                        <div id="digit3" style="width:16%"></div>
+                                                        <div id="digit4" style="width:25%"></div>
+                                                        <div id="digit7" style="width:41%"></div>
+                                                        <div id="digit1" style="width:17%"></div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="em-search">
+                                                    <div class="em-src-container">
+                                                        <!--                                         <form data-toggle="validator" role="form">-->
+                                                        <div class="em-input">
+                                                            <input type="number" name="digit3" min="3" maxlength="3" step="1" required class="form-control digit3" style="width:78px">
+                                                            <input type="number" name="digit4" min="4" maxlength="4" step="2" required class="form-control digit4" style="width:95px">
+                                                            <input type="number" name="digit7" min="7" maxlength="7" step="3" required class="form-control digit7" style="width:104px">
+                                                            <input type="number" name="digit1" min="1" maxlength="1" step="4" required class="form-control digit1" style="width:36px">
+
+                                                        </div>
+                                                        <button type="submit" class="btn-link">بحث</button>
+                                                        <!--                                       </form>-->
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+</div>
+                                </div>
+                                
+                                
+<div id="cboxOverlay" style="display: none"></div>
+
+
+                </div>
+            </div>
+        </div>
+<!-- Required Docs Modal -->
+<div class="modal fade" id="reqDocs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="box-heading">
+          <div class="box-title"> المستندات المطلوبة </div>
+          <div class="tab-icons">
+            <i class="material-icons" data-dismiss="modal" aria-label="Close">close</i>
+          </div>
+            
+      </div>
+      <div class="box-content">
+        <ul class="ar list-inside">
+            <li>2 الصور مع خلفية بيضاء</li>
+            <li>نسخ هيئة الإمارات للهوية</li>
+            <li>صورة جواز السفر</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        
+        <div class="modal fade" id="addSubCompany" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+       <div class="box-heading">
+          <div class="box-title"> المستندات المطلوبة </div>
+          <div class="tab-icons">
+            <i class="material-icons" data-dismiss="modal" aria-label="Close">close</i>
+          </div>
+            
+      </div>
+      <div class="box-content">
+         <div class="form-group">
+            <label>إسم الشركة </label>
+            <input type="text" class="form-control " placeholder="إسم الشركة ">
+         </div>
+        <div class="form-group">
+           <label>إرفاق الرخصة التجارية</label>
+           <input type="file" class="form-control " placeholder="">
+        </div>
+        <div class="form-group relative">
+            <label>رقم الهوية</label>
+           <input type="text" class="form-control robotomed" id="emiratesID" placeholder="رقم الهوية">
+            <div class="repeat">أضف المزيد <i class="material-icons">add_box</i></div>
+        </div>
+        <div class="form-group added-id">
+         <div class="number"><span class="emIDformat"> 784198510539541 </span> <i class="material-icons">clear</i></div>
+         <div class="number"><span class="emIDformat"> 784198510539541 </span><i class="material-icons">clear</i></div>
+        </div>
+       </div></div>
+            </div>
+        <!-- Main Content - Ends -->
+    </div>
+    
+     <!-- Activity left sidebar -->
+      <div class="activity-bar">
+        <div class="act-opener"><i class="material-icons">arrow_drop_down</i></div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#transaction" aria-controls="transaction" role="tab" data-toggle="tab">سجل المعاملة</a></li>
+          <li role="presentation"><a href="#customer-tab" aria-controls="customer-tab" role="tab" data-toggle="tab">سجل المعاملة 2</a></li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="transaction">
+            <div class="trans-timeline conversation ">
+              <div class="conversation-container Cscroll ">
+                <div class="transactions message sent">
+                  <div class="status-icons cancel"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#">TAHIR_80@YAHOO.COM</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">18/05/2016 </div>
+                      <div class="time">11:51:19 AM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">784199030971917</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">2016005612</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:00:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم دفع الرسوم. رقم الايصال:</span><a href="#" class="t-no">135147</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">16/05/2016 </div>
+                      <div class="time">09:53:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent" id="random">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم انشاء معاملة رقم: </span><a href="#" class="t-no">165003043334</a></div>
+                    <div class="lawyer"> العريف اول نوف محسن على درويش البلوشى </div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="conversation-compose">
+                <div class="converse-wrap">
+                  <div class="photo"><img src="images/user.jpg" alt=""/> </div>
+                  <div class="input-msg">
+                    <textarea name="input" placeholder="ملاحظات الموظف..." autocomplete="off" autofocus></textarea>
+                  </div>
+                  <button class="send mdl-js-button mdl-js-ripple-effect"><i class="material-icons">send</i></button>
+                </div>
+                <div class="select-status">
+                  <div class="in-reject"> <span class="mdl-list__item-primary-content">إلغاء الطلب</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                      <input type="radio" id="list-option-1" class="mdl-radio__button statusBtnClass" value="1" name="one"  />
+                    </label>
+                    </span> </div>
+                  <div class="in-process"> <span class="mdl-list__item-primary-content">قيد الإجراء</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                      <input type="radio" id="list-option-2" class="mdl-radio__button statusBtnClass" value="2" name="one" checked />
+                    </label>
+                    </span> </div>
+                </div>
+              </form>
+              <div class="status-bar">
+                <div class="time"></div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="customer-tab">
+            <div class="trans-timeline conversation">
+              <div class="conversation-container">
+                <div class="transactions message sent">
+                  <div class="status-icons cancel"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#">TAHIR_80@YAHOO.COM</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">18/05/2016 </div>
+                      <div class="time">11:51:19 AM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">784199030971917</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar"> تم قبول شهادة بحث الحالة و ارسالها بنجاح إلى 
+                      البريد الالكتروني: </span><a href="#" class="t-no">2016005612</a></div>
+                    <div class="lawyer">الوكيل ابراهيم سيد مصطفى سيد محمد سيد
+                      ابراهيم الهاشمي</div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:00:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم دفع الرسوم. رقم الايصال:</span><a href="#" class="t-no">135147</a></div>
+                    <div class="trans-time metadata">
+                      <div class="date">16/05/2016 </div>
+                      <div class="time">09:53:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions message sent" id="random">
+                  <div class="status-icons pending"></div>
+                  <div class="content-bubble">
+                    <div class="trans-text"><span class="ar">تم انشاء معاملة رقم: </span><a href="#" class="t-no">165003043334</a></div>
+                    <div class="lawyer"> العريف اول نوف محسن على درويش البلوشى </div>
+                    <div class="trans-time metadata">
+                      <div class="date">17/05/2016 </div>
+                      <div class="time">10:51:19 PM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="conversation-compose">
+                <div class="converse-wrap">
+                  <div class="photo"><img src="images/user.jpg" alt=""/> </div>
+                  <div class="input-msg">
+                    <textarea name="input" placeholder="ملاحظات الموظف..." autocomplete="off" autofocus></textarea>
+                  </div>
+                  <button class="send mdl-js-button mdl-js-ripple-effect"><i class="material-icons">send</i></button>
+                </div>
+                <div class="select-status">
+                  <div class="in-reject"> <span class="mdl-list__item-primary-content">إلغاء الطلب</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                      <input type="radio" id="list-option-1" class="mdl-radio__button statusBtnClass" value="1" name="one"  />
+                    </label>
+                    </span> </div>
+                  <div class="in-process"> <span class="mdl-list__item-primary-content">قيد الإجراء</span> <span class="mdl-list__item-secondary-action">
+                    <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                      <input type="radio" id="list-option-2" class="mdl-radio__button statusBtnClass" value="2" name="one" checked />
+                    </label>
+                    </span> </div>
+                </div>
+              </form>
+              <div class="status-bar">
+                <div class="time"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Activity left sidebar Ends--> 
+    
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.js"></script>
+    <!-- jquery validate -->
+<!--    <script src="js/bootstrapvalidator.min.js"></script>-->
+
+
+    <!-- Plugins JS -->
+    <script src="plugins/datepicker/moment.js"></script>
+    <script src="plugins/datepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="plugins/datatables/js/jquery.dataTables.js"></script>
+    <script src="plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="plugins/material-design/material.js"></script>
+    <script src="plugins/clock/js/jClocksGMT.js"></script>
+    <script src="plugins/clock/js/jquery.rotate.js"></script>
+    <!--<script src="plugins/material-design/jquery.dropdown.js"></script>-->
+    <script src="plugins/boot-select/js/select2.full.js"></script>
+    <script src="plugins/multilevelMenu/js/modernizr-custom.js"></script>
+    <script src="plugins/multilevelMenu/js/classie.js"></script>
+
+    <script src="plugins/multilevelMenu/js/main.js"></script>
+    <script src="plugins/step-form/js/jquery.backstretch.min.js"></script>
+    <script src="plugins/step-form/js/scripts-counter.js"></script>
+
+   <script src="plugins/x-editable/bootstrap-editable.min.js"></script>
+<script src="plugins/x-editable/fields-edit.js"></script>
+    <script src="plugins/inputmask/inputmask.js"></script>
+    <script src="plugins/inputmask/jquery.inputmask.js"></script>
+    <script src="plugins/inputmask/inputmask.extensions.js"></script>
+    
+    
+    
+    <!-- Custom JS - Always needs to be at the bottom -->
+    <script>
+        var container = document.getElementsByClassName("em-input")[0];
+        container.onkeyup = function (e) {
+            var target = e.srcElement;
+            var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+            var myLength = target.value.length;
+            if (myLength >= maxLength) {
+                var next = target;
+                while (next = next.nextElementSibling) {
+                    if (next == null)
+                        break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+        }
+
+        $(".digit3").on('keyup', function () {
+            $('#digit3').html($(this).val());
+        });
+        $(".digit4").on('keyup', function () {
+            $('#digit4').html($(this).val());
+
+        });
+        $(".digit7").on('keyup', function () {
+            $('#digit7').html($(this).val());
+        });
+        $(".digit1").on('keyup', function () {
+            $('#digit1').html($(this).val());
+        });
+        $(".home-action").on("click", function(){
+            $(".home-action").removeClass("highlight");
+            $(this).addClass("highlight");
+            $(this).append( "<span class='service-confirm-msg'> الرجاء التأكد من الخدمة وانقر فوق التالي </span>" );
+            //if ($(".home-action").hasClass("highlight")) {
+			//$(this).parents('fieldset').find(".f1-buttons").children(".btn-next").addClass('reveal');
+		//}
+            $(".clear-highlight, .service-confirm").fadeIn(500);
+        });
+        $(".clear-highlight").on("click", function(){
+            $(".home-action").removeClass("highlight");
+            $(".service-confirm-msg").remove();
+            $(".clear-highlight, .service-confirm").fadeOut(100);
+        });
+
+        
+       (function() {
+    $('.service-info-form .form-control').keyup(function() {
+
+        var empty = false;
+        $('.service-info-form .form-control').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('.btn-next').removeClass("reveal");
+        } else {
+            $('.btn-next').addClass('reveal');
+        }
+    });
+})()
+
+       $(".close-card").on("click", function(){
+           $(this).parents(".col-sm-4").hide(500);
+       });
+        $(".enable").on("click", function(){
+			$(".edit-mode-wrpr").css({"animation-fill-mode" : "none" , "opacity" : "1"});
+        });
+        $(".save, .clear").on("click", function(){
+			$(".edit-mode-wrpr").css({"animation-fill-mode" : "" , "opacity" : ""});
+        });
+  
+        
+    
+$(".btn-next").on("click", function(){
+    setTimeout(function(){
+   if ($(".edit-mode-wrpr").css("display") == "block") {
+			$("body").addClass("step3");
+                }
+        
+        if ($(".last-step").css("display") == "block") {
+			$("body").addClass("last-step");
+            $(".f1-step").removeClass("active").addClass("activated");
+            //$(".new-transaction").slideUp(400); 
+            $(".new-transaction").slideUp(300); 
+                }
+}, 500);
+    
+    
+   
+});
+
+  $(".cash img").on("click", function(){
+      $(".credit-card, .payby > label").hide();
+  $(".cash").addClass("selected-mode");
+     setTimeout(function(){
+      $(".cr-machine-strip, .cr-machine").fadeIn(700);
+      $(".cr-card-details").fadeIn(700); 
+           }, 400);
+});
+   $(".credit-card img").on("click", function(){
+       $(".cash, .payby > label").hide();
+  $(".credit-card").addClass("selected-mode");
+      
+       setTimeout(function(){
+      $(".cr-machine-strip, .cr-machine").fadeIn(700);
+      $(".cr-card-details").fadeIn(700); 
+           }, 400);
+});     
+
+   $(".cancel-payment").on("click", function(){
+      $(".cr-machine-strip, .cr-machine").fadeOut(200);
+      $(".cr-card-details").fadeOut(200); 
+       setTimeout(function(){
+            $(".cash, .credit-card, .payby > label ").fadeIn(300);
+           $(".payby").removeClass("selected-mode");
+           }, 300);
+});      
+        
+        $(document).ready(function(){
+  $("#emiratesID, .emIDformat").inputmask("999-9999-9999999-9");
+  $(".dateFormat").inputmask("99/99/9999");//static mask
+//  $(selector).inputmask({"mask": "(999) 999-9999"}); //specifying options
+//  $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+});
+    </script>
+    <script>
+        moveProgressBar();
+
+        function moveProgressBar() {
+            var getPercent = ($('.progress-wrap').data('progress-percent') / 100),
+                getProgressWrapWidth = $('.progress-wrap').width(),
+                progressTotal = getPercent * getProgressWrapWidth,
+                animationLength = converte("00:10:00");
+
+            $('.progress-bar').stop().animate({
+                left: progressTotal
+            }, animationLength);
+        }
+
+        function converte(time) {
+            var time = time.split(":");
+
+            var s = (time[2] * 1000),
+                m = ((time[1] * 1000) * 60),
+                h = ((time[0] * 60000) * 60);
+
+            return (h + m + s);
+        }
+
+
+        var evento = new Date('2016-06-03 11:10:00'),
+            atual = new Date('2016-06-03 11:00:00'),
+            duracao = moment.duration(evento - atual, 'milliseconds');
+        var tTime = "true";
+        var tTimeVal = "true";
+        var halfTimeDuration;
+        var lastTime = "60000";
+        var timer = "true";
+        updateChronometer(duracao);
+
+        function updateChronometer(duracao) {
+            setInterval(function () {
+                duracao = moment.duration(duracao - 1000, 'milliseconds');
+                if (tTime == "true") {
+                    halfTimeDuration = duracao / 2;
+                    tTime = "false";
+                }
+                if (duracao < halfTimeDuration && tTimeVal == "true") {
+                    timeLeft();
+                    tTimeVal = "false";
+                }
+
+                if (duracao < lastTime && timer == "true") {
+                    test();
+                    timer = "false";
+                }
+                if (duracao >= 0) {
+                    if (duracao.days() == 0) {
+                        $(".item").html(completeZeroToLeft(duracao.hours()) + ":" + completeZeroToLeft(duracao.minutes()) + ":" + completeZeroToLeft(duracao.seconds()));
+                    } else {
+                        $(".item").text(duracao.days() + "d " + completeZeroToLeft(duracao.hours()) + ":" + completeZeroToLeft(duracao.minutes()) + ":" + completeZeroToLeft(duracao.seconds()));
+                    }
+                }
+            }, 1000);
+        }
+
+        function timeLeft() {
+            var x = 10;
+            $('body').addClass('timePending');
+        }
+
+        function completeZeroToLeft(number) {
+
+            var timeVar = "" + number;
+            var timeChar1;
+            var timeChar2;
+            if (number >= 10) {
+                timeChar1 = timeVar.charAt(0);
+                timeChar2 = timeVar.charAt(1)
+            }
+
+
+            return (number < 10 ? "<span>0</span>" + "<span>" + number + "</span>" : "<span>" + timeChar1 + "</span><span>" + timeChar2 + "</span>");
+        }
+
+        function test() {
+            $('body').removeClass('timePending').addClass('timeOver');
+        }
+    </script>
+  <script>
+        $(function () {
+            $('#datePickFrom').datetimepicker({
+                format: 'DD/MM/YYYY',
+                showTodayButton: true,
+                showClear: true,
+                showClose: false,
+                //debug: true,
+
+            });
+            $('#datePickTo').datetimepicker({
+                format: 'DD/MM/YYYY',
+                showTodayButton: true,
+                showClear: true,
+                showClose: false,
+                useCurrent: false //Important! See issue #1075
+            });
+            $("#datePickFrom").on("dp.change", function (e) {
+                $('#datePickTo').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datePickTo").on("dp.change", function (e) {
+                $('#datePickFrom').data("DateTimePicker").maxDate(e.date);
+            });
+            
+            $('#timePickFrom').datetimepicker({
+         format: 'LT',
+                showTodayButton: true,
+            showClear: true,
+            showClose: false,
+            useCurrent: false,
+                //debug: true
+     });
+            $('#timePickto').datetimepicker({
+         format: 'LT',
+                showTodayButton: true,
+            showClear: true,
+            showClose: false,
+            useCurrent: false,
+                //debug: true
+     });
+            
+            
+        });
+
+        $('#datepicker').datetimepicker({
+            format: 'DD/MM/YYYY',
+            showTodayButton: true,
+            showClear: true,
+            showClose: false,
+            useCurrent: false //Important! See issue #1075
+        });
+        
+
+       
+
+        
+    </script>
+    <script>
+        var menuEl = '';
+        var mlmenu = '';
+        (function () {
+            menuEl = document.getElementById('ml-menu');
+            mlmenu = new MLMenu(menuEl, {
+                // breadcrumbsCtrl : true, // show breadcrumbs
+                // initialBreadcrumb : 'all', // initial breadcrumb text
+                backCtrl: false, // show back button
+                // itemsDelayInterval : 60, // delay between each menu item sliding animation
+                onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+            });
+
+            // mobile menu toggle
+            var openMenuCtrl = document.querySelector('.action--open'),
+                closeMenuCtrl = document.querySelector('.action--close');
+
+            openMenuCtrl.addEventListener('click', openMenu);
+            closeMenuCtrl.addEventListener('click', closeMenu);
+
+            function openMenu() {
+                classie.add(menuEl, 'menu--open');
+            }
+
+            function closeMenu() {
+                classie.remove(menuEl, 'menu--open');
+            }
+
+            // simulate grid content loading
+            var gridWrapper = document.querySelector('.content');
+
+            function loadDummyData(ev, itemName) {
+                ev.preventDefault();
+
+                closeMenu();
+                if (gridWrapper != undefined) {
+                    gridWrapper.innerHTML = '';
+                    classie.add(gridWrapper, 'content--loading');
+                    setTimeout(function () {
+                        classie.remove(gridWrapper, 'content--loading');
+                        gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+                    }, 700);
+                }
+            }
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".menu__breadcrumbs a:first-child").click(function () {
+                $('.menu__breadcrumbs').slideUp(300);
+            });
+
+            $("#step_1").on("click", function(){
+                $(".f1-step").removeClass("activated active");
+                $(this).removeClass("activated").addClass("active");
+                $("fieldset").hide();
+                $("#fsOne").show();
+                $(".f1-progress-line").css("height","0");
+                
+            });
+            $("#step_2").on("click", function(){
+                $(".f1-step").removeClass("activated active");
+                $("#step_1").addClass("activated");
+                $(this).removeClass("activated").addClass("active");
+                $("fieldset").hide();
+                $("#fsTwo").show();
+                $(".f1-progress-line").css("height","16.6666666%");
+                
+            });
+                $("#step_3").on("click", function(){
+                $(".f1-step").removeClass("activated active");
+                $("#step_1, #step_2").addClass("activated");
+                $(this).removeClass("activated").addClass("active");
+                $("fieldset").hide();
+                $("#fsThree").show();
+                $(".f1-progress-line").css("height","33.333333%");
+                
+            });
+             $("#step_4").on("click", function(){
+                $(".f1-step").removeClass("activated active");
+                $("#step_1, #step_2, #step_3").addClass("activated");
+                $(this).removeClass("activated").addClass("active");
+                $("fieldset").hide();
+                $("#fsFour").show();
+                $(".f1-progress-line").css("height","50%");
+                
+            });
+            $("#step_5").on("click", function(){
+                $(".f1-step").removeClass("activated active");
+                $("#step_1, #step_2, #step_3, #step_4").addClass("activated");
+                $(this).removeClass("activated").addClass("active");
+                $("fieldset").hide();
+                $("#fsFive").show();
+                $(".f1-progress-line").css("height","66.6666666%");
+                
+            });
+            
+            // person search jquery
+            $(".open-personSrch").on("click", function(){
+                $(".counter-search-wrpr").show(500);
+                $("#cboxOverlay").fadeIn(200);
+                 if( $("body").hasClass("step3") ){
+                 $("#addMoreperson").fadeOut();
+                 }
+            });
+            $("#close-btn, #cancel-btn").on("click", function(){
+                $(".counter-search-wrpr").fadeOut(500);
+                            $("#cboxOverlay").fadeOut(350);
+            });
+            $("#person-details").on("click", function(){
+               // $(".counter-search").css({'transform':'scale(0)', 'opacity':"0", 'position': 'fixed'});
+               // $(".person-details").css({'transform':'scale(1)', 'opacity':"1", 'position': ''});
+                $(".counter-search").removeClass("enter");
+                $(".person-details").addClass("enter");
+            });
+      $("#back-btn").on("click", function(){
+//        $(".counter-search").css({'transform':'scale(1)', 'opacity':"1", 'position': ''});
+//        $(".person-details").css({'transform':'scale(0)', 'opacity':"0", 'position': 'fixed'});
+          $(".counter-search").addClass("enter");
+                $(".person-details").removeClass("enter");
+
+      });
+
+            $(".add-person").on("click", function(){
+                $("#addMoreperson").slideDown(500);
+                $("#cboxOverlay").fadeIn(500);
+            });
+
+            $("#addThisPerson").on("click", function(){
+                if( $("body").hasClass("step3") ){
+                
+                $("#addMoreperson").slideUp(300);
+                $(".counter-search-wrpr").slideUp(500);
+                    $("#cboxOverlay").fadeOut(350);
+                //setTimeout function(){
+                    $("#addedPerson").show(300).addClass("bounceIn animated go");
+                   }
+            });
+        });
+    </script>
+    
+    <script src="js/custom.js"></script>
+
+  
+</body>
+
+</html>

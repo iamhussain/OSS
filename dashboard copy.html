@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard - OSS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/webfonts.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+
+<!-- Plugins --> 
+<link rel="stylesheet" href="plugins/boot-select/css/bootstrap-select.css">
+<link href="plugins/datepicker/css/datepicker.css" rel="stylesheet">
+<link href="plugins/material-design/material.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/clock/css/jClocksGMT.css">
+
+<!-- Custom Stylesheet (always need to be the last css file) -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+
+<link href="css/dashboard.css" rel="stylesheet">
+<link href="plugins/morris/morris.css" rel="stylesheet">
+<link href="plugins/easypiechart/easypiechart.css" rel="stylesheet">
+<link href="plugins/vmap/jqvmap.css" rel="stylesheet">
+<link href="plugins/flags/css/flag-icon.css" rel="stylesheet">
+
+<!-- responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+
+</head>
+<body class="fadeIn go slow">
+<div class="container">
+<!-- header starts -->
+<div id="header">
+<header>
+<div class="min-max header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">fullscreen</i></div>
+<div class="thumnails header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">apps</i></div>
+<div class="notifications header-icons mdl-js-button mdl-js-ripple-effect"><i class="material-icons">notifications</i></div>
+
+<div class="date-time">
+<div id="clock_uae"></div>
+</div>
+
+<div class="logo"><img src="images/logo.svg" alt="logo" /></div>
+
+<div class="switcher">
+	<div class="switch-button"><i class="material-icons">folder_shared</i></div>
+</div>
+</header>
+<!-- header ends -->
+<!-- Sub header with breadcrumbs -->
+<div class="sub-header">
+	<div class="user-login-info">
+        <div class="welcome">اهلاً وسهلاً بك٫</div>
+        <div class="last-login">
+        <div class="last-date">2016/05/10 الثلاثاء</div>
+        <div class="last-time">04:46:13 AM</div>
+        <label>:آخر دخول </label></div>
+    </div>
+    <div class="nav-opener mdl-js-button mdl-js-ripple-effect">
+    	<div id="nav-icon1" class="open">
+              <span></span>
+              <span></span>
+              <span></span>
+		</div>
+    </div>
+</div>
+</div>
+<!-- Sub header ends -->
+
+
+
+<!-- sidebar navigation -->
+<aside>
+<div class="user">
+	<div class="user-details">
+	<div class="avatar"><img src="images/murakabat.png" width="136" height="146" alt="user Avatar"/></div>
+    <div class="user-info">
+    	<div class="initial">العميد</div>
+        <div class="user-name">علي أحمد عبد الله غانم</div>
+    </div>
+    <div class="my-feedback">
+        <img src="images/normal.png" alt=""/>
+        <img src="images/happy-pagetitle-icon.png" alt=""/>
+    </div>
+    </div>
+    
+</div>
+<div class="sidenav">
+	<div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">home</i><div class="link"> لوحة التحكم </div></div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">fingerprint</i> <div class="link"> الجنائية </div>
+    
+    	<div class="counter">
+        	<span class="green">203</span>
+        	<span class="orange">44</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+        
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons lg">traffic</i><div class="link"> المرورية </div>
+    
+    	<div class="counter">
+        	<span class="green">12</span>
+        	<span class="orange">8</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="demo-icon icon-doc"></i> <div class="link">التصاريح والشهادات </div>
+     
+    	<div class="counter">
+        	<span class="green">3</span>
+        	<span class="orange">1</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+    </div>
+    <div class="nav mdl-js-button mdl-js-ripple-effect"><i class="material-icons md">language</i><div class="link"> الانترنت </div>
+     
+    	<div class="counter">
+        	<span class="green zero">0</span>
+        	<span class="orange zero">44</span>            
+        </div>
+        <span class="material-icons nav-arrow">keyboard_arrow_left</span>
+        
+    </div>
+</div>
+<div class="more-options">
+	<ul>
+    	<li><i class="material-icons">power_settings_new</i></li>
+    	<li><i class="material-icons">forum</i></li>   
+    	<li><i class="material-icons group">group</i></li>
+    	<li><i class="material-icons">settings_applications</i></li>                     
+    </ul>
+</div>
+</aside>
+<!-- sidebar navigation ends -->
+
+<!-- Main Content - Center page -->
+<div class="main-wrpr">
+    <div class="wrpr">
+            	<div class="counter-values">
+                <div class="col-sm-5th">
+                		<div class="card">
+                    	<span class="material-icons">person</span>
+                        <div class="value">
+                        	<span class="count">5</span>
+                            <label>نقطة خدمة فعالة</label>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5th">
+                    <div class="card">
+                    	<span class="material-icons">person</span>
+                        <div class="value">
+                        	<span class="count">10</span>
+                            <label>مجموع نقاط الخدمة</label>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5th">
+                    <div class="card">
+                    	<i class="demo-icon icon-pending">&#xe808;</i>
+                        <div class="value">
+                        	<span class="count">10</span>
+                            <label>متعامل في الانتظار</label>
+                        </div>
+                        </div>
+                    </div>
+                      <div class="col-sm-5th">
+                      <div class="card">
+                    	<span class="material-icons">thumb_up</span>
+                        <div class="value">
+                        	<span class="count">100</span>
+                            <label>متعامل تمت خدمته</label>
+                        </div>
+                        </div>
+                    </div>
+                	<div class="col-sm-5th">
+                    <div class="card">
+                    	<span class="material-icons">person</span>
+                        <div class="value">
+                        	<span class="count">110</span>
+                            <label>مجموع التذاكر</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        <div class="col-sm-6">
+        	<div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">عدد المعاملات <span class="material-icons">account_box</span></div>
+    </div>
+            <div class="box-content">
+            	<div class="row trans-graph height50">
+                	<div class="col-sm-7"><div class="total-value">
+                            <label>الاجمالي</label>
+                            <span class="trans-value">1000</span></div>
+                        <div id="graph"></div>
+                        </div>
+                    <div class="col-sm-5">
+                    	<ul>
+                        	<li class="pending"><label>غير منجزة</label><span class="trans-value">150</span></li>
+                            <li class="completed"><label>منجزة</label><span class="trans-value">800</span></li>
+                            <li class="online"><label>إلكترونية / ذكية</label><span class="trans-value">50</span></li>	
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">  الخدمات الأكثر استخداما <span class="material-icons">account_box</span></div>
+    </div>
+            <div class="box-content">
+            
+            	<div class="height50 easypie">
+                	<div class="col-sm-5th">
+                    <label>دفع
+غرامة</label>
+<div class="chart" data-percent="73"><i class="demo-icon icon-car-paint">&#xe807;</i><span>73%</span></div><div class="easypie-count">450</div></div>
+                    <div class="col-sm-5th"><label>تقديم
+المعلومات</label><div class="chart" data-percent="45"><i class="demo-icon icon-car-paint">&#xe807;</i><span>45%</span></div><div class="easypie-count">320</div></div>
+                    <div class="col-sm-5th"><label>تغيير لون
+السيارة</label><div class="chart" data-percent="25"><i class="demo-icon icon-car-paint">&#xe807;</i><span>25%</span></div><div class="easypie-count">70</div></div>
+                    <div class="col-sm-5th"><label>تغيير لو
+ السيارة</label><div class="chart" data-percent="10"><i class="demo-icon icon-car-paint">&#xe807;</i><span>10%</span></div><div class="easypie-count">37</div></div>
+                    <div class="col-sm-5th"><label>شهادة براءة
+الذمة</label><div class="chart" data-percent="8"><i class="demo-icon icon-car-paint">&#xe807;</i><span>8%</span></div><div class="easypie-count">25</div></div>
+                    
+                	
+                
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-6">
+        	<div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">التحصيل اليومي <span class="material-icons">account_box</span></div>
+    </div>
+            <div class="box-content height100">
+            <div class="amount-details"><img src="images/cash.jpg" alt=""/></div>
+<div id="amount"></div>
+            </div>
+        </div>
+	</div>
+    <div class="col-sm-6">
+    	<div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">الموظف المتصدر <span class="material-icons">account_box</span></div>
+    </div>
+            <div class="row box-content">
+            	<div class="col-sm-5 position">
+                	<label><span class="my-position animated bounceIn2 go delay-500">7<sup>th</sup></span></label>
+                    <div class="avatar top-pic"><img src="images/user.jpg" width="136" height="146" alt="user Avatar"></div>
+                    <div class="figures">
+        <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 227</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+    </div>
+                </div>
+           		<div class="col-sm-7">
+                	<div class="user-list">
+                    	<ul>
+                        	<li>
+                            	<div class="avatar44">
+                                	<i class="material-icons">person</i>
+                                </div>
+                                <div class="user-details">
+                                <div class="username">Junaid Khan</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 208</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 127</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,240.<sub>50</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="avatar44">
+                                	<img src="images/me.jpg" alt"user-pic" />
+                                </div>
+                                <div class="user-details">
+                                <div class="username">Saddam Pinjari</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 118</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 287</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,050.<sub>20</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="avatar44">
+                                	<img src="images/user.png" alt"user-pic" />
+                                </div>
+                                <div class="user-details">
+                                <div class="username ar-droid">حسين بوت والا</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 208</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 107</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 2,210.<sub>50</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="avatar44">
+                                	<i class="material-icons">person</i>
+                                </div>
+                                <div class="user-details">
+                                <div class="username">Maria Cruz</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 108</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 207</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 1,250.<sub>25</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="avatar44">
+                                	<i class="material-icons">person</i>
+                                </div>
+                                <div class="user-details">
+                                <div class="username">Jennifer Jackson</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 107</div>
+        <div class="col-sm-4 doc-time"><i class="demo-icon icon-doc-time"></i> 215</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 1,250.<sub>50</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+    	<div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">مركز الشرطة المتصدر <span class="material-icons">account_box</span></div>
+    </div>
+            <div class="row box-content">
+            	<div class="col-sm-5 position">
+                	<label>مركز شرطة المرقبات<span class="my-position animated bounceIn2 go delay-500">1<sup>st</sup></span></label>
+                    <div class="avatar top-pic"><img src="images/murakabat.png" width="136" height="146" alt="user Avatar"></div>
+                    <div class="figures">
+        <div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 218</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+    </div>
+                </div>
+           		<div class="col-sm-7">
+                	<div class="user-list">
+                    	<ul>
+                        	<li>
+                            	<div class="avatar44">
+                                	<img src="images/murakabat.png" alt"user-pic" />
+                                </div>
+                                <div class="user-details">
+                                <div class="username ar-droid">مركز  شرطة المرقبات</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 208</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,240.<sub>50</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                             <li>
+                            	<div class="avatar44">
+                           	    <img src="images/burdubai.png" alt="user pic"/> </div>
+                                <div class="user-details">
+                                <div class="username ar-droid">مركز شرطة بردبي</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 208</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 2,210.<sub>50</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="avatar44">
+                                	<img src="images/rashideya.png" alt"user-pic" />
+                                </div>
+                                <div class="user-details">
+                                <div class="username ar-droid">مركز شرطة الراشدية</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 118</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 3,050.<sub>20</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                           
+                            <li>
+                            	<div class="avatar44">
+                                	<i class="material-icons">person</i>
+                                </div>
+                                <div class="user-details">
+                                <div class="username ar-droid">مركز شرطة القصيص</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 107</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 1,250.<sub>50</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="avatar44">
+                                	<i class="material-icons">person</i>
+                                </div>
+                                <div class="user-details">
+                                <div class="username ar-droid">مركز شرطة جبل علي</div>
+                                <div class="figures transaction-details">
+                                	<div class="col-sm-4 doc-tick"><i class="demo-icon icon-doc-tick"></i> 108</div>
+        <div class="col-sm-4 amount"><i class="demo-icon icon-money"></i> 1,250.<sub>25</sub></div>
+                                </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+    	<div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">الجنسيات المتصدرة <span class="material-icons">flag</span></div>
+    </div>
+            <div class="box-content">
+            	<div class="col-md-7 col-sm-7">
+            	<div id="vmap" style="width: 100%; height: 100%; min-height:400px"></div>
+            </div>
+            <div class="col-md-5 col-sm-5">
+            	<ul class="top-nationals">
+            	<li><i class="flag-icon flag-icon-us"></i><h3>USA</h3><span>210</span></li>
+            	<li><i class="flag-icon flag-icon-in"></i><h3>India </h3> <span>200</span></li>
+                <li><i class="flag-icon flag-icon-ph"></i><h3>Phillipines</h3> <span>180</span></li>
+                <li><i class="flag-icon flag-icon-br"></i><h3>Brazil </h3><span>100</span></li>
+                <li><i class="flag-icon flag-icon-sa"></i><h3>Saudi Arabia </h3><span>90</span></li>
+                </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="col-sm-6">
+            	<div class="card nopad">
+        	<div class="box-heading light">
+    	<div class="tab-icons">
+    	<i class="material-icons">sync</i>
+        <i class="expand-table"></i>
+    </div>
+    	<div class="box-title">المتعامل المتصدر <span class="material-icons">flag</span></div>
+    </div>
+            <div class="box-content top-customer">
+            <div class="col-sm-4">
+            	 <div class="avatar56"><img src="images/P34324.JPG" alt=""/></div>
+                 <div class="username">Mohammed El Hafiz</div>
+                 <div class="nationality">Palestine <i class="flag-icon flag-icon-ps"></i></div>
+                 <div class="services-used">
+                  <div class="col-sm-6">
+                    	<div class="amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                    </div>
+                 	<div class="col-sm-6">
+                    	<i class="demo-icon icon-car-paint">&#xe807;</i>
+                        <label class="sm">تغيير لون السيارة</label>
+                        <div class="service-date">11<sup>th</sup>Jul 2016</div>
+                    </div>
+                   
+                 </div>
+              </div>
+             
+              <div class="col-sm-4">
+            	 <div class="avatar56"><img src="images/mona.jpg" alt=""/></div>
+                 <div class="username">Monalisa Joseph</div>
+                 <div class="nationality">United Kingdom <i class="flag-icon flag-icon-gb"></i></div>
+                 <div class="services-used">
+                 	<div class="col-sm-6">
+                    	<div class="amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                    </div>
+                    <div class="col-sm-6">
+                    	<i class="demo-icon icon-car-paint">&#xe807;</i>
+                        <label class="sm">تغيير لون السيارة</label>
+                        <div class="service-date">11<sup>th</sup>Jul 2016</div>
+                    </div>
+                 </div>
+              </div>
+              
+              <div class="col-sm-4">
+            	 <div class="avatar56"><img src="images/ankush.jpg" alt=""/></div>
+                 <div class="username">Ankush Sharma</div>
+                 <div class="nationality">India <i class="flag-icon flag-icon-in"></i></div>
+                 <div class="services-used">
+                 	<div class="col-sm-6">
+                    	<div class="amount"><i class="demo-icon icon-money"></i> 3,250.<sub>50</sub></div>
+                    </div>
+                    <div class="col-sm-6">
+                    	<i class="demo-icon icon-car-paint">&#xe807;</i>
+                        <label class="sm">تغيير لون السيارة</label>
+                        <div class="service-date">11<sup>th</sup>Jul 2016</div>
+                    </div>
+                 </div>
+              </div>
+             
+              </div>
+            </div>
+            	
+            </div>
+            
+            
+            
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width:740px;">
+    <div class="modal-content">
+      <div class="modal-body">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <img src="images/customer-popup.jpg" alt=""/> </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Main Content - Ends -->
+</div>
+<!-- jQuery --> <script src="js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap --> <script src="js/bootstrap.js"></script>
+
+
+<!-- Plugins JS -->
+<script src="plugins/datepicker/js/moment.js"></script>
+<script src="plugins/datepicker/js/datepicker2.js"></script>
+<script src="plugins/material-design/material.js"></script>
+<script src="plugins/clock/js/jClocksGMT.js"></script>
+<script src="plugins/clock/js/jquery.rotate.js"></script>
+<script src="plugins/boot-select/js/bootstrap-select.js"></script>
+
+<!-- Dashboard JS -->
+<script src="plugins/counterUp/waypoints.min.js"></script>
+<script src="plugins/counterUp/counterup.js"></script>
+<script type="text/javascript" src="plugins/morris/raphael-min.js"></script>
+<script type="text/javascript" src="plugins/morris/morris.js"></script>
+<script src="plugins/easypiechart/jquery.easypiechart.js"></script>
+<script src="plugins/vmap/jquery.vmap.js"></script>
+<script src="plugins/vmap/jquery.vmap.world.js"></script>
+<script src="plugins/vmap/jquery.vmap.sampledata.js"></script>
+
+<!-- Custom JS - Always needs to be at the bottom -->
+
+	<script>
+	$(function() {
+    $('.chart').easyPieChart({
+        animate:2000,
+		barColor: "#3498db", delay: 300, size: 105, lineWidth: 4, trackColor: "#dddddd"
+		
+    });
+});
+	</script>
+    
+<script>
+$('.count').counterUp({
+    delay: 10,
+    time: 3000
+});
+$('.easypie-count').counterUp({
+    time: 1500
+});
+</script>
+<script>
+Morris.Donut({
+  element: 'graph',
+  colors: ['#3ec491', '#fda738', '#ea4e1b'],
+  behaveLikeLine: true,
+  data: [
+    {value: 70, label: 'منجزة'},
+    {value: 15, label: 'إلكترونية / ذكية'},
+    {value: 10, label: 'غير منجزاة'},
+  ],
+  formatter: function (x) { return x + "%"}
+}).on('click', function(i, row){
+  console.log(i, row);
+});
+</script>
+<script>
+var day_data = [
+  {"day": "1st Aug", "نقدي": 7407, "بطاقة إئتمان": 660},
+  {"day": "2nd Aug", "نقدي": 3351, "بطاقة إئتمان": 2629},
+  {"day": "3rd Aug", "نقدي": 3269, "بطاقة إئتمان": 718},
+  {"day": "4th Aug", "نقدي": 3246, "بطاقة إئتمان": 661},
+  {"day": "5th Aug", "نقدي": 6257, "بطاقة إئتمان": 1867},
+  {"day": "6th Aug", "نقدي": 3248, "بطاقة إئتمان": 627},
+];
+Morris.Area({
+  element: 'amount',
+  colors: ['#3ec491', '#fda738'],
+  data: day_data,
+  xkey: 'day',
+  xLabels:'year',
+  //: ['June', 'July', 'Aug', 'Sept', 'Oct', 'Nov']
+  ykeys: ['نقدي', 'بطاقة إئتمان'],
+  labels: ['نقدي', 'بطاقة إئتمان'],
+  //xLabelAngle: 60
+  resize: true,
+  behaveLikeLine: true,
+  gridTextColor: '#202020',
+  fillOpacity: 0.5,
+ 
+});
+</script>
+<script>
+      jQuery(document).ready(function () {
+		 var areasWithLabel = ['DE', 'US', 'CA', 'RU'];
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: 'transparent',
+          color: '#3498db',
+          hoverOpacity: 0.7,
+          selectedColor: '#707070',
+		  borderColor: '#fff',
+          borderWidth: 2,
+          enableZoom: true,
+          showTooltip: true,
+          scaleColors: ['#3498db','#0078b2'],
+          values: sample_data,
+          normalizeFunction: 'polynomial',
+		  onRegionClick: false,
+		  //selectedRegions: ['in','ru','ph','ke','br','lb'],
+		  //showLabels: true,
+		  onLabelShow: function (event, label, code) {
+    if(sample_data[code] > 0)
+        label.append(': '+sample_data[code]+' transactions'); 
+}
+
+        });
+		 var fc = '#3ec491';
+	  jQuery('#vmap').vectorMap('set', 'colors', {us:fc , in:fc , ph:fc, br:fc, sa:fc});
+      });
+	  
+	 
+	      </script>
+          <script src="js/custom.js"></script>
+</body>
+</html>
